@@ -15,12 +15,8 @@ producing on-brand interfaces, decks, and assets.
 
 ## Sources used
 
-- `uploads/Identidade-visual-Marca-TOTVS-06-14-2026_10_07_AM_part1.png` — logo,
-  architecture of brands, color system.
-- `uploads/Identidade-visual-Marca-TOTVS-06-14-2026_10_07_AM_part2.png` — color
-  contrast, typography, *grafismo* (the "O" device), photography direction, icons.
-- `uploads/Identidade-visual-Marca-TOTVS-06-14-2026_10_07_AM_part3.png` —
-  photography galleries, composition, panels, editorial/corporate applications.
+- Official TOTVS brand manuals and reference material — logo, architecture of
+  brands, color system, typography, *grafismo*, photography direction and icons.
 - **Manual textual da marca TOTVS** (pasted brief) — full verbal-identity guidance.
 
 > ✅ The official deck template (provided as `Template_TOTVS 2025…pdf`) was parsed for
@@ -187,8 +183,7 @@ Assets (`assets/`):
 - `templates/` — official source files for reference & download:
   `TOTVS-apresentacao-2025.pdf` (32-slide deck template),
   `TOTVS-papel-timbrado-2025.pdf` (letterhead).
-  The Google-Docs cover template remains in `uploads/USO_PÚBLICO_COM_CAPA_Google Docs_2025.pdf`
-  (its filename couldn't be copied programmatically — open it from there).
+  The Google-Docs cover template is not part of this published package.
 
 Foundations (Design System tab — `01-fundamentos/`): color, type, spacing, brand cards.
 
