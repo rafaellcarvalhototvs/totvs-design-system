@@ -1,0 +1,43 @@
+<!-- @dsCard group="12 Slides — Abertura & agenda" viewport="1280x720" name="Capa (cyan)" subtitle="Cover variant — cyan ground, dark title, vertical TOTVS wordmark + symbol" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.capa-cyan { background: var(--totvs-cyan); background-image: radial-gradient(130% 130% at 80% 62%, var(--cyan-400) 0%, var(--totvs-cyan) 55%); color: var(--totvs-dark); overflow: hidden; }
+  /* hero 3D grafismo, softly blended into the cyan ground, cropped right */
+  .capa-cyan .hero {
+    position: absolute; right: -110px; top: 50%; transform: translateY(-50%);
+    width: 1180px; height: 1180px;
+    background: url('../assets/grafismo/grafismo-capa.png') center/contain no-repeat;
+    opacity: 1; z-index: 1;
+  }
+  /* big vertical wordmark on the far right edge */
+  .capa-cyan .wordmark {
+    position: absolute; right: -286px; top: 50%;
+    transform: translateY(-50%) rotate(-90deg); transform-origin: center;
+    width: 760px; opacity: .96; z-index: 2;
+  }
+  .capa-cyan .pad { position: relative; z-index: 2; padding: 96px 88px; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; }
+  .capa-cyan .title { font-family: var(--font-display); font-size: 62px; line-height: 1.02; letter-spacing: -.02em; margin: 0; max-width: 13ch; color: var(--totvs-dark); }
+  .capa-cyan .title .reg { font-weight: 300; display: block; }
+  .capa-cyan .title .bold { font-weight: 800; display: block; }
+  .capa-cyan .subtitle { color: #fff; font-size: 24px; font-family: var(--font-display); font-weight: 600; margin: 20px 0 0; }
+  .capa-cyan .foot { position: absolute; left: 88px; bottom: 56px; display: flex; align-items: center; gap: 12px; color: var(--totvs-dark); z-index: 4; }
+  .capa-cyan .foot svg { width: 30px; height: 30px; }
+  .capa-cyan .foot span { font-family: var(--font-display); font-weight: 600; font-size: 20px; }
+</style>
+</head>
+<body>
+  <div class="slide capa-cyan">
+    <div class="hero"></div>
+    <img class="wordmark" src="../assets/totvs-logo-white.svg" alt="TOTVS">
+    <div class="pad">
+      <h1 class="title"><span class="reg">Capa_Título da</span><span class="bold">apresentação</span></h1>
+      <p class="subtitle">Apresentador ou subtítulo</p>
+    </div>
+    <div class="foot"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="7" width="22" height="21" rx="3"/><path d="M5 13h22M11 4v6M21 4v6"/><circle cx="11" cy="19" r="1.4" fill="currentColor" stroke="none"/><circle cx="16" cy="19" r="1.4" fill="currentColor" stroke="none"/><circle cx="21" cy="19" r="1.4" fill="currentColor" stroke="none"/></svg><span>Mês/ano</span></div>
+  </div>
+</body>
+</html>

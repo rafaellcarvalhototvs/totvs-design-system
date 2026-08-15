@@ -1,0 +1,34 @@
+<!-- @dsCard group="15 Slides — Fundos & fechamento" viewport="1280x720" name="Contracapa (Aviso legal)" subtitle="Back cover — legal notice glass panel, navy grafismo, copyright" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.contracapa { background: var(--totvs-dark); background-image: radial-gradient(140% 130% at 16% 30%, var(--petrol-900) 0%, var(--totvs-dark) 55%, #00111c 100%); color: #fff; overflow: hidden; }
+  .contracapa .graf { position: absolute; left: -190px; top: 50%; transform: translateY(-50%); width: 780px; height: 780px; background: url('../assets/grafismo/grafismo-navy.png') center/contain no-repeat; opacity: .5; z-index: 1; }
+  .contracapa .panel {
+    position: absolute; right: 88px; top: 50%; transform: translateY(-50%);
+    width: 520px; padding: 40px 44px; box-sizing: border-box; z-index: 2;
+    background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); border-radius: 18px;
+  }
+  .contracapa .label { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .contracapa .label .bar { width: 26px; height: 2px; background: var(--totvs-cyan); }
+  .contracapa .label span { font-family: var(--font-display); font-weight: 700; font-size: 15px; letter-spacing: .08em; text-transform: uppercase; color: var(--totvs-cyan); }
+  .contracapa .panel p { font-size: 16px; line-height: 1.6; margin: 0 0 16px; color: var(--navy-200); }
+  .contracapa .panel p.copy { margin: 0; color: #fff; font-weight: 600; }
+  .contracapa .logo-bl { position: absolute; left: 88px; bottom: 56px; height: 26px; opacity: .9; z-index: 3; }
+</style>
+</head>
+<body>
+  <div class="slide contracapa">
+    <div class="graf"></div>
+    <div class="panel">
+      <div class="label"><span class="bar"></span><span>Aviso legal</span></div>
+      <p>As informações, produtos e marcas contidas nesta apresentação são de propriedade intelectual da TOTVS e não podem ser divulgadas, compartilhadas, publicadas ou utilizadas sem autorização expressa da TOTVS, sob pena de responsabilização cível e criminal do infrator, nos termos do quanto disposto na Lei n. 9.279/1996.</p>
+      <p class="copy">© TOTVS — Todos os direitos reservados.</p>
+    </div>
+    <img class="logo-bl" src="../assets/totvs-logo-white.svg" alt="TOTVS">
+  </div>
+</body>
+</html>

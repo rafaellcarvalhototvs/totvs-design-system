@@ -1,0 +1,37 @@
+<!-- @dsCard group="16 Papelaria" viewport="794x1123" name="Capa de documento" subtitle="Capa A4 — logo, selo USO PÚBLICO, título em até 3 linhas e data, sobre grafismo 3D navy" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="doc.css">
+<style>
+  .page.capa { background: var(--totvs-white); }
+  .capa .doc-grafismo {
+    width: 760px; height: 800px; right: -230px; top: 175px;
+    background-image: url('../assets/grafismo/grafismo-navy.png');
+    z-index: 1;
+  }
+  .capa .doc-title {
+    position: absolute; left: 56px; top: 452px; right: 320px; z-index: 3;
+    margin: 0; font-family: var(--font-display); font-weight: 700;
+    font-size: 44px; line-height: 1.1; letter-spacing: -.02em; color: var(--totvs-dark);
+  }
+  .capa .doc-date {
+    position: absolute; left: 56px; top: 648px; z-index: 3;
+    display: inline-flex; align-items: center; height: 38px; padding: 0 22px;
+    border: 1.5px solid var(--totvs-dark); border-radius: 999px;
+    font-family: var(--font-display); font-weight: 600; font-size: 14px;
+    letter-spacing: .04em; color: var(--totvs-dark);
+  }
+</style>
+</head>
+<body>
+  <div class="page capa">
+    <div class="doc-grafismo"></div>
+    <img class="doc-logo" src="../assets/totvs-logo.svg" alt="TOTVS">
+    <span class="uso-pill">Uso público</span>
+    <h1 class="doc-title">Modelo de aplicação do título na capa do documento</h1>
+    <span class="doc-date">DD/MM/AAAA</span>
+  </div>
+</body>
+</html>

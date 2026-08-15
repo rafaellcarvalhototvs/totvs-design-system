@@ -1,0 +1,45 @@
+<!-- @dsCard group="02 Fundamentos — Logo" viewport="900x640" name="Logo — aplicações incorretas" subtitle="What not to do — 13 misuses that break consistency and legibility" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family:var(--font-text); background:var(--surface-card); color:var(--text-strong);
+    display:grid; grid-template-columns:330px 1fr; height:640px; }
+  .content { padding:32px 30px; box-sizing:border-box; display:flex; flex-direction:column; }
+  .overline { font-family:var(--font-display); font-weight:700; font-size:10px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--status-danger); }
+  h1 { font-family:var(--font-display); font-weight:800; font-size:25px; letter-spacing:-.02em; margin:4px 0 12px; }
+  .lead { font-size:12.5px; line-height:1.6; color:var(--text-body); margin:0 0 16px; }
+  ul { margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:6px; }
+  li { display:flex; gap:8px; align-items:baseline; font-size:11.5px; line-height:1.35; color:var(--text-body); }
+  li::before { content:"✕"; color:var(--status-danger); font-weight:700; font-size:11px; flex:0 0 auto; }
+  .map { background:var(--grey-100); display:flex; align-items:center; justify-content:center; padding:18px; box-sizing:border-box; }
+  .map img { max-width:100%; max-height:100%; object-fit:contain; }
+</style>
+</head>
+<body>
+  <div class="content">
+    <div class="overline">Logo · Não faça</div>
+    <h1>Aplicações incorretas</h1>
+    <p class="lead">A consistência na aplicação do logo é fundamental para gerar reconhecimento e fortalecer a marca. Evite:</p>
+    <ul>
+      <li>Distorcer o logo</li>
+      <li>Aplicar contorno</li>
+      <li>Rotacionar o logo</li>
+      <li>Aplicar cores não previstas</li>
+      <li>Aplicar transparência</li>
+      <li>Aplicar efeitos</li>
+      <li>Usar o logo com máscara</li>
+      <li>Adicionar adereços ou enfeites</li>
+      <li>Criar novas variações</li>
+      <li>Criar derivações do logo</li>
+      <li>Criar mascotes a partir do logo/símbolo</li>
+      <li>Usar o logo em meio a texto</li>
+      <li>Usar o símbolo em meio a texto</li>
+    </ul>
+  </div>
+  <div class="map"><img src="../assets/social/logo-incorretas.png" alt="Exemplos de aplicações incorretas do logo TOTVS"></div>
+</body>
+</html>

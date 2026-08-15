@@ -1,0 +1,54 @@
+<!-- @dsCard group="14 Slides — Diagramas & dados" viewport="1280x720" name="Elementos gráficos" subtitle="Three notched text cards (navy / cyan / purple) with icon disc + dots" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.elem { background: #fff; }
+  .elem .pad { padding: 50px 64px 40px; }
+  .elem h1 { font-family: var(--font-display); font-weight: 800; font-size: 46px; letter-spacing: -.02em; margin: 0; color: var(--totvs-dark); }
+  .elem h1 em { font-style: normal; color: var(--totvs-cyan); }
+  .elem .sub { font-family: var(--font-text); font-size: 21px; color: var(--text-muted); margin: 6px 0 0; }
+  .cards { margin-top: 26px; display: flex; flex-direction: column; align-items: center; gap: 22px; }
+  .gcard { position: relative; width: 600px; min-height: 132px; display: flex; align-items: center; gap: 26px;
+    padding: 24px 40px; box-sizing: border-box;
+    clip-path: polygon(0 22%, 6% 22%, 6% 0, 100% 0, 100% 70%, 94% 70%, 94% 100%, 0 100%); }
+  .gcard .disc { width: 92px; height: 92px; border-radius: 50%; border: 1.5px solid currentColor;
+    display: flex; align-items: center; justify-content: center; flex: 0 0 auto; }
+  .gcard .disc svg { width: 42px; height: 42px; }
+  .gcard p { font-family: var(--font-display); font-weight: 700; font-size: 23px; line-height: 1.28; margin: 0; }
+  .gcard .dots { position: absolute; top: 18px; right: 34px; font-size: 26px; line-height: 0; letter-spacing: 2px; }
+  .navy { background: var(--totvs-dark); color: #fff; } .navy .disc { color: var(--totvs-green); } .navy p { color: #fff; }
+  .cyan { background: var(--totvs-cyan); color: var(--totvs-dark); } .cyan .disc { color: var(--totvs-dark); }
+  .purp { background: var(--totvs-purple); color: #fff; } .purp .disc { color: #fff; }
+  .dots { color: currentColor; }
+</style>
+</head>
+<body>
+  <div class="slide elem">
+    <div class="pagemark"><span class="n">18</span><img src="../assets/totvs-symbol.svg" alt=""></div>
+    <div class="pad">
+      <h1>Elementos gráficos <em>úteis</em></h1>
+      <p class="sub">Caixas de texto com ícones</p>
+      <div class="cards">
+        <div class="gcard navy">
+          <span class="dots">•••</span>
+          <div class="disc"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="11" width="32" height="26" rx="3"/><circle cx="18" cy="20" r="3"/><path d="M10 34l9-9 7 7 5-5 7 7"/></svg></div>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam.</p>
+        </div>
+        <div class="gcard cyan">
+          <span class="dots">•••</span>
+          <div class="disc"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="11" width="32" height="26" rx="3"/><circle cx="18" cy="20" r="3"/><path d="M10 34l9-9 7 7 5-5 7 7"/></svg></div>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam.</p>
+        </div>
+        <div class="gcard purp">
+          <span class="dots">•••</span>
+          <div class="disc"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="11" width="32" height="26" rx="3"/><circle cx="18" cy="20" r="3"/><path d="M10 34l9-9 7 7 5-5 7 7"/></svg></div>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

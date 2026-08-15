@@ -1,0 +1,49 @@
+<!-- @dsCard group="12 Slides — Abertura & agenda" viewport="1280x720" name="Agenda 2" subtitle="Timed agenda — gray rows with vertical cyan time tabs, sub-sessions, photo panel right" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.ag2 { background: #fff; overflow: hidden; }
+  .ag2 .photo { position: absolute; right: 0; top: 0; bottom: 0; width: 33%; background: url('../assets/backgrounds/office-conversa-web.jpg') center/cover no-repeat; }
+  .ag2 .pad { padding: 52px 60px; width: 67%; box-sizing: border-box; height: 100%; display: flex; flex-direction: column; }
+  .ag2 h1 { font-family: var(--font-display); font-weight: 800; font-size: 44px; color: var(--totvs-dark); margin: 0; letter-spacing: -.01em; }
+  .ag2 .sub { font-size: 20px; color: var(--text-muted); margin: 4px 0 26px; }
+  .ag2 .rows { display: flex; flex-direction: column; gap: 10px; }
+  .ag2 .row { display: flex; align-items: stretch; background: var(--grey-100); border-radius: 10px; overflow: hidden; min-height: 66px; }
+  .ag2 .tab { background: var(--totvs-cyan); display: flex; align-items: center; justify-content: center; flex: 0 0 44px; }
+  .ag2 .tab span { font-family: var(--font-display); font-weight: 700; font-size: 14px; color: var(--totvs-dark); writing-mode: vertical-rl; transform: rotate(180deg); letter-spacing: .04em; }
+  .ag2 .nm { flex: 0 0 190px; display: flex; align-items: center; padding: 0 20px; font-family: var(--font-display); font-weight: 800; font-size: 21px; color: var(--totvs-dark); }
+  .ag2 .ds { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 18px; }
+  .ag2 .ds .l1 { font-size: 16px; color: var(--text-body); }
+  .ag2 .ds .l2 { font-size: 14px; color: var(--text-placeholder); }
+  .ag2 .subrows { display: flex; flex-direction: column; gap: 0; margin: 2px 0 2px 44px; }
+  .ag2 .subrow { display: flex; align-items: center; gap: 18px; padding: 11px 20px; border-bottom: 1px solid var(--border-subtle); }
+  .ag2 .subrow:first-child { border-top: 1px solid var(--border-subtle); }
+  .ag2 .subrow .t { font-family: var(--font-display); font-weight: 700; font-size: 15px; color: var(--totvs-dark); flex: 0 0 56px; }
+  .ag2 .subrow .s { font-family: var(--font-display); font-weight: 700; font-size: 15px; color: var(--totvs-dark); flex: 0 0 90px; }
+  .ag2 .subrow .d { font-size: 14px; color: var(--text-muted); }
+</style>
+</head>
+<body>
+  <div class="slide ag2">
+    <div class="photo"></div>
+    <div class="pagemark"><span class="n">36</span><img src="../assets/totvs-symbol.svg" alt=""></div>
+    <div class="pad">
+      <h1>Agenda 2</h1>
+      <p class="sub">Tema geral da apresentação ou evento</p>
+      <div class="rows">
+        <div class="row"><div class="tab"><span>00h00</span></div><div class="nm">Introdução</div><div class="ds"><span class="l1">Descrição breve</span></div></div>
+        <div class="row"><div class="tab"><span>00h00</span></div><div class="nm">Sessão</div><div class="ds"><span class="l1">Nome do palestrante ou descrição breve</span><span class="l2">Complemento da informação</span></div></div>
+        <div class="subrows">
+          <div class="subrow"><span class="t">00h00</span><span class="s">Sessão</span><span class="d">Nome do palestrante ou descrição breve</span></div>
+          <div class="subrow"><span class="t">00h00</span><span class="s">Sessão</span><span class="d">Nome do palestrante ou descrição breve</span></div>
+        </div>
+        <div class="row"><div class="tab"><span>00h00</span></div><div class="nm">Sessão</div><div class="ds"><span class="l1">Nome do palestrante ou descrição breve</span></div></div>
+        <div class="row"><div class="tab"><span>00h00</span></div><div class="nm">Sessão</div><div class="ds"><span class="l1">Nome do palestrante ou descrição breve</span></div></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

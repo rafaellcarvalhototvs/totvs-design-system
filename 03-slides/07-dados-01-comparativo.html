@@ -1,0 +1,77 @@
+<!-- @dsCard group="14 Slides — Diagramas & dados" viewport="1280x720" name="Boxes comparativos" subtitle="Four themed comparison boxes — cyan header, navy body, outline CTA (official layout)" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.comp { background: #fff; }
+  .comp .pad { padding: 54px 64px 48px; }
+  .comp .htitle { font-family: var(--font-display); font-weight: 800; font-size: 48px; letter-spacing: -.02em;
+    text-align: center; margin: 0; color: var(--totvs-dark); }
+  .comp .htitle em { font-style: normal; color: var(--totvs-cyan); }
+  .comp .hsub { text-align: center; font-family: var(--font-text); font-size: 20px; color: var(--text-muted); margin: 8px 0 0; }
+  .boxes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; margin-top: 34px; flex: 1; }
+  .box { display: flex; flex-direction: column; border-radius: 22px; overflow: hidden;
+    box-shadow: 0 18px 30px -16px rgba(0,34,51,.35); }
+  .box .head { background: var(--totvs-cyan); color: var(--totvs-dark); text-align: center;
+    font-family: var(--font-display); font-weight: 800; font-size: 23px; line-height: 1.18; letter-spacing: -.01em;
+    padding: 26px 18px; }
+  .box .body { background: var(--totvs-dark); flex: 1; display: flex; flex-direction: column; align-items: center;
+    padding: 28px 24px 30px; }
+  .box .ico { width: 56px; height: 56px; margin: 4px 0 22px; }
+  .box .ico svg { width: 100%; height: 100%; display: block; }
+  .box .txt { color: #fff; font-family: var(--font-text); font-size: 14px; line-height: 1.5; margin: 0 0 16px; }
+  .box .cta { margin-top: auto; align-self: stretch; text-align: center; font-family: var(--font-display);
+    font-weight: 700; font-size: 15px; letter-spacing: .06em; color: var(--totvs-cyan);
+    border: 1.5px solid var(--totvs-cyan); border-radius: var(--radius-pill); padding: 12px 0; }
+</style>
+</head>
+<body>
+  <div class="slide comp">
+    <div class="pagemark"><span class="n">19</span><img src="../assets/totvs-symbol.svg" alt=""></div>
+    <div class="pad">
+      <h1 class="htitle">Slide com <em>boxes comparativos</em></h1>
+      <p class="hsub">Complemento da informação aqui</p>
+      <div class="boxes">
+        <div class="box">
+          <div class="head">Tema em até<br>2 linhas</div>
+          <div class="body">
+            <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#00dbff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 18h28l-7-7"/><path d="M40 30H12l7 7"/></svg></div>
+            <p class="txt">Mauris id magna gravida, varius risus ac, varius nunc nullam ut sit nulla ut velit rhon pretium</p>
+            <p class="txt">Wisi enim ad minim veniam, quis nostrud exerci tation ullam corper suscipit lobor tis</p>
+            <div class="cta">LOREM</div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="head">Tema em até<br>2 linhas</div>
+          <div class="body">
+            <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#00dbff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l14 6v9c0 9-6 16-14 21-8-5-14-12-14-21v-9l14-6Z"/><path d="M17 24l5 5 9-10"/></svg></div>
+            <p class="txt">Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut dolore nonummy</p>
+            <p class="txt">Varius risus ac, varius nunc nullam ut sit nulla ut velit rhon pretium</p>
+            <div class="cta">LOREM</div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="head">Tema em até<br>2 linhas</div>
+          <div class="body">
+            <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#00dbff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="18"/><ellipse cx="24" cy="24" rx="8" ry="18"/><path d="M6 24h36M9 14h30M9 34h30"/></svg></div>
+            <p class="txt">Wisi enim ad minim veniam, quis nostrud exerci tation ullam corper suscipit lobor tis nisl ut aliquip ex ea commodo</p>
+            <p class="txt">Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut dolore</p>
+            <div class="cta">LOREM</div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="head">Tema em até<br>2 linhas</div>
+          <div class="body">
+            <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#00dbff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="4"/><circle cx="24" cy="8" r="3.5"/><circle cx="24" cy="40" r="3.5"/><circle cx="8" cy="24" r="3.5"/><circle cx="40" cy="24" r="3.5"/><path d="M24 12v8M24 28v8M12 24h8M28 24h8"/></svg></div>
+            <p class="txt">Nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat sit amet</p>
+            <p class="txt">Mauris id magna gravida, varius risus ac, varius nunc nullam ut sit nulla ut velit rhon pretium</p>
+            <div class="cta">LOREM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

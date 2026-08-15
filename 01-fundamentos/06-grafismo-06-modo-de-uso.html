@@ -1,0 +1,37 @@
+<!-- @dsCard group="06 Fundamentos — Grafismo & composição" viewport="720x560" name="Modo de uso" subtitle="Expressive moves — color highlights, repeated grafismo, hero logo — all used sparingly" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family:var(--font-text); background:var(--surface-card); }
+  .art { display:block; width:100%; aspect-ratio:1436/688; object-fit:cover; }
+  .rules { display:grid; grid-template-columns:repeat(3,1fr); gap:0; }
+  .rule { padding:18px 20px; border-right:1px solid var(--border-subtle); box-sizing:border-box; }
+  .rule:last-child { border-right:0; }
+  .num { display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px;
+    border-radius:999px; background:var(--purple-soft); color:var(--purple-700);
+    font-family:var(--font-display); font-weight:700; font-size:12px; margin-bottom:10px; }
+  .rule p { margin:0; font-size:12px; line-height:1.5; color:var(--text-body); }
+  .rule b { color:var(--text-strong); font-weight:700; }
+</style>
+</head>
+<body>
+  <img class="art" src="../assets/social/modo-de-uso.webp" alt="Modos de uso da marca TOTVS">
+  <div class="rules">
+    <div class="rule">
+      <span class="num">1</span>
+      <p>As cores podem <b>destacar trechos</b> de títulos e chamadas — sempre de forma pontual, nunca exagerada.</p>
+    </div>
+    <div class="rule">
+      <span class="num">2</span>
+      <p>O grafismo pode ser <b>aplicado mais de uma vez</b> por peça, mostrando diferentes ângulos como elemento de composição.</p>
+    </div>
+    <div class="rule">
+      <span class="num">3</span>
+      <p>Com parcimônia, o logo pode assumir uma <b>aplicação “hero”</b> em grandes proporções, como elemento gráfico da peça.</p>
+    </div>
+  </div>
+</body>
+</html>

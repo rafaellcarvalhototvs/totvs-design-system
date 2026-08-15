@@ -1,0 +1,69 @@
+<!-- @dsCard group="17 UI Kits" viewport="1280x720" name="TOTVS Gestão — product UI kit" subtitle="Login → dashboard → pedidos, built from the design system" -->
+<!-- @startingPoint section="Screens" subtitle="TOTVS Gestão management dashboard" viewport="1280x720" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TOTVS Gestão</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>
+  html, body { margin: 0; height: 100%; }
+  body { font-family: var(--font-text); background: var(--surface-page); color: var(--text-body); }
+  #root { height: 100vh; }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel" src="shell.jsx"></script>
+  <script type="text/babel" src="screens.jsx"></script>
+  <script type="text/babel" data-presets="react">
+    const { useState } = React;
+    const titles = {
+      dashboard: ['Visão geral', 'Acompanhe a operação em tempo real.'],
+      pedidos: ['Pedidos', '486 pedidos · 12 aguardando aprovação.'],
+      clientes: ['Clientes', '2.140 clientes ativos.'],
+      financeiro: ['Financeiro', 'Fluxo de caixa e indicadores.'],
+      estoque: ['Estoque', 'Itens, entradas e saídas.'],
+      relatorios: ['Relatórios', 'Exporte e compartilhe resultados.'],
+    };
+    function Placeholder({ id }) {
+      return (
+        <div style={{ padding: 32 }}>
+          <window.TOTVSDesignSystem_be3538.Card padding="lg" elevation="sm">
+            <div style={{ textAlign: 'center', padding: '40px 10px', color: 'var(--text-muted)' }}>
+              <i className="ph ph-squares-four" style={{ fontSize: 36, color: 'var(--grey-400)' }} />
+              <p style={{ fontSize: 15, marginTop: 14 }}>Área de <strong style={{ color: 'var(--text-strong)' }}>{titles[id][0]}</strong> — exemplo do UI kit.</p>
+            </div>
+          </window.TOTVSDesignSystem_be3538.Card>
+        </div>
+      );
+    }
+    function App() {
+      const [authed, setAuthed] = useState(false);
+      const [route, setRoute] = useState('dashboard');
+      if (!authed) return <window.Login onLogin={() => setAuthed(true)} />;
+      const [title, sub] = titles[route];
+      return (
+        <div style={{ display: 'flex', height: '100vh', overflow: 'hidden' }}>
+          <window.Sidebar active={route} onNavigate={setRoute} />
+          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minWidth: 0 }}>
+            <window.Topbar title={title} subtitle={sub} />
+            <main style={{ flex: 1, overflow: 'auto' }}>
+              {route === 'dashboard' ? <window.Dashboard />
+                : route === 'pedidos' ? <window.Pedidos />
+                : <Placeholder id={route} />}
+            </main>
+          </div>
+        </div>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

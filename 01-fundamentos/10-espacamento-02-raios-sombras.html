@@ -1,0 +1,32 @@
+<!-- @dsCard group="10 Fundamentos — Espaçamento & elevação" viewport="700x180" name="Radii & shadows" subtitle="Soft rounded corners + cool navy-tinted elevation" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family: var(--font-text); background: var(--surface-page); padding:22px 26px; box-sizing:border-box; }
+  .label { font-family:var(--font-display); font-weight:700; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--text-muted); margin:0 0 12px; }
+  .row { display:flex; gap:18px; align-items:center; margin-bottom:20px; }
+  .box { width:64px; height:52px; background:var(--surface-card); display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-weight:700; font-size:11px; color:var(--text-strong); border:1px solid var(--border-subtle); }
+  .sbox { width:80px; height:52px; background:var(--surface-card); border-radius:var(--radius-md); display:flex; align-items:center; justify-content:center; font-size:10px; color:var(--text-muted); }
+</style>
+</head>
+<body>
+  <p class="label">Radii</p>
+  <div class="row">
+    <div class="box" style="border-radius:var(--radius-sm)">8</div>
+    <div class="box" style="border-radius:var(--radius-md)">12</div>
+    <div class="box" style="border-radius:var(--radius-lg)">16</div>
+    <div class="box" style="border-radius:var(--radius-xl)">24</div>
+    <div class="box" style="border-radius:var(--radius-pill);width:88px">pill</div>
+  </div>
+  <p class="label">Elevation</p>
+  <div class="row">
+    <div class="sbox" style="box-shadow:var(--shadow-xs);border:0">xs</div>
+    <div class="sbox" style="box-shadow:var(--shadow-sm);border:0">sm</div>
+    <div class="sbox" style="box-shadow:var(--shadow-md);border:0">md</div>
+    <div class="sbox" style="box-shadow:var(--shadow-lg);border:0">lg</div>
+  </div>
+</body>
+</html>

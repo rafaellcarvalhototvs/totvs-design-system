@@ -1,0 +1,44 @@
+<!-- @dsCard group="03 Fundamentos — Arquitetura de marcas" viewport="880x540" name="Diretrizes para logos" subtitle="When a logo exists — only masterbrand, business units and earn-out brands carry the symbol" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family:var(--font-text); background:var(--surface-card); color:var(--text-strong);
+    display:grid; grid-template-columns:1fr 360px; height:540px; }
+  .content { padding:30px 34px; box-sizing:border-box; display:flex; flex-direction:column; }
+  .overline { font-family:var(--font-display); font-weight:700; font-size:10px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--text-muted); }
+  h1 { font-family:var(--font-display); font-weight:800; font-size:27px; letter-spacing:-.02em; margin:4px 0 12px; }
+  .lead { font-size:13px; line-height:1.6; color:var(--text-body); margin:0 0 16px; max-width:52ch; }
+  .lead b { color:var(--text-strong); font-weight:700; }
+  .h { font-family:var(--font-display); font-weight:700; font-size:10px; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--status-success); margin:0 0 10px; }
+  ul { margin:0 0 16px; padding:0; list-style:none; display:flex; flex-direction:column; gap:8px; }
+  li { display:flex; gap:10px; align-items:flex-start; font-size:12.5px; line-height:1.4; color:var(--text-body); }
+  li b { color:var(--text-strong); font-weight:700; }
+  li::before { content:"✓"; color:var(--status-success); font-weight:700; font-size:13px; line-height:1.2; flex:0 0 auto; }
+  .note { margin-top:auto; font-size:12px; line-height:1.5; color:var(--text-body); padding-top:14px;
+    border-top:1px solid var(--border-subtle); }
+  .note b { color:var(--text-strong); font-weight:700; }
+  .map { background:var(--grey-100); display:flex; align-items:center; justify-content:center; padding:18px; box-sizing:border-box; }
+  .map img { max-width:100%; max-height:100%; object-fit:contain; }
+</style>
+</head>
+<body>
+  <div class="content">
+    <div class="overline">A marca</div>
+    <h1>Diretrizes para logos</h1>
+    <p class="lead">Ter uma submarca, produto, iniciativa ou evento <b>não pressupõe ter um logo</b>. Criação excessiva ou desalinhada gera ruído e enfraquece a identidade. Com a estrutura monolítica, o logo com símbolo se concentra em:</p>
+    <p class="h">Possuem logo com símbolo</p>
+    <ul>
+      <li><b>Masterbrand</b> — marca corporativa</li>
+      <li><b>Unidades de negócio</b> — submarcas</li>
+      <li><b>Marcas adquiridas</b> em período de earn-out</li>
+    </ul>
+    <p class="note">Outras ocorrências — como <b>produtos e eventos</b> — não recebem logo: devem ser nomeadas e apresentadas com assinaturas e descritivos textuais apenas.</p>
+  </div>
+  <div class="map"><img src="../assets/social/diretrizes-logos.png" alt="Esquema de diretrizes para logos TOTVS"></div>
+</body>
+</html>

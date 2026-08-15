@@ -1,0 +1,37 @@
+<!-- @dsCard group="12 Slides — Abertura & agenda" viewport="1280x720" name="Agenda 5" subtitle="Numbered agenda 1–4 with opening text — cyan ground, large 3D grafismo right" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.ag5 { background: var(--totvs-cyan); background-image: radial-gradient(130% 130% at 18% 30%, var(--cyan-400) 0%, var(--totvs-cyan) 58%); color: var(--totvs-dark); overflow: hidden; }
+  .ag5 .graf { position: absolute; right: -260px; top: 50%; transform: translateY(-50%); width: 920px; height: 920px; background: url('../assets/grafismo/grafismo-navy.png') center/contain no-repeat; filter: drop-shadow(0 24px 40px rgba(0,18,28,.3)); z-index: 1; }
+  .ag5 .pad { position: relative; z-index: 2; padding: 48px 64px; height: 100%; box-sizing: border-box; width: 60%; }
+  .ag5 h1 { font-family: var(--font-display); font-weight: 800; font-size: 44px; color: var(--totvs-dark); margin: 0; letter-spacing: -.01em; }
+  .ag5 .sub { font-size: 20px; color: var(--totvs-dark); margin: 2px 0 14px; }
+  .ag5 .lead { font-size: 14px; line-height: 1.55; color: var(--petrol-900); margin: 0 0 22px; max-width: 54ch; }
+  .ag5 .item { display: grid; grid-template-columns: 30px 72px 1fr; align-items: center; padding: 12px 0; border-top: 1px solid rgba(0,34,51,.25); }
+  .ag5 .item:last-child { border-bottom: 1px solid rgba(0,34,51,.25); }
+  .ag5 .dash { width: 18px; height: 2px; background: var(--totvs-dark); }
+  .ag5 .num { font-family: var(--font-display); font-weight: 800; font-size: 50px; line-height: 1; color: #fff; }
+  .ag5 .it-label { font-family: var(--font-display); font-weight: 800; font-size: 22px; color: #fff; }
+  .ag5 .it-desc { font-size: 14px; color: var(--petrol-900); margin-top: 1px; }
+</style>
+</head>
+<body>
+  <div class="slide ag5">
+    <div class="graf"></div>
+    <div class="pagemark"><span class="n">39</span><img src="../assets/totvs-symbol.svg" alt=""></div>
+    <div class="pad">
+      <h1>Agenda 5</h1>
+      <p class="sub">Tema geral da apresentação ou evento</p>
+      <p class="lead">Pequeno texto de abertura para contextualizar a pauta. Destaque a palavra ou frase-chave que orienta a leitura dos tópicos a seguir.</p>
+      <div class="item"><span class="dash"></span><span class="num">1</span><div><div class="it-label">Introdução</div><div class="it-desc">Descrição breve</div></div></div>
+      <div class="item"><span class="dash"></span><span class="num">2</span><div><div class="it-label">Tema</div><div class="it-desc">Descrição breve</div></div></div>
+      <div class="item"><span class="dash"></span><span class="num">3</span><div><div class="it-label">Tema</div><div class="it-desc">Descrição breve</div></div></div>
+      <div class="item"><span class="dash"></span><span class="num">4</span><div><div class="it-label">Tema</div><div class="it-desc">Descrição breve</div></div></div>
+    </div>
+  </div>
+</body>
+</html>

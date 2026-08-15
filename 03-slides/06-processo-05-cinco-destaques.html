@@ -1,0 +1,70 @@
+<!-- @dsCard group="14 Slides — Diagramas & dados" viewport="1280x720" name="Cinco destaques + ícones" subtitle="Five icon columns on navy — cyan-highlighted headings, accent bars, white body band" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.cinco { background: var(--totvs-dark); background-image: radial-gradient(120% 90% at 75% 8%, #062a3a 0%, var(--totvs-dark) 46%, #00111c 100%); color: #fff; display: flex; flex-direction: column; }
+  .cinco .top { flex: 1; padding: 46px 56px 0; display: flex; flex-direction: column; min-height: 0; }
+  .cinco h1 { font-family: var(--font-display); font-weight: 800; font-size: 46px; letter-spacing: -.02em; margin: 0; color: #fff; }
+  .cinco h1 em { font-style: normal; color: var(--totvs-cyan); }
+  .cinco .sub { font-family: var(--font-text); font-size: 21px; color: #fff; opacity: .9; margin: 6px 0 0; }
+  .cols { display: grid; grid-template-columns: repeat(5, 1fr); gap: 30px; margin-top: 36px; flex: 1; align-items: stretch; }
+  .col { display: flex; flex-direction: column; }
+  .col .ico { width: 52px; height: 52px; margin-bottom: 22px; }
+  .col .ico svg { width: 100%; height: 100%; }
+  .col p { font-family: var(--font-display); font-weight: 800; font-size: 22px; line-height: 1.18; letter-spacing: -.01em; margin: 0; color: #fff; }
+  .col p b { color: var(--totvs-cyan); font-weight: 800; }
+  .col .bar { margin-top: auto; height: 5px; width: 78%; background: var(--totvs-cyan); border-radius: 3px; }
+  .band { background: #fff; padding: 22px 56px 26px; }
+  .bcols { display: grid; grid-template-columns: repeat(5, 1fr); gap: 30px; }
+  .bcols p { font-family: var(--font-text); font-size: 12.5px; line-height: 1.5; color: var(--text-muted); margin: 0; }
+</style>
+</head>
+<body>
+  <div class="slide cinco">
+    <div class="pagemark on-dark"><span class="n">83</span><img src="../assets/totvs-symbol-white.svg" alt=""></div>
+    <div class="top">
+      <h1>Cinco destaques <em>+ ícones</em></h1>
+      <p class="sub">Complete a informação neste espaço</p>
+      <div class="cols">
+        <div class="col">
+          <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#00dbff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 18h28l-7-7"/><path d="M40 30H12l7 7"/></svg></div>
+          <p><b>Mauris id magna amet</b> gravida, olor varius risus ac, varius nunc nullam</p>
+          <div class="bar"></div>
+        </div>
+        <div class="col">
+          <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#00dbff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l14 6v9c0 9-6 16-14 21-8-5-14-12-14-21v-9l14-6Z"/><path d="M17 24l5 5 9-10"/></svg></div>
+          <p>Consectetuer adipiscing elit, <b>diam nonummy</b> nibh euismod</p>
+          <div class="bar"></div>
+        </div>
+        <div class="col">
+          <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#00dbff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="18"/><ellipse cx="24" cy="24" rx="8" ry="18"/><path d="M6 24h36M9 14h30M9 34h30"/></svg></div>
+          <p>Enim ad minim nibh veniam, quis nostrud exerci tation <b>ullam corp</b></p>
+          <div class="bar"></div>
+        </div>
+        <div class="col">
+          <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#00dbff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="4"/><circle cx="24" cy="8" r="3.5"/><circle cx="24" cy="40" r="3.5"/><circle cx="8" cy="24" r="3.5"/><circle cx="40" cy="24" r="3.5"/><path d="M24 12v8M24 28v8M12 24h8M28 24h8"/></svg></div>
+          <p>Nonummy nibh euismod <b>tincidunt ut</b> laoreet dolore Magna diam aliquam sed</p>
+          <div class="bar"></div>
+        </div>
+        <div class="col">
+          <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#00dbff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="17"/><path d="M24 24V7"/><path d="M24 24l14.5 9"/></svg></div>
+          <p><b>Sed diam nonummy nibh euismod</b> tincidunt ut laoreet dolore</p>
+          <div class="bar"></div>
+        </div>
+      </div>
+    </div>
+    <div class="band">
+      <div class="bcols">
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam nascetur ridiculus mus. Integer nec hendrerit erat, iaculis nulla.</p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam nascetur ridiculus mus. Integer nec hendrerit erat, iaculis nulla.</p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam nascetur ridiculus mus. Integer nec hendrerit erat, iaculis nulla.</p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam nascetur ridiculus mus. Integer nec hendrerit erat, iaculis nulla.</p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam nascetur ridiculus mus. Integer nec hendrerit erat, iaculis nulla.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

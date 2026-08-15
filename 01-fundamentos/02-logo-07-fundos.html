@@ -1,0 +1,43 @@
+<!-- @dsCard group="02 Fundamentos — Logo" viewport="820x560" name="Logo — aplicações sobre fundos" subtitle="Logo on color grounds, grafismos and photos — always with reading contrast" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family:var(--font-text); background:var(--surface-card); color:var(--text-strong);
+    padding:26px 30px; box-sizing:border-box; display:flex; flex-direction:column; gap:16px; }
+  .overline { font-family:var(--font-display); font-weight:700; font-size:10px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--text-muted); }
+  h1 { font-family:var(--font-display); font-weight:800; font-size:24px; letter-spacing:-.02em; margin:4px 0 4px; }
+  .lead { font-size:12.5px; line-height:1.55; color:var(--text-body); margin:0; max-width:74ch; }
+  .lead b { color:var(--text-strong); font-weight:700; }
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  .tile { aspect-ratio:16/9; border-radius:var(--radius-md); display:flex; align-items:center; justify-content:center;
+    overflow:hidden; position:relative; }
+  .tile img.logo { height:26px; }
+  .photo { grid-column:span 3; aspect-ratio:auto; height:150px; }
+  .photo img.bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .photo img.logo { position:absolute; left:24px; bottom:20px; height:30px; z-index:1; }
+</style>
+</head>
+<body>
+  <div>
+    <div class="overline">Logo</div>
+    <h1>Aplicações sobre fundos</h1>
+    <p class="lead">O logo pode ser reproduzido sobre fundos de cores diferentes, desde que observado o <b>contraste de leitura</b>. Damos preferência às cores institucionais e, sobre grafismos e fotografias, busque áreas de baixa complexidade visual.</p>
+  </div>
+  <div class="grid">
+    <div class="tile" style="background:var(--totvs-cyan)"><img class="logo" src="../assets/totvs-logo.svg" alt=""></div>
+    <div class="tile" style="background:var(--totvs-purple)"><img class="logo" src="../assets/totvs-logo-white.svg" alt=""></div>
+    <div class="tile" style="background:var(--totvs-pink)"><img class="logo" src="../assets/totvs-logo-white.svg" alt=""></div>
+    <div class="tile" style="background:var(--totvs-green)"><img class="logo" src="../assets/totvs-logo.svg" alt=""></div>
+    <div class="tile" style="background:var(--totvs-lime)"><img class="logo" src="../assets/totvs-logo.svg" alt=""></div>
+    <div class="tile" style="background:var(--totvs-orange)"><img class="logo" src="../assets/totvs-logo.svg" alt=""></div>
+    <div class="tile photo">
+      <img class="bg" src="../assets/social/foto-hero.webp" alt="">
+      <img class="logo" src="../assets/totvs-logo-white.svg" alt="">
+    </div>
+  </div>
+</body>
+</html>

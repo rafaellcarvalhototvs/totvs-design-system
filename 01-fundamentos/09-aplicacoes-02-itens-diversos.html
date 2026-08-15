@@ -1,0 +1,38 @@
+<!-- @dsCard group="09 Fundamentos — Aplicações da marca" viewport="820x410" name="Itens diversos" subtitle="Everyday merch applications — clarity, legibility, consistent graphics" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family:var(--font-text); background:var(--surface-card); color:var(--text-strong);
+    display:grid; grid-template-columns:320px 1fr; height:410px; }
+  .photo { background:var(--grey-100); display:flex; align-items:center; justify-content:center; padding:16px; box-sizing:border-box; }
+  .photo img { max-width:100%; max-height:100%; object-fit:contain; border-radius:var(--radius-sm); }
+  .content { padding:26px 30px; box-sizing:border-box; display:flex; flex-direction:column; }
+  .overline { font-family:var(--font-display); font-weight:700; font-size:10px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--text-muted); }
+  h1 { font-family:var(--font-display); font-weight:800; font-size:26px; letter-spacing:-.02em; margin:4px 0 10px; }
+  .intro { font-size:12.5px; line-height:1.55; color:var(--text-body); margin:0 0 16px; max-width:48ch; }
+  ul { margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:12px; }
+  li { display:grid; grid-template-columns:24px 1fr; gap:11px; align-items:start; }
+  .num { width:24px; height:24px; border-radius:999px; background:var(--purple-soft); color:var(--purple-700);
+    font-family:var(--font-display); font-weight:700; font-size:12px; display:flex; align-items:center; justify-content:center; }
+  li p { margin:0; font-size:12px; line-height:1.45; color:var(--text-body); }
+  li b { color:var(--text-strong); font-weight:700; }
+</style>
+</head>
+<body>
+  <div class="photo"><img src="../assets/social/itens-diversos.webp" alt="Aplicações em itens diversos TOTVS"></div>
+  <div class="content">
+    <div class="overline">Aplicações</div>
+    <h1>Itens diversos</h1>
+    <p class="intro">Reforçam a presença cotidiana da marca por meio de peças simples, mas altamente visuais. Como são objetos de uso recorrente, o foco está na clareza da marca, na boa legibilidade e na consistência dos elementos gráficos.</p>
+    <ul>
+      <li><span class="num">1</span><p>Prefira <b>versões simplificadas</b> da identidade em objetos de pequena escala, mantendo símbolo e tipografia legíveis.</p></li>
+      <li><span class="num">2</span><p>Em itens de <b>área reduzida</b> (canetas, figurinhas), use layouts diretos, com um único elemento visual central.</p></li>
+      <li><span class="num">3</span><p>Em peças maiores ou <b>superfícies amplas</b> (sacolas), incorpore grafismos, padrões ou expansões — sempre com controle de contraste.</p></li>
+    </ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!-- @dsCard group="16 Papelaria" viewport="794x1123" name="Papel timbrado" subtitle="Folha A4 timbrada — logo no topo, totvs.com no rodapé, grafismo discreto e área de corpo editável" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="doc.css">
+<style>
+  .page.timbrado { background: var(--totvs-white); }
+  /* discreet grafismo, bottom-right */
+  .timbrado .doc-grafismo {
+    width: 460px; height: 460px; right: -120px; bottom: -110px;
+    background-image: url('../assets/grafismo/grafismo-navy.png');
+    opacity: .10; filter: grayscale(1); z-index: 1;
+  }
+  .timbrado .doc-body {
+    position: absolute; left: 56px; right: 56px; top: 150px; z-index: 3;
+  }
+  .timbrado .doc-body h2 {
+    margin: 0 0 16px; font-family: var(--font-display); font-weight: 700;
+    font-size: 22px; letter-spacing: -.01em; color: var(--totvs-dark);
+  }
+  .timbrado .doc-body p {
+    margin: 0 0 14px; font-size: 13.5px; line-height: 1.7; color: #324049; max-width: 60ch;
+  }
+</style>
+</head>
+<body>
+  <div class="page timbrado">
+    <div class="doc-grafismo"></div>
+    <img class="doc-logo" src="../assets/totvs-logo.svg" alt="TOTVS">
+    <div class="doc-body">
+      <h2>Título do documento</h2>
+      <p>Corpo do texto. Substitua este parágrafo pelo conteúdo do documento. A folha timbrada mantém a marca TOTVS no topo, o endereço totvs.com no rodapé e o grafismo institucional discreto no canto inferior direito.</p>
+      <p>Use parágrafos curtos e objetivos. Para títulos de seção, repita o estilo do título acima. As margens laterais de 56px e o topo a partir de 150px garantem respiro consistente em todas as páginas.</p>
+    </div>
+    <span class="doc-foot">totvs.com</span>
+  </div>
+</body>
+</html>

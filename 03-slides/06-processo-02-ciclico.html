@@ -1,0 +1,57 @@
+<!-- @dsCard group="14 Slides — Diagramas & dados" viewport="1280x720" name="Processos cíclicos" subtitle="Cyclic process — central 3D ring, 6 icon discs, 6 cyan callout boxes" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.ciclo { background: var(--totvs-dark); color: #fff; overflow: hidden; }
+  .ciclo .head { position: absolute; top: 40px; left: 0; right: 0; text-align: center; z-index: 4; }
+  .ciclo .head h1 { font-family: var(--font-display); font-weight: 800; font-size: 44px; letter-spacing: -.02em; margin: 0; color: #fff; }
+  .ciclo .head h1 em { font-style: normal; color: var(--totvs-cyan); }
+  .ciclo .head p { font-family: var(--font-text); font-size: 19px; color: var(--navy-100); margin: 6px 0 0; }
+  /* central ring */
+  .ring-c { position: absolute; left: 50%; top: 56%; transform: translate(-50%,-50%); width: 420px; height: 445px;
+    background: url('../assets/grafismo/hexagono-centro-sm.png') center/contain no-repeat; z-index: 1; }
+  /* callout boxes */
+  .cbox { position: absolute; width: 320px; background: var(--totvs-cyan); color: var(--totvs-dark);
+    border-radius: 12px; padding: 18px 22px; font-family: var(--font-text); font-size: 15px; line-height: 1.45; z-index: 3; }
+  .L { left: 64px; } .R { right: 64px; }
+  .r1 { top: 258px; } .r2 { top: 432px; } .r3 { top: 606px; }
+  /* icon discs */
+  .disc { position: absolute; width: 96px; height: 96px; border-radius: 50%;
+    background: rgba(0,219,255,.10); display: flex; align-items: center; justify-content: center; z-index: 2; }
+  .disc svg { width: 44px; height: 44px; }
+  .dL { left: 396px; } .dR { right: 396px; }
+  .d1 { top: 258px; } .d2 { top: 432px; } .d3 { top: 606px; }
+  .ciclo .body-area { position: absolute; inset: 0; }
+</style>
+</head>
+<body>
+  <div class="slide ciclo">
+    <div class="pagemark on-dark"><span class="n">15</span><img src="../assets/totvs-symbol-white.svg" alt=""></div>
+    <div class="head">
+      <h1>Representação de <em>processos cíclicos</em></h1>
+      <p>Complemento da informação aqui</p>
+    </div>
+    <div class="ring-c"></div>
+
+    <!-- left boxes -->
+    <div class="cbox L r1" style="transform:translateY(-50%)">Euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Key word or state to be highlighted.</div>
+    <div class="cbox L r2" style="transform:translateY(-50%)">Lorem ipsum dolor sit amet, consectetuer adipiscing elitsed diamets nonummy nibh word magna.</div>
+    <div class="cbox L r3" style="transform:translateY(-50%)">Lorem ipsum dolor sit amet, consectetuer adipiscing elitsed diamets nonummy nibh word magna.</div>
+    <!-- right boxes -->
+    <div class="cbox R r1" style="transform:translateY(-50%)">Euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Key word or state to be highlighted.</div>
+    <div class="cbox R r2" style="transform:translateY(-50%)">Lorem ipsum dolor sit amet, consectetuer adipiscing elitsed diamets nonummy nibh word magna.</div>
+    <div class="cbox R r3" style="transform:translateY(-50%)">Lorem ipsum dolor sit amet, consectetuer adipiscing elitsed diamets nonummy nibh word magna.</div>
+
+    <!-- icon discs -->
+    <div class="disc dL d1" style="transform:translateY(-50%)"><svg viewBox="0 0 48 48" fill="none" stroke="#00dbff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8h24l8 10-20 24L4 18 12 8Z"/><path d="M4 18h40M18 8l-6 10 12 24 12-24-6-10"/></svg></div>
+    <div class="disc dL d2" style="transform:translateY(-50%)"><svg viewBox="0 0 48 48" fill="none" stroke="#00dbff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4c7 5 10 12 10 20 0 4-1 7-2 9H16c-1-2-2-5-2-9 0-8 3-15 10-20Z"/><circle cx="24" cy="20" r="4"/><path d="M16 33l-5 6 6-1M32 33l5 6-6-1M21 42h6"/></svg></div>
+    <div class="disc dL d3" style="transform:translateY(-50%)"><svg viewBox="0 0 48 48" fill="none" stroke="#00dbff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="14" height="10" rx="1.5"/><rect x="28" y="20" width="14" height="9" rx="1.5"/><rect x="28" y="33" width="14" height="9" rx="1.5"/><path d="M15 16v9h13M28 24.5h-6M22 37.5h-7v-12"/></svg></div>
+    <div class="disc dR d1" style="transform:translateY(-50%)"><svg viewBox="0 0 48 48" fill="none" stroke="#00dbff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="21" cy="21" r="13"/><path d="M31 31l10 10"/></svg></div>
+    <div class="disc dR d2" style="transform:translateY(-50%)"><svg viewBox="0 0 48 48" fill="none" stroke="#00dbff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12h32M14 12l8 11v13l4 3V23l8-11"/></svg></div>
+    <div class="disc dR d3" style="transform:translateY(-50%)"><svg viewBox="0 0 48 48" fill="none" stroke="#00dbff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6a13 13 0 0 0-8 23v4h16v-4a13 13 0 0 0-8-23Z"/><path d="M19 41h10M20 33l3 3 6-7"/></svg></div>
+  </div>
+</body>
+</html>

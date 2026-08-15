@@ -1,0 +1,114 @@
+/* ============================================================
+   TOTVS — COLOR TOKENS
+   Source: Manual de Identidade Visual TOTVS (Cores)
+   The palette is "vibrant, digital and diverse". Dark navy +
+   cyan dominate (55–70%), white frames (15–20%), purple is the
+   secondary accent (15–20%), and four tertiary brights appear
+   occasionally (10–15%).
+   ============================================================ */
+
+:root {
+  /* ---- Primary (most present in communication) ---- */
+  --totvs-dark:        #002233; /* Azul Escuro · Pantone 539 C — dominant ground */
+  --totvs-cyan:        #00DBFF; /* Azul · Pantone 2985 C — signature accent */
+  --totvs-white:       #FFFFFF; /* Branco */
+
+  /* ---- Secondary (variable, complementary) ---- */
+  --totvs-purple:      #A44DFF; /* Roxo · Pantone 2665 C */
+
+  /* ---- Petrol blue (azul petróleo) — deep teal cover/ground tone ---- */
+  --totvs-petrol:      #0B3D4C; /* azul petróleo — capas e fundos profundos */
+  --petrol-700:        #0E4A5C;
+  --petrol-900:        #072B36;
+
+  /* ---- Tertiary (occasional, strategic pops) ---- */
+  --totvs-green:       #00FFD4; /* Verde · Pantone 3255 C */
+  --totvs-lime:        #D9FF65; /* Limão · Pantone 2296 C */
+  --totvs-orange:      #FF8900; /* Laranja · Pantone 151 C */
+  --totvs-pink:        #FF009E; /* Rosa · PMS Rhodamine Red C */
+
+  /* ---- Dark-navy neutral ramp (built from the brand dark) ---- */
+  --navy-900:          #001722; /* deepest, near-black ground */
+  --navy-800:          #002233; /* = --totvs-dark, brand dark */
+  --navy-700:          #06303f; /* raised surface on dark */
+  --navy-600:          #0d3e50; /* hairline / borders on dark */
+  --navy-500:          #1d5266; /* muted text on dark */
+  --navy-400:          #4a7686; /* secondary text on dark */
+  --navy-300:          #8aa6b1; /* disabled on dark */
+
+  /* ---- Light neutral ramp (cool greys, slightly navy-tinted) ---- */
+  --grey-50:           #f6f8f9; /* page wash */
+  --grey-100:          #eef1f3; /* subtle surface */
+  --grey-200:          #e1e6e9; /* card border / divider */
+  --grey-300:          #cdd5d9; /* strong divider */
+  --grey-400:          #9aa7ad; /* placeholder / disabled text */
+  --grey-500:          #6b7a81; /* secondary text on light */
+  --grey-600:          #45565d; /* body text on light (softer than dark) */
+
+  /* ---- Cyan tints/shades (interactive ramp) ---- */
+  --cyan-soft:         #d6f8ff; /* tinted fill / selected wash */
+  --cyan-400:          #2ee3ff; /* hover-lighten */
+  --cyan-600:          #00b6d6; /* hover-darken on light bg */
+  --cyan-700:          #008aa3; /* pressed */
+
+  /* ---- Purple tints/shades ---- */
+  --purple-soft:       #efe1ff;
+  --purple-600:        #8a2ff0;
+  --purple-700:        #6f1dcf;
+
+  /* ============================================================
+     SEMANTIC ALIASES — prefer these in components
+     ============================================================ */
+
+  /* Brand */
+  --brand-primary:        var(--totvs-cyan);
+  --brand-ink:            var(--totvs-dark);
+  --brand-accent:         var(--totvs-purple);
+
+  /* Surfaces — light theme (default) */
+  --surface-page:         var(--grey-50);
+  --surface-card:         var(--totvs-white);
+  --surface-sunken:       var(--grey-100);
+  --surface-inverse:      var(--totvs-dark);
+
+  /* Text — on light */
+  --text-strong:          var(--totvs-dark);
+  --text-body:            var(--grey-600);
+  --text-muted:           var(--grey-500);
+  --text-placeholder:     var(--grey-400);
+  --text-on-brand:        var(--totvs-dark);  /* cyan is bright → dark text */
+  --text-on-inverse:      var(--totvs-white);
+  --text-link:            var(--cyan-700);
+
+  /* Borders */
+  --border-subtle:        var(--grey-200);
+  --border-strong:        var(--grey-300);
+  --border-inverse:       var(--navy-600);
+  --border-focus:         var(--totvs-cyan);
+
+  /* Interactive */
+  --action-primary:       var(--totvs-dark);
+  --action-primary-hover: #06303f;
+  --action-primary-press: #001722;
+  --action-cyan:          var(--totvs-cyan);
+  --action-cyan-hover:    var(--cyan-400);
+  --action-cyan-press:    var(--cyan-600);
+
+  /* Status (mapped onto the brand palette) */
+  --status-success:       #1f8a5b;
+  --status-success-soft:  #e3f5ec;
+  --status-warning:       var(--totvs-orange);
+  --status-warning-soft:  #fff0dd;
+  --status-danger:        #e02d3c;
+  --status-danger-soft:   #fde6e8;
+  --status-info:          var(--cyan-700);
+  --status-info-soft:     var(--cyan-soft);
+
+  /* ---- Signature brand gradients (grafismo / hero washes) ---- */
+  --grad-cyan-purple:  linear-gradient(120deg, #00DBFF 0%, #A44DFF 100%); /* @kind color */
+  --grad-purple-orange:linear-gradient(120deg, #A44DFF 0%, #FF8900 100%); /* @kind color */
+  --grad-pink-lime:    linear-gradient(120deg, #FF009E 0%, #D9FF65 100%); /* @kind color */
+  --grad-green-cyan:   linear-gradient(120deg, #00FFD4 0%, #00DBFF 100%); /* @kind color */
+  --grad-lime-green:   linear-gradient(120deg, #D9FF65 0%, #00FFD4 100%); /* @kind color */
+  --grad-dark-cyan:    linear-gradient(135deg, #002233 0%, #008aa3 60%, #00DBFF 100%); /* @kind color */
+}

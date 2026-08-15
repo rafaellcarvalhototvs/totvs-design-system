@@ -1,0 +1,41 @@
+<!-- @dsCard group="12 Slides — Abertura & agenda" viewport="1280x720" name="Capa" subtitle="Cover — navy ground, horizontal logo top-left, hero cyan grafismo cropped right" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.capa { background: var(--totvs-dark); background-image: radial-gradient(130% 120% at 15% 35%, #013040 0%, var(--totvs-dark) 48%, #001019 100%); color: #fff; overflow: hidden; }
+  /* hero cyan 3D grafismo — large, cropped off the right edge */
+  .capa .hero {
+    position: absolute; right: -260px; top: 50%; transform: translateY(-50%);
+    width: 1180px; height: 1180px;
+    background: url('../assets/grafismo/grafismo-cyan.png') center/contain no-repeat;
+    z-index: 1;
+  }
+  .capa .pad { position: relative; z-index: 2; padding: 64px 72px; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; }
+  .capa .logo { height: 52px; align-self: flex-start; }
+  .capa .mid { margin-top: auto; margin-bottom: auto; }
+  .capa .title { font-family: var(--font-display); font-size: 64px; line-height: 1.0; letter-spacing: -.02em; margin: 0; max-width: 13ch; color: #fff; }
+  .capa .title .reg { font-weight: 400; display: block; }
+  .capa .title .bold { font-weight: 800; display: block; }
+  .capa .subtitle { color: var(--totvs-cyan); font-size: 24px; font-family: var(--font-display); font-weight: 600; margin: 22px 0 0; }
+  .capa .foot { display: flex; align-items: center; gap: 12px; color: #fff; }
+  .capa .foot svg { width: 30px; height: 30px; }
+  .capa .foot span { font-family: var(--font-display); font-weight: 600; font-size: 20px; }
+</style>
+</head>
+<body>
+  <div class="slide capa">
+    <div class="hero"></div>
+    <div class="pad">
+      <img class="logo" src="../assets/totvs-logo-white.svg" alt="TOTVS">
+      <div class="mid">
+        <h1 class="title"><span class="reg">Capa_Título da</span><span class="bold">apresentação</span></h1>
+        <p class="subtitle">Apresentador ou subtítulo</p>
+      </div>
+      <div class="foot"><svg viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="7" width="22" height="21" rx="3"/><path d="M5 13h22M11 4v6M21 4v6"/><circle cx="11" cy="19" r="1.4" fill="#fff" stroke="none"/><circle cx="16" cy="19" r="1.4" fill="#fff" stroke="none"/><circle cx="21" cy="19" r="1.4" fill="#fff" stroke="none"/></svg><span>Mês/ano</span></div>
+    </div>
+  </div>
+</body>
+</html>

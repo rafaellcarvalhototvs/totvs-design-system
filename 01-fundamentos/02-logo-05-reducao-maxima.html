@@ -1,0 +1,35 @@
+<!-- @dsCard group="02 Fundamentos — Logo" viewport="760x440" name="Logo — redução máxima" subtitle="Minimum size by height — 21 px digital · 5 mm print" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family:var(--font-text); background:var(--surface-card); color:var(--text-strong);
+    padding:28px 32px; box-sizing:border-box; display:flex; flex-direction:column; gap:16px; }
+  .overline { font-family:var(--font-display); font-weight:700; font-size:10px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--text-muted); }
+  h1 { font-family:var(--font-display); font-weight:800; font-size:26px; letter-spacing:-.02em; margin:4px 0 8px; }
+  .lead { font-size:13px; line-height:1.6; color:var(--text-body); margin:0; max-width:64ch; }
+  .lead b { color:var(--text-strong); font-weight:700; }
+  .map { background:var(--grey-100); border-radius:var(--radius-md); padding:20px; box-sizing:border-box;
+    display:flex; align-items:center; justify-content:center; flex:1; }
+  .map img { width:100%; max-height:240px; object-fit:contain; }
+  .pills { display:flex; gap:10px; }
+  .pill { font-family:var(--font-display); font-weight:700; font-size:12px; padding:7px 13px; border-radius:999px;
+    background:var(--cyan-soft); color:var(--cyan-700); }
+</style>
+</head>
+<body>
+  <div>
+    <div class="overline">Logo</div>
+    <h1>Redução máxima</h1>
+    <p class="lead">É o tamanho mínimo em que o logo pode ser reduzido preservando sua legibilidade, de forma que o público ainda o identifique. A redução é medida pela <b>altura</b> do logo:</p>
+  </div>
+  <div class="pills">
+    <span class="pill">Digital · 21 px</span>
+    <span class="pill">Impresso · 5 mm</span>
+  </div>
+  <div class="map"><img src="../assets/social/logo-reducao-maxima.png" alt="Redução máxima do logo TOTVS"></div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!-- @dsCard group="11 Componentes" viewport="700x260" name="Feedback — Alert, Progress, Card" subtitle="Inline alerts, progress tracks, surface cards" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>
+  body { margin:0; font-family: var(--font-text); background: var(--surface-page); padding:24px; box-sizing:border-box; }
+  .grid { display:grid; grid-template-columns:1.1fr 1fr; gap:16px; align-items:start; }
+  .stack { display:flex; flex-direction:column; gap:12px; }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    const { Alert, ProgressBar, Card, Button } = window.TOTVSDesignSystem_be3538;
+    const I = ({n}) => <i className={"ph ph-"+n} />;
+    function Demo(){
+      return (
+        <div className="grid">
+          <div className="stack">
+            <Alert tone="success" title="Solicitação recebida" icon={<I n="check-circle"/>}>
+              A gente vai analisar o cenário e indicar o melhor caminho.
+            </Alert>
+            <Alert tone="warning" title="Atenção" icon={<I n="warning"/>} onClose={()=>{}}>
+              Confirme os dados antes de continuar.
+            </Alert>
+          </div>
+          <Card padding="md" elevation="sm">
+            <div style={{fontFamily:'var(--font-display)',fontWeight:700,fontSize:18,color:'var(--text-strong)',marginBottom:4}}>Onboarding</div>
+            <div style={{fontSize:13,color:'var(--text-muted)',marginBottom:14}}>3 de 5 etapas concluídas</div>
+            <ProgressBar value={60} tone="cyan" showLabel />
+            <div style={{marginTop:16}}><Button variant="cyan" size="sm" iconRight={<I n="arrow-right"/>}>Continuar</Button></div>
+          </Card>
+        </div>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+  </script>
+</body>
+</html>

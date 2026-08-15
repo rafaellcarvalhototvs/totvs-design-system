@@ -1,0 +1,69 @@
+<!-- @dsCard group="13 Slides — Conteúdo" viewport="1280x720" name="Texto + laptop" subtitle="Cyan slide — text block, notebook image slot, callout box" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.nb { background: var(--totvs-cyan); overflow: hidden; }
+  /* subtle flowing line texture, concentrated top-right */
+  .nb::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background:
+      radial-gradient(120% 90% at 92% 4%, rgba(255,255,255,.30) 0%, rgba(255,255,255,0) 42%),
+      repeating-linear-gradient(115deg, rgba(255,255,255,.10) 0 1.5px, rgba(255,255,255,0) 1.5px 64px);
+    -webkit-mask-image: radial-gradient(140% 120% at 100% 0%, #000 0%, rgba(0,0,0,.25) 60%, transparent 100%);
+    mask-image: radial-gradient(140% 120% at 100% 0%, #000 0%, rgba(0,0,0,.25) 60%, transparent 100%);
+  }
+  .nb .header { position: absolute; left: 64px; top: 48px; right: 120px; z-index: 3; }
+  .nb .h-title { font-family: var(--font-display); font-weight: 800; font-size: 40px; line-height: 1.05;
+    letter-spacing: -.02em; color: var(--totvs-dark); margin: 0; }
+  .nb .h-sub { font-family: var(--font-display); font-weight: 400; font-size: 21px; color: #fff; margin: 6px 0 0; }
+
+  .nb .stage { position: absolute; left: 64px; right: 56px; top: 200px; bottom: 56px; z-index: 2;
+    display: grid; grid-template-columns: 250px 1fr 270px; align-items: center; gap: 24px; }
+
+  .nb .lead { font-family: var(--font-display); font-weight: 700; font-size: 25px; line-height: 1.28;
+    color: var(--totvs-dark); margin: 0; }
+
+  /* notebook + screen placeholder */
+  .nb .device { position: relative; width: 100%; justify-self: center; }
+  .nb .device img { width: 100%; display: block; }
+  .nb .screen { position: absolute; left: 14.4%; top: 4.9%; width: 71.4%; height: 73.2%;
+    display: flex; align-items: center; justify-content: center; }
+  .nb .screen .dash { position: absolute; inset: 5%; border: 1.5px dashed rgba(255,255,255,.7); border-radius: 2px; }
+  .nb .chip { position: relative; display: inline-flex; align-items: center; gap: 11px; background: #fff;
+    color: var(--totvs-dark); font-family: var(--font-display); font-weight: 600; font-size: 16px;
+    padding: 12px 20px; border-radius: var(--radius-sm); box-shadow: var(--shadow-md); white-space: nowrap; }
+  .nb .chip i { color: var(--cyan-700); font-size: 22px; }
+
+  /* callout */
+  .nb .callout { align-self: flex-start; margin-top: 30px; background: rgba(255,255,255,.18);
+    border: 1px solid rgba(255,255,255,.55); border-radius: var(--radius-md); padding: 16px 18px;
+    font-family: var(--font-text); font-size: 15px; line-height: 1.5; color: var(--totvs-dark);
+    box-shadow: 0 18px 40px rgba(0,18,28,.16); backdrop-filter: blur(2px); }
+  .nb .callout b { font-weight: 700; }
+  .nb .chip svg { width: 22px; height: 22px; display: block; }
+</style>
+</head>
+<body>
+  <div class="slide nb">
+    <div class="pagemark"><span class="n">07</span><img src="../assets/totvs-symbol.svg" alt=""></div>
+    <div class="header">
+      <h1 class="h-title">Slide com texto + laptop em movimento</h1>
+      <p class="h-sub">Insira aqui um subtítulo, se necessário</p>
+    </div>
+    <div class="stage">
+      <p class="lead">Massa de texto, consectetuer am adipisc elit, seimt nonum nibh morq euismod tincidunt ut lore laoreet sit dolore.</p>
+      <div class="device">
+        <img src="../assets/devices/notebook-sm.png" alt="">
+        <div class="screen">
+          <div class="dash"></div>
+          <span class="chip"><svg viewBox="0 0 32 32"><rect x="3" y="5" width="21" height="17" rx="3" fill="none" stroke="#2f8fd1" stroke-width="2"/><circle cx="9.5" cy="11" r="2" fill="#2f8fd1"/><path d="M4 19l6-6 5 5 3-3 5 5" fill="none" stroke="#2f8fd1" stroke-width="2" stroke-linejoin="round"/><circle cx="24" cy="23" r="7" fill="#2f8fd1"/><path d="M24 20v6M21.2 22.8 24 20l2.8 2.8" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Inserir Imagem (Preenchimento)</span>
+        </div>
+      </div>
+      <div class="callout">Ut wisi enim adminim veniam, quisnos exerci tation ullamcorper suscip eborp lobortis nislut utea commod. <b>Use a versão bold para destaque</b></div>
+    </div>
+  </div>
+</body>
+</html>

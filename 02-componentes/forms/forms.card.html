@@ -1,0 +1,49 @@
+<!-- @dsCard group="11 Componentes" viewport="700x300" name="Forms — Input, Switch, Checkbox" subtitle="Fields with cyan focus, toggles and checkboxes" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>
+  body { margin:0; font-family: var(--font-text); background: var(--surface-card); padding:24px; box-sizing:border-box; }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:22px 28px; align-items:start; }
+  .stack { display:flex; flex-direction:column; gap:16px; }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    const { Input, Switch, Checkbox } = window.TOTVSDesignSystem_be3538;
+    function Demo(){
+      const [email,setEmail]=React.useState('');
+      const [news,setNews]=React.useState(true);
+      const [beta,setBeta]=React.useState(false);
+      const [t1,setT1]=React.useState(true);
+      const [t2,setT2]=React.useState(false);
+      return (
+        <div className="grid">
+          <div className="stack">
+            <Input label="E-mail corporativo" value={email} onChange={e=>setEmail(e.target.value)}
+              placeholder="voce@empresa.com.br" iconLeft={<i className="ph ph-envelope-simple"/>}
+              hint="A gente nunca compartilha seus dados." />
+            <Input label="CNPJ" value="" onChange={()=>{}} placeholder="00.000.000/0000-00"
+              error="Informe um CNPJ válido." />
+          </div>
+          <div className="stack">
+            <Switch checked={news} onChange={setNews} label="Receber novidades da TOTVS" />
+            <Switch checked={beta} onChange={setBeta} label="Participar do programa beta" />
+            <Checkbox checked={t1} onChange={setT1} label="Li e aceito os termos de uso." />
+            <Checkbox checked={t2} onChange={setT2} label="Quero falar com um especialista." />
+          </div>
+        </div>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+  </script>
+</body>
+</html>

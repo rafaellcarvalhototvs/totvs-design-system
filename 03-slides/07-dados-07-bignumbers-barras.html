@@ -1,0 +1,61 @@
+<!-- @dsCard group="14 Slides — Diagramas & dados" viewport="1280x720" name="Texto + Big Numbers (barras)" subtitle="Dark variant — horizontal bar chart, 75% big number, outlined note" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.bn2 { background: #fff; display: flex; }
+  .bn2 .left { width: 50%; padding: 50px 48px; box-sizing: border-box; }
+  .bn2 h1 { font-family: var(--font-display); font-weight: 800; font-size: 46px; letter-spacing: -.02em; margin: 0; color: var(--totvs-dark); }
+  .bn2 h1 em { font-style: normal; color: var(--totvs-cyan); }
+  .bn2 .sub { font-family: var(--font-text); font-size: 21px; color: var(--text-muted); margin: 6px 0 0; }
+  .bn2 .body { font-family: var(--font-text); font-size: 17px; line-height: 1.5; color: var(--text-body); margin: 40px 0 0; }
+  .bn2 .body.bold { font-family: var(--font-display); font-weight: 700; color: var(--text-muted); margin-top: 20px; }
+  .bn2 .body.bold b { color: var(--totvs-dark); }
+  .bn2 .right { width: 50%; background: var(--totvs-dark); color: #fff; padding: 44px 48px; box-sizing: border-box; position: relative; }
+  .chart { position: relative; margin-top: 6px; }
+  .bar { display: flex; align-items: center; gap: 12px; margin: 14px 0; }
+  .bar .lbl { width: 56px; font-family: var(--font-text); font-size: 12px; color: #fff; text-align: right; }
+  .bar .fill { height: 30px; border-radius: 3px; }
+  .b3 { width: 16%; background: var(--totvs-cyan); }
+  .b2 { width: 35%; background: #fff; }
+  .b1 { width: 88%; background: var(--totvs-green); }
+  .pct { position: absolute; right: 30px; top: 40%; transform: translateY(-50%); font-family: var(--font-display); font-weight: 800; font-size: 92px; color: var(--totvs-green); letter-spacing: -.03em; }
+  .legend { margin-top: 16px; }
+  .legend div { display: flex; align-items: center; gap: 9px; font-family: var(--font-display); font-weight: 600; font-size: 16px; margin: 6px 0; color: #fff; }
+  .legend .dot { width: 11px; height: 11px; border-radius: 50%; }
+  .massa { position: absolute; right: 48px; top: 300px; width: 42%; font-family: var(--font-display); font-weight: 800; font-size: 23px; line-height: 1.2; color: #fff; }
+  .note-o { position: absolute; right: 48px; bottom: 56px; width: 42%; border: 1.5px solid rgba(255,255,255,.4); border-radius: 14px; padding: 20px 24px; font-family: var(--font-text); font-size: 16px; line-height: 1.45; color: #fff; box-sizing: border-box; }
+  .editnote { position: absolute; left: 48px; bottom: 36px; width: 34%; font-family: var(--font-text); font-size: 11.5px; line-height: 1.35; color: #fff; }
+  .editnote b { font-weight: 800; }
+</style>
+</head>
+<body>
+  <div class="slide bn2">
+    <div class="left">
+      <h1>Texto <em>+ Big Numbers</em></h1>
+      <p class="sub">Complete a informação neste espaço</p>
+      <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Key word or statement to be highlighted. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer nec hendrerit erat, id iaculis nulla. Donec vel dapibus nisi.</p>
+      <p class="body bold">Nullam pharetra leo eu purus congue euismod. Pellent habitant morbi <b>tristique senectus et netus et erat mus malesuada fames ac turpis egestas.</b> Nam pharetravel sollicitudin tincidunt.</p>
+    </div>
+    <div class="right">
+      <div class="pagemark on-dark"><span class="n">25</span><img src="../assets/totvs-symbol-white.svg" alt=""></div>
+      <div class="chart">
+        <div class="bar"><span class="lbl">3rd Qtr</span><div class="fill b3"></div></div>
+        <div class="bar"><span class="lbl">2nd Qtr</span><div class="fill b2"></div></div>
+        <div class="bar"><span class="lbl">1st Qtr</span><div class="fill b1"></div></div>
+        <div class="pct">75%</div>
+      </div>
+      <div class="legend">
+        <div><span class="dot" style="background:var(--totvs-cyan)"></span>Legenda número 1</div>
+        <div><span class="dot" style="background:#fff"></span>Legenda número 2</div>
+        <div><span class="dot" style="background:var(--totvs-cyan)"></span>Legenda número 3</div>
+      </div>
+      <p class="massa">Massa de texto, leo consectetuer adipisc elit, sed diam amet</p>
+      <div class="note-o">Euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Key word or state to be highlighted.</div>
+      <div class="editnote"><b>Para editar,</b> selecione a margem do gráfico e escolha a opção Editar dados no Excel.</div>
+    </div>
+  </div>
+</body>
+</html>

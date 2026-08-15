@@ -1,0 +1,28 @@
+<!-- @dsCard group="08 Fundamentos — Iconografia" viewport="700x300" name="Iconografia" subtitle="Official thin-line segment icons + Phosphor (regular) as the live substitute" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<style>
+  body { margin:0; font-family: var(--font-text); background: var(--surface-card); padding:20px 24px; box-sizing:border-box; }
+  .label { font-family:var(--font-display); font-weight:700; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--text-muted); margin:0 0 10px; }
+  .sheet { width:100%; border-radius:var(--radius-md); display:block; }
+  .row { display:flex; gap:26px; margin-top:8px; color:var(--totvs-cyan); }
+  .row i { font-size:30px; }
+  .note { font-size:12px; color:var(--text-muted); margin-top:14px; line-height:1.5; }
+</style>
+</head>
+<body>
+  <p class="label">Segmentos — biblioteca oficial (traço fino, cyan)</p>
+  <img class="sheet" src="../assets/icons/totvs-icons-segmentos.png" alt="Ícones de segmentos TOTVS">
+  <p class="label" style="margin-top:18px;">Substituto em HTML — Phosphor (regular)</p>
+  <div class="row">
+    <i class="ph ph-tractor"></i><i class="ph ph-truck"></i><i class="ph ph-factory"></i>
+    <i class="ph ph-shopping-cart-simple"></i><i class="ph ph-graduation-cap"></i><i class="ph ph-heartbeat"></i>
+    <i class="ph ph-scales"></i><i class="ph ph-coins"></i>
+  </div>
+  <p class="note">Single-color, thin even stroke, rounded terminals. Substitute the official set when the icon font is available.</p>
+</body>
+</html>

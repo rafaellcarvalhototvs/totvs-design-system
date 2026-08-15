@@ -1,0 +1,23 @@
+<!-- @dsCard group="04 Fundamentos — Cores" viewport="700x170" name="Brand gradients" subtitle="Two-stop blends across adjacent brights — hero washes & grafismo" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family: var(--font-text); background: var(--surface-card); padding:18px; box-sizing:border-box; }
+  .grid { display:grid; grid-template-columns: repeat(3,1fr); gap:12px; }
+  .g { height:62px; border-radius: var(--radius-md); display:flex; align-items:flex-end; padding:8px 10px; color:#fff; font-family:var(--font-display); font-weight:700; font-size:11px; letter-spacing:.01em; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="g" style="background:var(--grad-cyan-purple)">cyan → purple</div>
+    <div class="g" style="background:var(--grad-purple-orange)">purple → orange</div>
+    <div class="g" style="background:var(--grad-pink-lime); color:var(--totvs-dark)">pink → lime</div>
+    <div class="g" style="background:var(--grad-green-cyan); color:var(--totvs-dark)">green → cyan</div>
+    <div class="g" style="background:var(--grad-lime-green); color:var(--totvs-dark)">lime → green</div>
+    <div class="g" style="background:var(--grad-dark-cyan)">dark → cyan</div>
+  </div>
+</body>
+</html>

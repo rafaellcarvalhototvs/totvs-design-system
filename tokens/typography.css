@@ -1,0 +1,72 @@
+/* ============================================================
+   TOTVS — TYPOGRAPHY TOKENS
+   Institutional (display): the official proprietary "TOTVS" typeface —
+   a geometric grotesque in 6 weights (ExtraLight→ExtraBold), installed
+   as webfonts in tokens/fonts.css.
+
+   System / text: **Verdana** (and Verdana Bold) — websafe, exactly
+   as specified in the brand manual for everyday text.
+   ============================================================ */
+
+/* Official TOTVS typeface declared in tokens/fonts.css. */
+
+:root {
+  /* ---- Families ---- */
+  --font-display: 'TOTVS', 'Segoe UI', Tahoma, sans-serif; /* @kind font */
+  --font-text:    Verdana, 'Segoe UI', Tahoma, sans-serif; /* @kind font */
+  --font-mono:    'SF Mono', Consolas, ui-monospace, monospace; /* @kind font */
+
+  /* ---- Weights (mirror the TOTVS weight set) ---- */
+  --fw-extralight: 200; /* @kind font */
+  --fw-light:      300; /* @kind font */
+  --fw-regular:    400; /* @kind font */
+  --fw-semibold:   600; /* @kind font */
+  --fw-bold:       700; /* @kind font */
+  --fw-extrabold:  800; /* @kind font */
+
+  /* ---- Type scale (px) — display uses --font-display ---- */
+  --fs-display-2xl: 76px;  /* hero */
+  --fs-display-xl:  60px;
+  --fs-display-lg:  46px;
+  --fs-h1:          36px;
+  --fs-h2:          28px;
+  --fs-h3:          22px;
+  --fs-title:       18px;
+  --fs-body-lg:     17px;
+  --fs-body:        15px;
+  --fs-body-sm:     13px;
+  --fs-caption:     12px;
+  --fs-overline:    11px;
+
+  /* ---- Line heights ---- */
+  --lh-tight:   1.04;  /* @kind other */
+  --lh-snug:    1.18;  /* @kind other */
+  --lh-normal:  1.5;   /* @kind other */
+  --lh-relaxed: 1.65;  /* @kind other */
+
+  /* ---- Letter spacing ---- */
+  --ls-display: -0.02em;  /* @kind other */
+  --ls-heading: -0.01em; /* @kind other */
+  --ls-normal:  0; /* @kind other */
+  --ls-overline: 0.14em;  /* @kind other */
+
+  /* ---- Semantic text roles ---- */
+  --role-display-font: var(--font-display);
+  --role-heading-font: var(--font-display);
+  --role-body-font:    var(--font-text);
+}
+
+/* Convenience utility classes (optional helpers for cards/kits) */
+.t-display { font-family: var(--font-display); font-weight: var(--fw-extrabold);
+  font-size: var(--fs-display-xl); line-height: var(--lh-tight); letter-spacing: var(--ls-display);
+  color: var(--text-strong); }
+.t-h1 { font-family: var(--font-display); font-weight: var(--fw-bold);
+  font-size: var(--fs-h1); line-height: var(--lh-snug); letter-spacing: var(--ls-heading); color: var(--text-strong); }
+.t-h2 { font-family: var(--font-display); font-weight: var(--fw-bold);
+  font-size: var(--fs-h2); line-height: var(--lh-snug); letter-spacing: var(--ls-heading); color: var(--text-strong); }
+.t-h3 { font-family: var(--font-display); font-weight: var(--fw-semibold);
+  font-size: var(--fs-h3); line-height: var(--lh-snug); color: var(--text-strong); }
+.t-body { font-family: var(--font-text); font-weight: var(--fw-regular);
+  font-size: var(--fs-body); line-height: var(--lh-normal); color: var(--text-body); }
+.t-overline { font-family: var(--font-display); font-weight: var(--fw-bold);
+  font-size: var(--fs-overline); letter-spacing: var(--ls-overline); text-transform: uppercase; color: var(--text-muted); }

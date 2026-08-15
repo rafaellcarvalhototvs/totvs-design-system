@@ -1,0 +1,33 @@
+<!-- @dsCard group="06 Fundamentos — Grafismo & composição" viewport="720x540" name="Composição com foto" subtitle="The grafismo over photography — as a panel for text/logo and as a frame for emphasis" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family:var(--font-text); background:var(--surface-card); }
+  .art { display:block; width:100%; aspect-ratio:1436/810; object-fit:cover; }
+  .rules { display:grid; grid-template-columns:1fr 1fr; gap:0; }
+  .rule { padding:18px 22px; border-right:1px solid var(--border-subtle); box-sizing:border-box; }
+  .rule:last-child { border-right:0; }
+  .num { display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px;
+    border-radius:999px; background:var(--purple-soft); color:var(--purple-700);
+    font-family:var(--font-display); font-weight:700; font-size:12px; margin-bottom:10px; }
+  .rule p { margin:0; font-size:12.5px; line-height:1.5; color:var(--text-body); }
+  .rule b { color:var(--text-strong); font-weight:700; }
+</style>
+</head>
+<body>
+  <img class="art" src="../assets/social/composicao-foto.webp" alt="Composição da marca TOTVS sobre fotografia">
+  <div class="rules">
+    <div class="rule">
+      <span class="num">1</span>
+      <p>O grafismo pode servir de <b>anteparo</b> para posicionar texto e logo na peça, com bom contraste e destaque no layout.</p>
+    </div>
+    <div class="rule">
+      <span class="num">2</span>
+      <p>O grafismo também pode <b>destacar partes da imagem</b>, atuando como uma moldura que enquadra o que se deseja enfatizar.</p>
+    </div>
+  </div>
+</body>
+</html>

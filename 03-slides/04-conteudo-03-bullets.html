@@ -1,0 +1,76 @@
+<!-- @dsCard group="13 Slides — Conteúdo" viewport="1280x720" name="Lista de bullets" subtitle="Cyan ground, grafismo + image slot left, bullet cards right (official layout)" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<style>
+  .slide.bullets { background: var(--totvs-cyan); color: var(--totvs-dark); }
+  .bullets .pad { padding: 56px 72px; }
+  .head { position: relative; z-index: 2; }
+  .bullets .title { font-size: 52px; color: var(--totvs-dark); }
+  .bullets .sub { font-family: var(--font-text); font-size: 22px; color: var(--totvs-dark); opacity: .85; margin: 8px 0 0; }
+  .topright { position: absolute; top: 56px; right: 72px; display: flex; align-items: center; gap: 12px; }
+  .topright .pg { font-family: var(--font-display); font-weight: 700; font-size: 15px; color: var(--totvs-dark); }
+  .topright img { height: 26px; }
+  /* layout */
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; margin-top: 22px; flex: 1; align-items: stretch; position: relative; z-index: 2; }
+  /* left: grafismo + image slot */
+  .left { position: relative; }
+  .graf {
+    position: absolute; left: -130px; top: 50%; transform: translateY(-50%);
+    width: 700px; height: 700px; background: url('../assets/grafismo/grafismo-navy.png') center/contain no-repeat;
+    opacity: .9; z-index: 0; pointer-events: none;
+  }
+  .imgslot {
+    position: relative; z-index: 1; height: 100%; min-height: 360px;
+    border: 2px dashed rgba(0,34,51,.45); border-radius: var(--radius-lg);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .imgslot .chip {
+    display: inline-flex; align-items: center; gap: 10px; background: #fff; color: var(--totvs-dark);
+    font-family: var(--font-display); font-weight: 600; font-size: 17px; padding: 12px 18px;
+    border-radius: var(--radius-pill); box-shadow: var(--shadow-md); white-space: nowrap;
+  }
+  .imgslot .chip i { color: var(--cyan-700); font-size: 22px; }
+  /* right column */
+  .right { display: flex; flex-direction: column; }
+  .lead { font-family: var(--font-text); font-weight: 700; font-size: 22px; line-height: 1.4; color: var(--totvs-dark); margin: 0 0 26px; }
+  .blist { display: flex; flex-direction: column; gap: 14px; }
+  .bcard {
+    border: 1.5px solid rgba(0,34,51,.35); border-radius: var(--radius-md);
+    padding: 16px 20px; font-family: var(--font-text); font-size: 16px; line-height: 1.45; color: var(--totvs-dark);
+  }
+  .symbol-br { position: absolute; left: 56px; bottom: 44px; height: 26px; opacity: .9; z-index: 2; }
+</style>
+</head>
+<body>
+  <div class="slide bullets">
+    <div class="pagemark"><span class="n">06</span><img src="../assets/totvs-symbol.svg" alt=""></div>
+    <div class="pad">
+      <div class="head">
+        <h1 class="title">Lista de bullets</h1>
+        <p class="sub">Insira aqui um subtítulo, se necessário</p>
+      </div>
+      <div class="cols">
+        <div class="left">
+          <div class="graf"></div>
+          <div class="imgslot">
+            <span class="chip"><i class="ph ph-image"></i>Inserir imagem</span>
+          </div>
+        </div>
+        <div class="right">
+          <p class="lead">Massa de texto, consectetuer am adipisc elit, seimt nonum nibh morq euismod tincidunt ut lore laoreet sit dolore sat magna aliquam erat agt volutpat dolor.</p>
+          <div class="blist">
+            <div class="bcard">Ut wisi enim adminim veniam, quisnos exercitus</div>
+            <div class="bcard">Magna aliquam erat agt volutpat dolor</div>
+            <div class="bcard">Seimt nonum nibh morq euismod tincidunt</div>
+            <div class="bcard">Cras eu quam ultrices, efficitur elit nec, sed diam nonum nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

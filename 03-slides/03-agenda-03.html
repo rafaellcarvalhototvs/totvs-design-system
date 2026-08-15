@@ -1,0 +1,48 @@
+<!-- @dsCard group="12 Slides — Abertura & agenda" viewport="1280x720" name="Agenda 3" subtitle="Two-column numbered agenda — navy ground, glass cards, staggered cyan numbers" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.ag3 { background: var(--totvs-dark); background-image: radial-gradient(130% 120% at 20% 20%, #012c3c 0%, var(--totvs-dark) 55%, #00111c 100%); color: #fff; overflow: hidden; }
+  .ag3 .pad { padding: 48px 64px; height: 100%; box-sizing: border-box; }
+  .ag3 h1 { font-family: var(--font-display); font-weight: 800; font-size: 44px; color: var(--totvs-cyan); margin: 0; letter-spacing: -.01em; }
+  .ag3 .sub { font-size: 20px; color: #fff; margin: 2px 0 30px; }
+  .ag3 .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; max-width: 864px; margin: 16px auto 0; }
+  .ag3 .card { position: relative; border: 1px solid rgba(0,196,255,.32); border-radius: 18px;
+    padding: 16px 32px 16px 60px; min-height: 472px;
+    display: flex; flex-direction: column;
+    background: linear-gradient(152deg, rgba(0,196,255,.07) 0%, rgba(0,196,255,.015) 42%, rgba(255,255,255,.012) 100%); }
+  .ag3 .col-l { justify-content: flex-start; }
+  .ag3 .col-r { justify-content: flex-end; }
+  .ag3 .item { position: relative; display: flex; flex-direction: column; justify-content: center; padding: 22px 0; }
+  .ag3 .item + .item { border-top: 1px solid rgba(255,255,255,.15); }
+  .ag3 .num { position: absolute; left: -92px; top: 50%; transform: translateY(-50%);
+    width: 84px; text-align: center; font-family: var(--font-display); font-weight: 800; font-size: 76px; line-height: .9; color: var(--totvs-cyan); }
+  .ag3 .it-label { font-family: var(--font-display); font-weight: 800; font-size: 24px; color: var(--totvs-cyan); margin: 0 0 7px; }
+  .ag3 .it-desc { font-size: 16px; line-height: 1.42; color: #fff; max-width: 300px; }
+</style>
+</head>
+<body>
+  <div class="slide ag3">
+    <div class="pagemark on-dark"><span class="n">37</span><img src="../assets/totvs-symbol-white.svg" alt=""></div>
+    <div class="pad">
+      <h1>Agenda 3</h1>
+      <p class="sub">Tema geral da apresentação ou evento</p>
+      <div class="cols">
+        <div class="card col-l">
+          <div class="item"><span class="num">1</span><div class="txt"><div class="it-label">Introdução</div><div class="it-desc">Nome do palestrante ou descrição breve em 2 linhas</div></div></div>
+          <div class="item"><span class="num">3</span><div class="txt"><div class="it-label">Tema</div><div class="it-desc">Nome do palestrante ou descrição breve em 2 linhas</div></div></div>
+          <div class="item"><span class="num">5</span><div class="txt"><div class="it-label">Tema</div><div class="it-desc">Nome do palestrante ou descrição breve em 2 linhas</div></div></div>
+        </div>
+        <div class="card col-r">
+          <div class="item"><span class="num">2</span><div class="txt"><div class="it-label">Tema</div><div class="it-desc">Nome do palestrante ou descrição breve em 2 linhas</div></div></div>
+          <div class="item"><span class="num">4</span><div class="txt"><div class="it-label">Tema</div><div class="it-desc">Nome do palestrante ou descrição breve em 2 linhas</div></div></div>
+          <div class="item"><span class="num">6</span><div class="txt"><div class="it-label">Tema</div><div class="it-desc">Nome do palestrante ou descrição breve em 2 linhas</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!-- @dsCard group="13 Slides — Conteúdo" viewport="1280x720" name="Texto + imagem (preenchimento)" subtitle="Text left, large image fill placeholder right, orange accent title" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.ti { background: #fff; display: flex; }
+  .ti .left { width: 50%; padding: 50px 56px; box-sizing: border-box; }
+  .ti h1 { font-family: var(--font-display); font-weight: 800; font-size: 42px; letter-spacing: -.02em; margin: 0; color: var(--totvs-dark); }
+  .ti h1 em { font-style: normal; color: var(--totvs-orange); }
+  .ti .sub { font-family: var(--font-text); font-size: 20px; color: var(--text-muted); margin: 6px 0 0; }
+  .ti .body { font-family: var(--font-text); font-size: 17px; line-height: 1.5; color: var(--text-body); margin: 40px 0 0; }
+  .ti .body b { color: var(--totvs-orange); font-weight: 700; }
+  .ti .body + .body { margin-top: 18px; }
+  .ti .right { width: 50%; padding: 44px 56px 44px 0; box-sizing: border-box; }
+  .slot { width: 100%; height: 100%; border: 2px dashed var(--grey-300, #c4ccd1); border-radius: 18px; background: var(--grey-50, #f3f5f6);
+    display: flex; align-items: center; justify-content: center; }
+  .slot .pill { display: inline-flex; align-items: center; gap: 12px; background: #fff; border-radius: var(--radius-pill);
+    padding: 14px 22px; box-shadow: var(--shadow-md); font-family: var(--font-text); font-size: 19px; color: var(--text-strong); }
+  .slot .pill svg { width: 28px; height: 28px; }
+</style>
+</head>
+<body>
+  <div class="slide ti">
+    <div class="left">
+      <h1>Título do slide. <em>Apenas 1 linha</em></h1>
+      <p class="sub">Complemento da informação aqui</p>
+      <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Key word or statement <b>to be highlighted.</b> Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer nec hendrerit erat, id iaculis nulla. Donec vel dapibus nisi.</p>
+      <p class="body">Nullam pharetra leo eu purus congue euismod. Pellent habitant morbi tristique senectus et netus et erat mus malesuada fames ac turpis egestas. Nam pharetravel sollicitudin tincidunt.</p>
+    </div>
+    <div class="right">
+      <div class="slot"><span class="pill"><svg viewBox="0 0 32 32" fill="none" stroke="var(--totvs-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="24" height="18" rx="2"/><circle cx="11" cy="13" r="2.5"/><path d="M6 22l7-7 5 5 4-4 4 4"/><path d="M22 26v6M19 29l3 3 3-3"/></svg>Inserir Imagem (Preenchimento)</span></div>
+    </div>
+    <div class="pagemark"><span class="n">08</span><img src="../assets/totvs-symbol.svg" alt=""></div>
+  </div>
+</body>
+</html>

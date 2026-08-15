@@ -1,0 +1,32 @@
+<!-- @dsCard group="07 Fundamentos — Fotografia" viewport="860x430" name="Fotografia — galeria" subtitle="Example imagery — proprietary aesthetic built from technique, lens and angle" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family:var(--font-text); background:var(--surface-card); color:var(--text-strong);
+    padding:24px 26px; box-sizing:border-box; display:flex; flex-direction:column; gap:16px; }
+  .head { max-width:64ch; }
+  .overline { font-family:var(--font-display); font-weight:700; font-size:10px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--text-muted); }
+  h1 { font-family:var(--font-display); font-weight:800; font-size:24px; letter-spacing:-.02em; margin:4px 0 8px; }
+  .head p { margin:0; font-size:12.5px; line-height:1.55; color:var(--text-body); }
+  .gallery { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  .gallery img { width:100%; aspect-ratio:747/466; object-fit:cover; border-radius:var(--radius-sm);
+    box-shadow:var(--shadow-sm); }
+</style>
+</head>
+<body>
+  <div class="head">
+    <div class="overline">Fotografia</div>
+    <h1>Galeria de exemplos</h1>
+    <p>Veja como o uso de técnicas, lentes e ângulos constrói uma estética proprietária e diferenciada, fácil de associar à TOTVS.</p>
+  </div>
+  <div class="gallery">
+    <img src="../assets/social/foto-galeria-1.webp" alt="Exemplo de fotografia TOTVS 1">
+    <img src="../assets/social/foto-galeria-2.webp" alt="Exemplo de fotografia TOTVS 2">
+    <img src="../assets/social/foto-galeria-3.webp" alt="Exemplo de fotografia TOTVS 3">
+  </div>
+</body>
+</html>

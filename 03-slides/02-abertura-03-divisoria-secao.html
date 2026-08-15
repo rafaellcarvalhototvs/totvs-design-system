@@ -1,0 +1,100 @@
+<!-- @dsCard group="12 Slides — Abertura & agenda" viewport="1280x720" name="Divisória de seção" subtitle="Padrão de divisória — foto, anel cyan com número, título em 2 pesos — 5 variações de foto aprovada" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.secao {
+    background: #00121c center/cover no-repeat;
+    background-image: url('../assets/aberturas/abertura-01.opt.jpg');
+    position: relative; overflow: hidden;
+  }
+  .secao .overlay {
+    position: absolute; inset: 0; z-index: 1;
+    background: linear-gradient(100deg, rgba(0,18,28,.94) 0%, rgba(0,18,28,.72) 26%, rgba(0,18,28,.28) 50%, rgba(0,18,28,0) 72%);
+  }
+  .dwrap { position: absolute; left: 64px; top: 50%; transform: translateY(-50%); display: flex; align-items: center; gap: 34px; z-index: 2; }
+  .ring { position: relative; width: 246px; height: 258px; flex: 0 0 auto;
+    background: url('../assets/grafismo/grafismo-numero-sm.png') center/contain no-repeat;
+    display: flex; align-items: center; justify-content: center; }
+  .ring .num { font-family: var(--font-display); font-weight: 800; font-size: 76px; color: #fff; letter-spacing: -.02em; line-height: 1; }
+  .dtext { max-width: 640px; }
+  .dtitle { margin: 0; color: #fff; letter-spacing: -.01em; }
+  .dtitle .reg { display: block; font-family: var(--font-display); font-weight: 400; font-size: 50px; line-height: 1.06; }
+  .dtitle .bold { display: block; font-family: var(--font-display); font-weight: 800; font-size: 56px; line-height: 1.02; }
+  .dsub { display: inline-block; margin-top: 20px; padding: 9px 16px; color: #fff;
+    font-family: var(--font-text); font-size: 16px; border: 1px dashed rgba(255,255,255,.65); border-radius: 6px; }
+  /* Seletor de variação — 5 fotos aprovadas (banco "aberturas") */
+  .secao .vars { position: absolute; right: 56px; bottom: 40px; z-index: 3; display: flex; gap: 8px; }
+  .secao .vars button { width: 11px; height: 11px; padding: 0; border-radius: 50%; cursor: pointer;
+    background: rgba(255,255,255,.32); border: 1px solid rgba(255,255,255,.6); transition: background .16s ease, transform .16s ease; }
+  .secao .vars button:hover { transform: scale(1.12); }
+  .secao .vars button[aria-current="true"] { background: var(--totvs-cyan); border-color: var(--totvs-cyan); }
+</style>
+</head>
+<body>
+  <div class="slide secao">
+    <div class="overlay"></div>
+    <div class="pagemark on-dark"><span class="n">03</span><img src="../assets/totvs-symbol-white.svg" alt=""></div>
+    <div class="dwrap">
+      <div class="ring"><span class="num">01</span></div>
+      <div class="dtext">
+        <h1 class="dtitle"><span class="reg">Inserir o título</span><span class="bold">em até 2 linhas</span></h1>
+        <div class="dsub">Se necessário, complemente a informação neste espaço</div>
+      </div>
+    </div>
+    <div class="vars" role="group" aria-label="Variações de foto aprovada"></div>
+  </div>
+
+  <script>
+    (function () {
+      var imgs = [
+        '../assets/aberturas/abertura-01.opt.jpg',
+        '../assets/aberturas/abertura-02.opt.jpg',
+        '../assets/aberturas/abertura-03.opt.jpg',
+        '../assets/aberturas/abertura-05.opt.jpg',
+        '../assets/aberturas/abertura-06.opt.jpg',
+        '../assets/aberturas/abertura-09.opt.jpg',
+        '../assets/aberturas/abertura-10.opt.jpg',
+        '../assets/aberturas/abertura-12.opt.jpg',
+        '../assets/aberturas/abertura-13.opt.jpg',
+        '../assets/aberturas/abertura-15.opt.jpg',
+        '../assets/aberturas/abertura-16.opt.jpg',
+        '../assets/aberturas-animadas/anim-01.jpg',
+        '../assets/aberturas-animadas/anim-02.jpg',
+        '../assets/aberturas-animadas/anim-03.jpg',
+        '../assets/aberturas-animadas/anim-04.jpg',
+        '../assets/aberturas-animadas/anim-05.jpg',
+        '../assets/aberturas-animadas/anim-06.jpg',
+        '../assets/aberturas-animadas/anim-07.jpg',
+        '../assets/aberturas-animadas/anim-08.jpg',
+        '../assets/aberturas-animadas/anim-09.jpg',
+        '../assets/aberturas-animadas/anim-10.jpg'
+      ];
+      var KEY = 'totvs-secao-var';
+      var slide = document.querySelector('.slide.secao');
+      var bar = slide.querySelector('.vars');
+      var current = parseInt(localStorage.getItem(KEY), 10);
+      if (isNaN(current) || current < 0 || current >= imgs.length) current = 0;
+
+      function apply(i) {
+        current = i;
+        slide.style.backgroundImage = "url('" + imgs[i] + "')";
+        Array.prototype.forEach.call(bar.children, function (b, k) {
+          b.setAttribute('aria-current', k === i ? 'true' : 'false');
+        });
+        try { localStorage.setItem(KEY, String(i)); } catch (e) {}
+      }
+      imgs.forEach(function (_, i) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('aria-label', 'Variação ' + (i + 1));
+        b.addEventListener('click', function () { apply(i); });
+        bar.appendChild(b);
+      });
+      apply(current);
+    })();
+  </script>
+</body>
+</html>

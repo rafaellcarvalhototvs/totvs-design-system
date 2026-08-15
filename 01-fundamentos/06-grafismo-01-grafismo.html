@@ -1,0 +1,36 @@
+<!-- @dsCard group="06 Fundamentos — Grafismo & composição" viewport="700x240" name="Grafismo (O 3D)" subtitle="The signature ring device — cropped large on navy, color & light grounds" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family: var(--font-display); display:grid; grid-template-columns:1.25fr 1fr 1fr; height:240px; }
+  .block { position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end; padding:18px; box-sizing:border-box; }
+  .navy { background:var(--totvs-dark); color:#fff; }
+  .cyan { background:var(--totvs-cyan); color:var(--totvs-dark); }
+  .light{ background:var(--surface-page); color:var(--text-strong); }
+  .g { position:absolute; width:230px; height:230px; background-size:contain; background-repeat:no-repeat; background-position:center; }
+  .kicker { position:relative; font-weight:700; font-size:10px; letter-spacing:.14em; text-transform:uppercase; opacity:.75; margin-bottom:5px; }
+  .head { position:relative; font-weight:800; font-size:18px; line-height:1.05; letter-spacing:-.02em; margin:0; }
+  .logo { position:relative; height:26px; }
+</style>
+</head>
+<body>
+  <div class="block navy">
+    <div class="g" style="background-image:url(../assets/grafismo/grafismo-cyan.png); right:-70px; top:-50px;"></div>
+    <div class="kicker" style="color:var(--totvs-cyan)">Sobre escuro</div>
+    <p class="head">A gente faz<br>acontecer.</p>
+  </div>
+  <div class="block cyan">
+    <div class="g" style="background-image:url(../assets/grafismo/grafismo-navy.png); right:-80px; bottom:-70px; width:200px; height:200px;"></div>
+    <div class="kicker">Sobre cor</div>
+    <p class="head">Resultado<br>responsável</p>
+  </div>
+  <div class="block light">
+    <div class="g" style="background-image:url(../assets/grafismo/grafismo-teal.png); right:-60px; top:-55px; width:185px; height:185px;"></div>
+    <img class="logo" src="../assets/totvs-logo.svg" alt="TOTVS">
+    <div class="kicker" style="color:var(--text-muted); opacity:1; margin-top:8px; margin-bottom:0;">Sobre claro · com logo</div>
+  </div>
+</body>
+</html>

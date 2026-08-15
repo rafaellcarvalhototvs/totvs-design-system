@@ -1,0 +1,56 @@
+<!-- @dsCard group="14 Slides — Diagramas & dados" viewport="1280x720" name="Tabela 3 (escura)" subtitle="Dark pill-cell table — rounded cells, cyan highlights, outlined totals, footer notes" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.tab3 { background: var(--totvs-dark); color: #fff; }
+  .tab3 .pad { padding: 44px 56px 32px; }
+  .tab3 h1 { font-family: var(--font-display); font-weight: 800; font-size: 44px; letter-spacing: -.02em; margin: 0; color: var(--totvs-cyan); }
+  .tab3 .sub { font-family: var(--font-text); font-size: 20px; color: #fff; margin: 4px 0 0; }
+  .grid3 { margin-top: 22px; display: flex; flex-direction: column; gap: 10px; }
+  .trow { display: grid; grid-template-columns: 1.1fr 2.6fr 1fr 1fr 1fr 1fr; gap: 12px; }
+  .cell { border-radius: 9px; padding: 12px 16px; font-family: var(--font-display); font-weight: 700;
+    font-size: 14px; display: flex; align-items: center; }
+  .hd .cell { background: var(--totvs-cyan); color: var(--totvs-dark); font-weight: 800; font-size: 15px; }
+  .body-row .cell { background: var(--petrol-700, #0e4a5c); color: #fff; }
+  .body-row .cell.itens { background: transparent; border: 1.5px solid rgba(255,255,255,.22); }
+  .center { justify-content: center; }
+  .cell.total { background: transparent; border: 1.5px solid var(--totvs-cyan); justify-content: center; }
+  .cell.hi { background: var(--totvs-cyan); color: var(--totvs-dark); justify-content: center; }
+  .cell.total.hi { border-color: var(--totvs-cyan); }
+  .notes { margin-top: 16px; display: flex; flex-direction: column; gap: 10px; }
+  .note { border-radius: 9px; padding: 12px 18px; font-family: var(--font-display); font-weight: 700; font-size: 14px; }
+  .note.a { border: 1.5px solid rgba(255,255,255,.22); color: #fff; }
+  .note.b { background: var(--petrol-700, #0e4a5c); color: var(--totvs-cyan); }
+</style>
+</head>
+<body>
+  <div class="slide tab3">
+    <div class="pagemark on-dark"><span class="n">23</span><img src="../assets/totvs-symbol-white.svg" alt=""></div>
+    <div class="pad">
+      <h1>Tabela 3</h1>
+      <p class="sub">Complete a informação neste espaço</p>
+      <div class="grid3">
+        <div class="trow hd">
+          <div class="cell">ITENS</div><div class="cell">DESCRIÇÃO</div>
+          <div class="cell center">CATEGORIA</div><div class="cell center">VALORES 1</div>
+          <div class="cell center">VALORES 2</div><div class="cell center">TOTAL</div>
+        </div>
+        <div class="trow body-row"><div class="cell itens">Item 1</div><div class="cell">Lorem ipsum dolor sit amet, consect</div><div class="cell center">3</div><div class="cell center">200</div><div class="cell center">400</div><div class="cell total">600</div></div>
+        <div class="trow body-row"><div class="cell itens">Item 2</div><div class="cell">Lorem ipsum dolor sit amet, consectetuer adipis</div><div class="cell center">1</div><div class="cell center">50</div><div class="cell center hi">800</div><div class="cell total">850</div></div>
+        <div class="trow body-row"><div class="cell itens">Item 3</div><div class="cell">Lorem ipsum dolor</div><div class="cell center">6</div><div class="cell center">100</div><div class="cell center">20</div><div class="cell total">120</div></div>
+        <div class="trow body-row"><div class="cell itens">Item 4</div><div class="cell">Lorem ipsum dolor sit amet, consectetuer</div><div class="cell center">8</div><div class="cell center hi">970</div><div class="cell center">120</div><div class="cell total">1090</div></div>
+        <div class="trow body-row"><div class="cell itens">Item 5</div><div class="cell">Lorem ipsum dolor sit ametlit</div><div class="cell center">————</div><div class="cell center">50</div><div class="cell center">40</div><div class="cell total">90</div></div>
+        <div class="trow body-row"><div class="cell itens">Item 6</div><div class="cell">Lorem ipsum dolor sit amet consectetuer</div><div class="cell center">————</div><div class="cell center">150</div><div class="cell center">160</div><div class="cell total hi">310</div></div>
+        <div class="trow body-row"><div class="cell itens">Item 7</div><div class="cell">Lorem ipsum dolor sit amet consectetuer</div><div class="cell center">————</div><div class="cell center">150</div><div class="cell center">160</div><div class="cell total hi">310</div></div>
+      </div>
+      <div class="notes">
+        <div class="note a">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</div>
+        <div class="note b">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

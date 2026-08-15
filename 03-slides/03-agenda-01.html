@@ -1,0 +1,57 @@
+<!-- @dsCard group="12 Slides — Abertura & agenda" viewport="1280x720" name="Agenda" subtitle="Agenda timed list — blob image slot left, cyan time markers, Q&A highlight" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.agenda { background: #fff; overflow: hidden; }
+  /* left blob image slot */
+  .blob {
+    position: absolute; left: -240px; top: 50%; transform: translateY(-50%);
+    width: 720px; height: 720px;
+    background: url('../assets/grafismo/blob-imagem-sm.png') center/contain no-repeat;
+    display: flex; align-items: center; justify-content: center; z-index: 1;
+  }
+  .blob .chip {
+    display: inline-flex; align-items: center; gap: 9px; background: #fff; color: var(--totvs-dark);
+    font-family: var(--font-display); font-weight: 600; font-size: 15px; padding: 11px 16px;
+    border-radius: var(--radius-pill); box-shadow: var(--shadow-md); transform: translateX(120px); white-space: nowrap;
+  }
+  .blob .chip i { color: var(--cyan-700); font-size: 20px; }
+  /* right agenda column */
+  .ag { position: absolute; left: 600px; right: 64px; top: 54px; z-index: 2; }
+  .ag h1 { font-family: var(--font-display); font-weight: 800; font-size: 40px; color: var(--totvs-cyan); margin: 0; letter-spacing: -.01em; }
+  .ag .sub { font-family: var(--font-text); font-size: 18px; color: var(--text-muted); margin: 4px 0 22px; }
+  .row { padding: 9px 0 8px; border-bottom: 1px solid var(--border-subtle); }
+  .row .head { display: flex; align-items: baseline; gap: 14px; }
+  .row .time { font-family: var(--font-display); font-weight: 800; font-size: 17px; color: var(--totvs-cyan); }
+  .row .name { font-family: var(--font-display); font-weight: 700; font-size: 17px; color: var(--text-strong); }
+  .row .desc { font-family: var(--font-text); font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+  .sub-item { display: flex; align-items: flex-start; gap: 16px; margin-left: 18px; }
+  .sub-item .dash { width: 22px; height: 2px; background: var(--grey-300); margin-top: 16px; flex: 0 0 auto; }
+  .sub-item .body { flex: 1; }
+  .sub-item .time { font-size: 15px; } .sub-item .name { font-size: 15px; }
+  .qa { background: var(--totvs-cyan); border-radius: var(--radius-sm); padding: 8px 14px; display: inline-flex; align-items: baseline; gap: 12px; }
+  .qa .time { color: var(--totvs-dark); } .qa .name { color: var(--totvs-dark); }
+  .qa-row { padding-top: 9px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 8px; }
+</style>
+</head>
+<body>
+  <div class="slide agenda">
+    <div class="pagemark"><span class="n">02</span><img src="../assets/totvs-symbol.svg" alt=""></div>
+    <div class="blob"><span class="chip"><i class="ph ph-image"></i>Inserir imagem</span></div>
+    <div class="ag">
+      <h1>Agenda 1</h1>
+      <p class="sub">Nome do palestrante ou descrição breve</p>
+      <div class="row"><div class="head"><span class="time">00h00</span><span class="name">Introdução</span></div><div class="desc">Descrição breve</div></div>
+      <div class="row"><div class="head"><span class="time">00h00</span><span class="name">Sessão</span></div><div class="desc">Nome do palestrante ou descrição breve</div></div>
+      <div class="row"><div class="head"><span class="time">00h00</span><span class="name">Sessão</span></div><div class="desc">Nome do palestrante ou descrição breve</div></div>
+      <div class="row"><div class="head"><span class="time">00h00</span><span class="name">Sessão</span></div><div class="desc">Nome do palestrante ou descrição breve</div></div>
+      <div class="row sub-item"><span class="dash"></span><div class="body"><div class="head"><span class="time">00h00</span><span class="name">Subsessão</span></div><div class="desc">Nome do palestrante ou descrição breve</div></div></div>
+      <div class="row sub-item"><span class="dash"></span><div class="body"><div class="head"><span class="time">00h00</span><span class="name">Subsessão</span></div><div class="desc">Tema geral da apresentação ou evento</div></div></div>
+      <div class="qa-row"><span class="qa"><span class="time">00h00</span><span class="name">Perguntas e Respostas</span></span><div class="desc">Descrição breve</div></div>
+    </div>
+  </div>
+</body>
+</html>

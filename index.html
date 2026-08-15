@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TOTVS · Design System</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  *{box-sizing:border-box;}
+  html,body{margin:0;}
+  body{font-family:Verdana,'Segoe UI',Tahoma,sans-serif;color:#fff;
+    background:#00121c radial-gradient(130% 110% at 16% 8%, #013040 0%, #00121c 52%, #000c14 100%);
+    min-height:100vh;}
+  .wrap{max-width:1280px;margin:0 auto;padding:56px 40px 80px;}
+  header.hero{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;
+    padding-bottom:28px;border-bottom:1px solid rgba(0,219,255,.22);margin-bottom:40px;}
+  .hero .lead .kick{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#00dbff;font-weight:700;margin:0 0 10px;}
+  .hero h1{font-size:48px;line-height:1.02;letter-spacing:-.02em;margin:0;font-weight:800;}
+  .hero p.sub{margin:12px 0 0;color:#9fb7c2;font-size:16px;max-width:62ch;line-height:1.5;}
+  .hero .logo{height:30px;flex:0 0 auto;opacity:.96;}
+  .kits{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 44px;}
+  .kit{display:flex;align-items:center;gap:12px;text-decoration:none;color:#00121c;background:#00dbff;
+    border-radius:12px;padding:14px 20px;font-weight:700;font-size:15px;transition:transform .16s ease, box-shadow .16s ease;}
+  .kit.alt{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.28);}
+  .kit:hover{transform:translateY(-1px);box-shadow:0 8px 26px rgba(0,219,255,.22);}
+  .grp{margin:0 0 38px;}
+  .grp h2{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#7fd8ea;font-weight:700;margin:0 0 16px;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(214px,1fr));gap:16px;}
+  .card{text-decoration:none;color:#fff;background:linear-gradient(160deg,rgba(0,219,255,.07),rgba(255,255,255,.015));
+    border:1px solid rgba(255,255,255,.10);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:12px;
+    transition:transform .16s ease, border-color .16s ease, box-shadow .16s ease;}
+  .card:hover{transform:translateY(-3px);border-color:rgba(0,219,255,.5);box-shadow:0 12px 30px rgba(0,18,28,.5);}
+  .thumb{position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden;
+    background:#0a2230 radial-gradient(120% 120% at 22% 18%, #0e3346 0%, #07202c 60%);
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;}
+  .thumb::after{content:"";position:absolute;width:40px;height:44px;
+    clip-path:polygon(50% 0,100% 27%,100% 73%,50% 100%,0 73%,0 27%);
+    border:3px solid rgba(0,219,255,.7);}
+  .cn{font-size:14px;font-weight:700;line-height:1.25;}
+  footer{margin-top:32px;color:#5f7c89;font-size:13px;border-top:1px solid rgba(255,255,255,.08);padding-top:20px;}
+  @media(max-width:640px){.hero{flex-direction:column;align-items:flex-start;}.hero h1{font-size:34px;}}
+</style>
+</head>
+<body>
+  <template id="__bundler_thumbnail">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+      <rect width="100" height="100" fill="#00121c"/>
+      <path d="M50 28 L66 37 L66 56 L50 65 L34 56 L34 37 Z" fill="none" stroke="#00DBFF" stroke-width="5" stroke-linejoin="round"/>
+      <ellipse cx="50" cy="46" rx="9" ry="6" fill="#00DBFF"/>
+    </svg>
+  </template>
+
+  <div class="wrap">
+    <header class="hero">
+      <div class="lead">
+        <p class="kick">TOTVS · Design System</p>
+        <h1>Sistema de design &amp; biblioteca de slides</h1>
+        <p class="sub">Tokens, componentes e modelos de apresentação fiéis à marca TOTVS. Selecione um modelo para abrir em tela cheia.</p>
+      </div>
+      <img class="logo" src="assets/totvs-logo-white.svg" alt="TOTVS">
+    </header>
+
+    <div class="kits">
+      <a class="kit" href="05-ui-kits/gestao/index.html">Abrir UI Kit — Gestão (produto)</a>
+      <a class="kit alt" href="03-slides/02-abertura-01-imagens-aprovadas.html">Banco de imagens aprovadas</a>
+    </div>
+
+      <section class="grp">
+        <h2>Documentos</h2>
+        <div class="grid">
+        <a class="card" href="04-documentos/01-capa-documento.html"><span class="thumb"></span><span class="cn">Capa de documento</span></a>
+        <a class="card" href="04-documentos/02-papel-timbrado.html"><span class="thumb"></span><span class="cn">Papel timbrado</span></a>
+        </div>
+      </section>
+
+      <section class="grp">
+        <h2>Capas</h2>
+        <div class="grid">
+        <a class="card" href="03-slides/01-capa-01-navy.html"><span class="thumb"></span><span class="cn">Capa</span></a>
+        <a class="card" href="03-slides/01-capa-02-cyan.html"><span class="thumb"></span><span class="cn">Capa — cyan</span></a>
+        </div>
+      </section>
+      <section class="grp">
+        <h2>Agenda</h2>
+        <div class="grid">
+        <a class="card" href="03-slides/03-agenda-01.html"><span class="thumb"></span><span class="cn">Agenda 1</span></a>
+        <a class="card" href="03-slides/03-agenda-02.html"><span class="thumb"></span><span class="cn">Agenda 2</span></a>
+        <a class="card" href="03-slides/03-agenda-03.html"><span class="thumb"></span><span class="cn">Agenda 3</span></a>
+        <a class="card" href="03-slides/03-agenda-04.html"><span class="thumb"></span><span class="cn">Agenda 4</span></a>
+        <a class="card" href="03-slides/03-agenda-05.html"><span class="thumb"></span><span class="cn">Agenda 5</span></a>
+        </div>
+      </section>
+      <section class="grp">
+        <h2>Aberturas & Divisórias</h2>
+        <div class="grid">
+        <a class="card" href="03-slides/02-abertura-01-imagens-aprovadas.html"><span class="thumb"></span><span class="cn">Imagens aprovadas</span></a>
+        <a class="card" href="03-slides/02-abertura-02-animadas.html"><span class="thumb"></span><span class="cn">Aberturas animadas</span></a>
+        <a class="card" href="03-slides/02-abertura-03-divisoria-secao.html"><span class="thumb"></span><span class="cn">Divisória de seção</span></a>
+        </div>
+      </section>
+      <section class="grp">
+        <h2>Conteúdo</h2>
+        <div class="grid">
+        <a class="card" href="03-slides/04-conteudo-01-topicos.html"><span class="thumb"></span><span class="cn">Tópicos</span></a>
+        <a class="card" href="03-slides/04-conteudo-02-topicos-icones.html"><span class="thumb"></span><span class="cn">Tópicos + ícones</span></a>
+        <a class="card" href="03-slides/04-conteudo-03-bullets.html"><span class="thumb"></span><span class="cn">Bullets</span></a>
+        <a class="card" href="03-slides/04-conteudo-04-texto-listas.html"><span class="thumb"></span><span class="cn">Texto + listas</span></a>
+        <a class="card" href="03-slides/04-conteudo-05-notebook.html"><span class="thumb"></span><span class="cn">Notebook</span></a>
+        <a class="card" href="03-slides/04-conteudo-06-texto-imagem.html"><span class="thumb"></span><span class="cn">Texto + imagem</span></a>
+        <a class="card" href="03-slides/04-conteudo-07-duas-imagens.html"><span class="thumb"></span><span class="cn">Duas imagens</span></a>
+        </div>
+      </section>
+      <section class="grp">
+        <h2>Destaques</h2>
+        <div class="grid">
+        <a class="card" href="03-slides/05-destaque-01-cyan.html"><span class="thumb"></span><span class="cn">Destaque cyan</span></a>
+        <a class="card" href="03-slides/05-destaque-02-rosa.html"><span class="thumb"></span><span class="cn">Destaque rosa</span></a>
+        <a class="card" href="03-slides/05-destaque-03-imagem.html"><span class="thumb"></span><span class="cn">Destaque + imagem</span></a>
+        <a class="card" href="03-slides/05-destaque-04-foto.html"><span class="thumb"></span><span class="cn">Destaque + foto</span></a>
+        <a class="card" href="03-slides/05-destaque-05-grandes-destaques.html"><span class="thumb"></span><span class="cn">Grandes destaques</span></a>
+        </div>
+      </section>
+      <section class="grp">
+        <h2>Processos & Diagramas</h2>
+        <div class="grid">
+        <a class="card" href="03-slides/06-processo-01-passo-a-passo.html"><span class="thumb"></span><span class="cn">Passo a passo</span></a>
+        <a class="card" href="03-slides/06-processo-02-ciclico.html"><span class="thumb"></span><span class="cn">Cíclico</span></a>
+        <a class="card" href="03-slides/06-processo-04-timeline-2.html"><span class="thumb"></span><span class="cn">Timeline 2</span></a>
+        <a class="card" href="03-slides/06-processo-03-timeline-1.html"><span class="thumb"></span><span class="cn">Timeline 1</span></a>
+        <a class="card" href="03-slides/06-processo-05-cinco-destaques.html"><span class="thumb"></span><span class="cn">Cinco etapas</span></a>
+        <a class="card" href="03-slides/06-processo-06-elementos-graficos.html"><span class="thumb"></span><span class="cn">Elementos</span></a>
+        </div>
+      </section>
+      <section class="grp">
+        <h2>Comparativos & Dados</h2>
+        <div class="grid">
+        <a class="card" href="03-slides/07-dados-01-comparativo.html"><span class="thumb"></span><span class="cn">Comparativo</span></a>
+        <a class="card" href="03-slides/07-dados-02-classificacao.html"><span class="thumb"></span><span class="cn">Classificação</span></a>
+        <a class="card" href="03-slides/07-dados-03-tabela.html"><span class="thumb"></span><span class="cn">Tabela</span></a>
+        <a class="card" href="03-slides/07-dados-04-tabela-clara.html"><span class="thumb"></span><span class="cn">Tabela 2</span></a>
+        <a class="card" href="03-slides/07-dados-05-tabela-escura.html"><span class="thumb"></span><span class="cn">Tabela 3</span></a>
+        <a class="card" href="03-slides/07-dados-06-bignumbers-donut.html"><span class="thumb"></span><span class="cn">Big numbers — donut</span></a>
+        <a class="card" href="03-slides/07-dados-07-bignumbers-barras.html"><span class="thumb"></span><span class="cn">Big numbers — barras</span></a>
+        <a class="card" href="03-slides/07-dados-08-modelos-graficos.html"><span class="thumb"></span><span class="cn">Modelos de gráficos</span></a>
+        </div>
+      </section>
+      <section class="grp">
+        <h2>Fundos coloridos</h2>
+        <div class="grid">
+        <a class="card" href="03-slides/08-fundo-01-azul-escuro.html"><span class="thumb"></span><span class="cn">Fundo azul</span></a>
+        <a class="card" href="03-slides/08-fundo-02-verde.html"><span class="thumb"></span><span class="cn">Fundo verde</span></a>
+        <a class="card" href="03-slides/08-fundo-03-laranja.html"><span class="thumb"></span><span class="cn">Fundo laranja</span></a>
+        <a class="card" href="03-slides/08-fundo-04-limao.html"><span class="thumb"></span><span class="cn">Fundo limão</span></a>
+        <a class="card" href="03-slides/08-fundo-05-rosa.html"><span class="thumb"></span><span class="cn">Fundo rosa</span></a>
+        </div>
+      </section>
+      <section class="grp">
+        <h2>Frases & Fechamento</h2>
+        <div class="grid">
+        <a class="card" href="03-slides/09-fechamento-01-frase-impacto.html"><span class="thumb"></span><span class="cn">Frase de impacto</span></a>
+        <a class="card" href="03-slides/09-fechamento-02-frase-anel.html"><span class="thumb"></span><span class="cn">Frase + anel</span></a>
+        <a class="card" href="03-slides/09-fechamento-03-encerramento.html"><span class="thumb"></span><span class="cn">Encerramento</span></a>
+        <a class="card" href="03-slides/09-fechamento-04-contracapa.html"><span class="thumb"></span><span class="cn">Contracapa</span></a>
+        </div>
+      </section>
+
+    <footer>TOTVS Design System — modelos de apresentação 16:9 (1280×720). Cada cartão abre o slide correspondente.</footer>
+  </div>
+</body>
+</html>

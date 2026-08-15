@@ -1,0 +1,47 @@
+/* TOTVS sample slides — shared 1280×720 frame & helpers. */
+@import url('../styles.css');
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+.slide {
+  width: 1280px; height: 720px; position: relative; overflow: hidden;
+  background: var(--surface-card); font-family: var(--font-text);
+  color: var(--text-strong);
+  /* Diretriz de marca: apresentações usam a fonte Verdana em todos os textos,
+     inclusive títulos/números. Escopado aos slides — não afeta componentes/UI kit. */
+  --font-display: Verdana, 'Segoe UI', Tahoma, sans-serif;
+}
+.pad { padding: 72px 88px; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; }
+.kicker {
+  font-family: var(--font-display); font-weight: 700; font-size: 15px; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--totvs-cyan); margin: 0 0 18px;
+}
+.kicker.ink { color: var(--text-muted); }
+.title {
+  font-family: var(--font-display); font-weight: 800; letter-spacing: -.02em;
+  line-height: 1.04; margin: 0; font-size: 60px;
+}
+.subtitle { font-size: 22px; color: var(--text-muted); margin: 16px 0 0; line-height: 1.4; }
+.body { font-size: 19px; line-height: 1.6; color: var(--text-body); }
+.logo-br { position: absolute; right: 64px; bottom: 56px; height: 26px; }
+.pagenum {
+  position: absolute; left: 88px; bottom: 56px; font-family: var(--font-display);
+  font-weight: 700; font-size: 14px; color: var(--text-muted);
+}
+/* Standard brand + page-number mark, top-right of every slide */
+.pagemark { position: absolute; top: 48px; right: 64px; display: flex; align-items: center; gap: 10px; z-index: 5; }
+.pagemark .n { font-family: var(--font-display); font-weight: 700; font-size: 15px; color: var(--text-strong); }
+.pagemark img { height: 24px; display: block; }
+.pagemark.on-dark .n { color: #fff; }
+/* The "O" grafismo — official 3D ring renders, cropped large */
+.grafismo {
+  position: absolute; pointer-events: none;
+  background-size: contain; background-repeat: no-repeat; background-position: center;
+}
+.grafismo.cyan { background-image: url('../assets/grafismo/grafismo-cyan.png'); }
+.grafismo.teal { background-image: url('../assets/grafismo/grafismo-teal.png'); }
+.grafismo.navy { background-image: url('../assets/grafismo/grafismo-navy.png'); }
+.grafismo.blue { background-image: url('../assets/grafismo/grafismo-blue.png'); }
+/* legacy soft-ring fallbacks (kept for subtle ambient washes) */
+.grafismo.purple{ background: radial-gradient(circle, transparent 40%, rgba(164,77,255,.20) 41%, rgba(164,77,255,.20) 52%, transparent 53%); }
+.grafismo.dark  { background: radial-gradient(circle, transparent 40%, rgba(0,34,51,.10) 41%, rgba(0,34,51,.10) 52%, transparent 53%); }

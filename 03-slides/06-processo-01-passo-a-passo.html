@@ -1,0 +1,74 @@
+<!-- @dsCard group="14 Slides — Diagramas & dados" viewport="1280x720" name="Texto + passo a passo" subtitle="Three numbered steps — purple badges, text + image card with caption" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.steps { background: #fff; overflow: hidden; }
+  .steps .header { position: absolute; left: 64px; top: 48px; right: 120px; z-index: 3; }
+  .steps .h-title { font-family: var(--font-display); font-weight: 800; font-size: 40px; line-height: 1.05;
+    letter-spacing: -.02em; color: var(--totvs-dark); margin: 0; }
+  .steps .h-title .pur { color: var(--totvs-purple); }
+  .steps .h-sub { font-family: var(--font-display); font-weight: 400; font-size: 21px; color: var(--text-muted); margin: 6px 0 0; }
+
+  .steps .cols { position: absolute; left: 64px; right: 56px; top: 178px; bottom: 48px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 46px; z-index: 2; }
+  .col { display: grid; grid-template-rows: auto 1fr; }
+
+  .col .head { display: flex; align-items: center; gap: 16px; margin-bottom: 18px; }
+  .col .badge { width: 70px; height: 70px; border-radius: 50%; flex: 0 0 auto;
+    background: radial-gradient(120% 120% at 35% 25%, #b877ff 0%, var(--totvs-purple) 55%, #8f33f5 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-weight: 800; font-size: 40px; color: #fff;
+    box-shadow: 0 10px 22px rgba(164,77,255,.35); }
+  .col .ctitle { font-family: var(--font-display); font-weight: 700; font-size: 22px; color: var(--totvs-dark); white-space: nowrap; }
+
+  .col .body { display: grid; grid-template-columns: 1fr 150px; gap: 18px; align-items: center; }
+  .col .lead { font-family: var(--font-text); font-size: 15px; line-height: 1.5; color: var(--text-muted);
+    text-align: right; margin: 0; }
+
+  .card { display: flex; flex-direction: column; height: 360px; border-radius: var(--radius-md); overflow: hidden;
+    border: 1.5px dashed var(--grey-400); }
+  .card .img { flex: 1; background: #f0f1f2; display: flex; align-items: center; justify-content: center; }
+  .card .img i { font-size: 34px; color: var(--cyan-700); }
+  .card .img .pin { width: 56px; height: 56px; border-radius: var(--radius-sm); background: #fff;
+    box-shadow: var(--shadow-sm); display: flex; align-items: center; justify-content: center; }
+  .card .img .pin svg { width: 30px; height: 30px; display: block; }
+  .card .cap { background: var(--totvs-purple); color: #fff; font-family: var(--font-text); font-size: 13.5px;
+    line-height: 1.35; padding: 12px 14px; }
+</style>
+</head>
+<body>
+  <div class="slide steps">
+    <div class="pagemark"><span class="n">14</span><img src="../assets/totvs-symbol.svg" alt=""></div>
+    <div class="header">
+      <h1 class="h-title">Slide com texto <span class="pur">+ img passo a passo</span></h1>
+      <p class="h-sub">Insira aqui um subtítulo, se necessário</p>
+    </div>
+    <div class="cols">
+      <div class="col">
+        <div class="head"><div class="badge">1</div><div class="ctitle">Título do tema</div></div>
+        <div class="body">
+          <p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+          <div class="card"><div class="img"><span class="pin"><svg viewBox="0 0 32 32"><rect x="3" y="5" width="21" height="17" rx="3" fill="none" stroke="#2f8fd1" stroke-width="2"/><circle cx="9.5" cy="11" r="2" fill="#2f8fd1"/><path d="M4 19l6-6 5 5 3-3 5 5" fill="none" stroke="#2f8fd1" stroke-width="2" stroke-linejoin="round"/><circle cx="24" cy="23" r="7" fill="#2f8fd1"/><path d="M24 20v6M21.2 22.8 24 20l2.8 2.8" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><div class="cap">Legenda imagem em 2 linhas no máximo</div></div>
+      </div>
+      </div>
+      <div class="col">
+        <div class="head"><div class="badge">2</div><div class="ctitle">Título do tema</div></div>
+        <div class="body">
+          <p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+          <div class="card"><div class="img"><span class="pin"><svg viewBox="0 0 32 32"><rect x="3" y="5" width="21" height="17" rx="3" fill="none" stroke="#2f8fd1" stroke-width="2"/><circle cx="9.5" cy="11" r="2" fill="#2f8fd1"/><path d="M4 19l6-6 5 5 3-3 5 5" fill="none" stroke="#2f8fd1" stroke-width="2" stroke-linejoin="round"/><circle cx="24" cy="23" r="7" fill="#2f8fd1"/><path d="M24 20v6M21.2 22.8 24 20l2.8 2.8" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><div class="cap">Legenda imagem em 2 linhas no máximo</div></div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="head"><div class="badge">3</div><div class="ctitle">Título do tema</div></div>
+        <div class="body">
+          <p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+          <div class="card"><div class="img"><span class="pin"><svg viewBox="0 0 32 32"><rect x="3" y="5" width="21" height="17" rx="3" fill="none" stroke="#2f8fd1" stroke-width="2"/><circle cx="9.5" cy="11" r="2" fill="#2f8fd1"/><path d="M4 19l6-6 5 5 3-3 5 5" fill="none" stroke="#2f8fd1" stroke-width="2" stroke-linejoin="round"/><circle cx="24" cy="23" r="7" fill="#2f8fd1"/><path d="M24 20v6M21.2 22.8 24 20l2.8 2.8" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><div class="cap">Legenda imagem em 2 linhas no máximo</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

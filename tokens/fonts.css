@@ -1,0 +1,15 @@
+/* ============================================================
+   TOTVS — webfonts (official proprietary typeface, 6 weights)
+   ============================================================ */
+@font-face { font-family: 'TOTVS'; font-style: normal; font-weight: 200; font-display: swap;
+  src: url('../assets/fonts/TOTVS-ExtraLight.ttf') format('truetype'); }
+@font-face { font-family: 'TOTVS'; font-style: normal; font-weight: 300; font-display: swap;
+  src: url('../assets/fonts/TOTVS-Light.ttf') format('truetype'); }
+@font-face { font-family: 'TOTVS'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('../assets/fonts/TOTVS-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'TOTVS'; font-style: normal; font-weight: 600; font-display: swap;
+  src: url('../assets/fonts/TOTVS-SemiBold.ttf') format('truetype'); }
+@font-face { font-family: 'TOTVS'; font-style: normal; font-weight: 700; font-display: swap;
+  src: url('../assets/fonts/TOTVS-Bold.ttf') format('truetype'); }
+@font-face { font-family: 'TOTVS'; font-style: normal; font-weight: 800; font-display: swap;
+  src: url('../assets/fonts/TOTVS-ExtraBold.ttf') format('truetype'); }

@@ -1,0 +1,80 @@
+<!-- @dsCard group="14 Slides — Diagramas & dados" viewport="1280x720" name="Tabela 2 (clara)" subtitle="Grouped data table — cyan header, banded groups, spanning subtotal/total cells" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.tab2 { background: #fff; }
+  .tab2 .pad { padding: 48px 56px 36px; }
+  .tab2 h1 { font-family: var(--font-display); font-weight: 800; font-size: 44px; letter-spacing: -.02em; margin: 0; color: var(--totvs-cyan); }
+  .tab2 .sub { font-family: var(--font-text); font-size: 20px; color: var(--text-muted); margin: 4px 0 0; }
+  table.t { width: 100%; border-collapse: collapse; margin-top: 22px; table-layout: fixed; }
+  .t th, .t td { text-align: left; vertical-align: middle; padding: 10px 14px; font-family: var(--font-text);
+    font-size: 12.5px; line-height: 1.32; color: var(--text-strong); border: 1px solid #fff; }
+  .t thead th { background: var(--totvs-cyan); color: var(--totvs-dark); font-family: var(--font-display);
+    font-weight: 800; font-size: 14px; letter-spacing: .02em; }
+  .t .item { font-family: var(--font-display); font-weight: 800; font-size: 17px; color: var(--totvs-cyan); }
+  .band td { background: var(--cyan-50, #e6f9ff); }
+  .v { font-family: var(--font-display); font-weight: 700; white-space: nowrap; }
+  .total { font-family: var(--font-display); font-weight: 800; font-size: 17px; text-align: center; }
+  .t td.total-cyan { background: var(--totvs-cyan); color: var(--totvs-dark); }
+  .white td { background: #fff; }
+  .nest { width: 100%; border-collapse: collapse; }
+  .nest td { border: none; border-bottom: 1px solid #d6e6ec; padding: 5px 4px; font-size: 11.5px; }
+  .nest tr:last-child td { border-bottom: none; }
+  .colw-itens { width: 11%; } .colw-desc { width: 31%; } .colw-cat { width: 19%; }
+  .colw-v { width: 11%; } .colw-total { width: 13%; }
+</style>
+</head>
+<body>
+  <div class="slide tab2">
+    <div class="pagemark"><span class="n">22</span><img src="../assets/totvs-symbol.svg" alt=""></div>
+    <div class="pad">
+      <h1>Tabela 2</h1>
+      <p class="sub">Complete a informação neste espaço</p>
+      <table class="t">
+        <colgroup><col class="colw-itens"><col class="colw-desc"><col class="colw-cat"><col class="colw-v"><col class="colw-v"><col class="colw-total"></colgroup>
+        <thead><tr><th>ITENS</th><th>DESCRIÇÃO</th><th>CATEGORIA</th><th>VALORES 1</th><th>VALORES 2</th><th>TOTAL</th></tr></thead>
+        <tbody>
+          <tr class="white">
+            <td class="item">Item 1</td>
+            <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Key word or state</td>
+            <td>Lorem ipsum dolor sit amet, consectet adiping magna aliquam matus</td>
+            <td class="v">R$ 200 mi</td><td class="v">R$ 200 mi</td>
+            <td class="total">R$ 400 mi</td>
+          </tr>
+          <tr class="band"><td class="item" rowspan="3">Item 2.1</td><td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td><td>Lorem ipsum dolor</td><td class="v">R$ 80 mi</td><td class="v">R$ 80 mi</td><td class="total total-cyan" rowspan="6">R$ 404 mi</td></tr>
+          <tr class="band"><td>Tincidunt ut laoreet dolore magna aliquam erat volutpat</td><td>Tincidunt ut laoreet</td><td class="v">R$ 150 mi</td><td class="v">R$ 150 mi</td></tr>
+          <tr class="band"><td>Key word or statement</td><td>Key word or statement</td><td class="v">R$ 75 mi</td><td class="v">R$ 75 mi</td></tr>
+          <tr class="band"><td class="item" rowspan="3">Item 2.2</td><td>Consectetuer adipiscing magna aliquam erat</td><td>Consectetuer adipi</td><td class="v">R$ 62 mi</td><td class="v">R$ 62 mi</td></tr>
+          <tr class="band"><td>Risus non viverra tincidunt placerat lectus a sapien</td><td>Risus non viverra</td><td class="v">R$ 31 mi</td><td class="v">R$ 31 mi</td></tr>
+          <tr class="band"><td>Utaliquip ex ea commodo vehicula enim eros</td><td>Utaliquip ex ea cot</td><td class="v">R$ 6 mi</td><td class="v">R$ 6 mi</td></tr>
+          <tr class="white">
+            <td class="item">Item 3</td>
+            <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Key word or state</td>
+            <td colspan="2" style="padding:0;">
+              <table class="nest">
+                <tr><td>Consectetuer adipiscing elit</td><td class="v">R$ 45 mi</td></tr>
+                <tr><td>Consectetuer adipiscing</td><td class="v">R$ 28 mi</td></tr>
+                <tr><td>Key word or statement dolore</td><td class="v">R$ 91 mi</td></tr>
+                <tr><td>Diam nonummy nibh euismod</td><td class="v">R$ 11 mi</td></tr>
+                <tr><td>Magna aliquam erat volutpat</td><td class="v">R$ 74 mi</td></tr>
+              </table>
+            </td>
+            <td class="total" style="text-align:center;">R$ 249 mi</td>
+            <td class="total">R$ 249 mi</td>
+          </tr>
+          <tr class="band">
+            <td class="item">Item 4</td>
+            <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Key word or state</td>
+            <td>Lorem ipsum dolor sit amet, consectet adiping magna aliquam matus</td>
+            <td class="v">R$ 672 mi</td><td class="v">R$ 672 mi</td>
+            <td class="total total-cyan">R$ 1.344 bi</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!-- @dsCard group="13 Slides — Conteúdo" viewport="1280x720" name="Texto + destaque (cyan)" subtitle="Text left, colored translucent highlight panel over navy shape (cyan)" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.dq { background: #fff; overflow: hidden; }
+  .dq .graf { position: absolute; right: -120px; top: 50%; transform: translateY(-50%); width: 820px; height: 820px;
+    background: url('../assets/grafismo/grafismo-navy.png') center/contain no-repeat; z-index: 1; }
+  .dq .pad { padding: 50px 64px; position: relative; z-index: 2; }
+  .dq h1 { font-family: var(--font-display); font-weight: 800; font-size: 46px; letter-spacing: -.02em; margin: 0; color: var(--totvs-dark); }
+  .dq h1 em { font-style: normal; color: var(--totvs-cyan); }
+  .dq .sub { font-family: var(--font-text); font-size: 21px; color: var(--text-muted); margin: 6px 0 0; }
+  .dq .lead { width: 44%; }
+  .dq .lead .big { font-family: var(--font-display); font-weight: 800; font-size: 23px; line-height: 1.25; color: var(--totvs-dark); margin: 50px 0 0; }
+  .dq .lead .small { font-family: var(--font-text); font-size: 17px; line-height: 1.5; color: var(--text-muted); margin: 22px 0 0; }
+  .panel { position: absolute; right: 56px; top: 50%; transform: translateY(-50%); width: 42%; background: var(--totvs-cyan); opacity: .94;
+    border-radius: 16px; padding: 40px 38px; box-sizing: border-box; display: flex; align-items: center; gap: 26px; z-index: 3; }
+  .panel .ico { width: 76px; height: 76px; flex: 0 0 auto; }
+  .panel .ico svg { width: 100%; height: 100%; }
+  .panel p { font-family: var(--font-display); font-weight: 800; font-size: 26px; line-height: 1.2; margin: 0; color: var(--totvs-dark); }
+</style>
+</head>
+<body>
+  <div class="slide dq">
+    <div class="graf"></div>
+    <div class="pagemark"><span class="n">10</span><img src="../assets/totvs-symbol.svg" alt=""></div>
+    <div class="pad">
+      <h1>Slide com texto <em>+ destaque 1</em></h1>
+      <p class="sub">Insira aqui um subtítulo, se necessário</p>
+      <div class="lead">
+        <p class="big">Massa de texto, consectetuer adipisc elit, sed diam nonummy nibh morq euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+        <p class="small">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Key word or olor statement to be highlighted. Orci varius natoque penatibus et magnis dis amet parturient montes, nascetur ridiculus mut.</p>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="var(--totvs-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="18"/><path d="M24 24V8a16 16 0 0 1 16 16H24Z"/><circle cx="24" cy="24" r="5"/></svg></div>
+      <p>Massa de texto, lorem consectetuer amet adipisc elit, sed diam nonummy nibh morq euismod mush tincidunt utile.</p>
+    </div>
+  </div>
+</body>
+</html>

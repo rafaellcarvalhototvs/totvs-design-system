@@ -1,0 +1,53 @@
+<!-- @dsCard group="14 Slides — Diagramas & dados" viewport="1280x720" name="Timeline 1" subtitle="Horizontal timeline — five icon cards over a dotted line, bullet text below" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.tl1 { background: #fff; overflow: hidden; }
+  .tl1 .pad { padding: 44px 56px 36px; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; }
+  .tl1 h1 { font-family: var(--font-display); font-weight: 800; font-size: 46px; letter-spacing: -.02em; margin: 0; color: var(--totvs-dark); }
+  .tl1 .sub { font-family: var(--font-text); font-size: 21px; color: var(--text-muted); margin: 6px 0 0; }
+  .tl1 .track { display: grid; grid-template-columns: repeat(5, 1fr); gap: 26px; margin-top: 30px; }
+  .tl1 .col { display: flex; flex-direction: column; align-items: center; }
+  .tl1 .ico { width: 46px; height: 46px; margin-bottom: 16px; }
+  .tl1 .ico svg { width: 100%; height: 100%; }
+  .tl1 .card { width: 100%; background: var(--cyan-soft); border-radius: 14px; min-height: 230px; display: flex; align-items: center; justify-content: center; }
+  .tl1 .card span { font-family: var(--font-display); font-weight: 800; font-size: 22px; color: var(--totvs-cyan); }
+  /* dotted line */
+  .tl1 .line { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); margin: 0 0 16px; height: 22px; align-items: center; }
+  .tl1 .line::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 2.5px; background: var(--totvs-dark); transform: translateY(-50%); }
+  .tl1 .dot { width: 16px; height: 16px; border-radius: 50%; background: var(--totvs-dark); justify-self: center; position: relative; }
+  .tl1 .bullets { display: grid; grid-template-columns: repeat(5, 1fr); gap: 26px; align-items: start; }
+  .tl1 ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .tl1 li { display: flex; gap: 7px; align-items: baseline; font-family: var(--font-text); font-size: 13px; line-height: 1.4; color: var(--text-muted); }
+  .tl1 li::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--totvs-cyan); flex: 0 0 auto; transform: translateY(-2px); }
+  .tl1 li b { color: var(--totvs-cyan); font-weight: 700; }
+</style>
+</head>
+<body>
+  <div class="slide tl1">
+    <div class="pagemark"><span class="n">81</span><img src="../assets/totvs-symbol.svg" alt=""></div>
+    <div class="pad">
+      <h1>Timeline 1</h1>
+      <p class="sub">Complete a informação neste espaço</p>
+      <div class="track">
+        <div class="col"><div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="var(--totvs-cyan)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 18h28l-7-7"/><path d="M40 30H12l7 7"/></svg></div><div class="card"><span>Tema</span></div></div>
+        <div class="col"><div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="var(--totvs-cyan)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l14 6v9c0 9-6 16-14 21-8-5-14-12-14-21v-9l14-6Z"/><path d="M17 24l5 5 9-10"/></svg></div><div class="card"><span>Tema</span></div></div>
+        <div class="col"><div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="var(--totvs-cyan)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="18"/><ellipse cx="24" cy="24" rx="8" ry="18"/><path d="M6 24h36M9 14h30M9 34h30"/></svg></div><div class="card"><span>Tema</span></div></div>
+        <div class="col"><div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="var(--totvs-cyan)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="4"/><circle cx="24" cy="8" r="3.5"/><circle cx="24" cy="40" r="3.5"/><circle cx="8" cy="24" r="3.5"/><circle cx="40" cy="24" r="3.5"/><path d="M24 12v8M24 28v8M12 24h8M28 24h8"/></svg></div><div class="card"><span>Tema</span></div></div>
+        <div class="col"><div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="var(--totvs-cyan)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4c7 5 10 12 10 20 0 4-1 7-2 9H16c-1-2-2-5-2-9 0-8 3-15 10-20Z"/><circle cx="24" cy="20" r="4"/><path d="M16 33l-5 6 6-1M32 33l5 6-6-1M21 42h6"/></svg></div><div class="card"><span>Tema</span></div></div>
+      </div>
+      <div class="line"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      <div class="bullets">
+        <ul><li>Mauris id magna gravida, varius risus ac, varius nunc nullam ut sit nulla ut velit rho</li></ul>
+        <ul><li>Consectetuer adipiscing elit, sed diam nonummy nibh euismod <b>tincidunt</b> dolore nonummy.</li><li>Euismod tincidunt ut laoreet dolore</li></ul>
+        <ul><li>Wisi enim ad minim veniam, quis nostrud exerci tation ullam corper suscipit lobortis nisl ut aliquip ex ea commodo dolore</li></ul>
+        <ul><li>Nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat sit amet</li></ul>
+        <ul><li>Sed diam nonummy <b>nibh euismod</b> tincidunt ut laoreet dolore magna. Pellentesque elem</li></ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

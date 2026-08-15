@@ -1,0 +1,45 @@
+<!-- @dsCard group="02 Fundamentos — Logo" viewport="820x320" name="Logo — versões cromáticas" subtitle="Chromatic versions — positiva, negativa and azul (cyan)" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family:var(--font-text); background:var(--surface-card); color:var(--text-strong);
+    padding:26px 30px; box-sizing:border-box; display:flex; flex-direction:column; gap:16px; }
+  .overline { font-family:var(--font-display); font-weight:700; font-size:10px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--text-muted); }
+  h1 { font-family:var(--font-display); font-weight:800; font-size:24px; letter-spacing:-.02em; margin:4px 0 4px; }
+  .lead { font-size:12.5px; line-height:1.5; color:var(--text-body); margin:0; max-width:70ch; }
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; flex:1; }
+  figure { margin:0; display:flex; flex-direction:column; gap:8px; }
+  .tile { flex:1; border-radius:var(--radius-md); display:flex; align-items:center; justify-content:center;
+    min-height:120px; box-shadow:inset 0 0 0 1px var(--border-subtle); }
+  .tile.light { background:var(--surface-card); }
+  .tile.navy { background:var(--totvs-dark); box-shadow:none; }
+  .tile img { height:34px; }
+  figcaption { font-family:var(--font-display); font-weight:600; font-size:11px; color:var(--text-muted); letter-spacing:.02em; }
+</style>
+</head>
+<body>
+  <div>
+    <div class="overline">Logo</div>
+    <h1>Versões cromáticas</h1>
+    <p class="lead">O logo possui versões cromáticas para se adaptar a diferentes fundos, preservando sempre o contraste de leitura.</p>
+  </div>
+  <div class="grid">
+    <figure>
+      <div class="tile light"><img src="../assets/totvs-logo.svg" alt="Logo positiva"></div>
+      <figcaption>Positiva · azul escuro</figcaption>
+    </figure>
+    <figure>
+      <div class="tile navy"><img src="../assets/totvs-logo-white.svg" alt="Logo negativa"></div>
+      <figcaption>Negativa · branco</figcaption>
+    </figure>
+    <figure>
+      <div class="tile navy" style="padding:0;overflow:hidden;"><img src="../assets/social/logo-versao-azul.png" alt="Versão cromática azul" style="height:auto;width:100%;object-fit:contain;"></div>
+      <figcaption>Azul · cyan sobre escuro</figcaption>
+    </figure>
+  </div>
+</body>
+</html>

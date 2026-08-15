@@ -1,0 +1,33 @@
+<!-- @dsCard group="13 Slides — Conteúdo" viewport="1280x720" name="Texto + destaque (foto)" subtitle="Full-bleed photo, green statement panel top-left, white caption below" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.dphoto { background: #00121c url('../assets/backgrounds/office-conversa-web.jpg') center/cover no-repeat; overflow: hidden; }
+  .dphoto::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,18,28,.55) 0%, rgba(0,18,28,.12) 45%, transparent 70%); }
+  .dphoto .pad { padding: 44px 56px; position: relative; z-index: 2; }
+  .dphoto h1 { font-family: var(--font-display); font-weight: 800; font-size: 44px; letter-spacing: -.02em; margin: 0; color: #fff; }
+  .dphoto h1 em { font-style: normal; color: var(--totvs-green); }
+  .dphoto .sub { font-family: var(--font-text); font-size: 20px; color: #fff; margin: 6px 0 0; }
+  .panel { width: 48%; background: var(--totvs-green); border-radius: 16px; padding: 32px 34px; margin: 30px 0 0; box-sizing: border-box; }
+  .panel p { font-family: var(--font-display); font-weight: 800; font-size: 33px; line-height: 1.16; letter-spacing: -.02em; color: var(--totvs-dark); margin: 0; }
+  .cap { width: 46%; font-family: var(--font-text); font-size: 16px; line-height: 1.5; color: #fff; margin: 26px 0 0;
+    text-shadow: 0 1px 8px rgba(0,0,0,.5); }
+</style>
+</head>
+<body>
+  <div class="slide dphoto">
+    <div class="pagemark on-dark"><span class="n">13</span><img src="../assets/totvs-symbol-white.svg" alt=""></div>
+    <div class="pad">
+      <h1>Slide com texto <em>+ destaque 4</em></h1>
+      <p class="sub">Insira aqui um subtítulo, se necessário</p>
+      <div class="panel">
+        <p>Massa de texto, dolor consect amet adipisc elit, sed diam nonummy nibh morq euismod tincidunt utrich.</p>
+      </div>
+      <p class="cap">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Key word or olor statement to be highlighted.</p>
+    </div>
+  </div>
+</body>
+</html>

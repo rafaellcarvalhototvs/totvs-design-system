@@ -1,0 +1,69 @@
+<!-- @dsCard group="13 Slides — Conteúdo" viewport="1280x720" name="Slide especial (grandes destaques)" subtitle="Full-bleed portrait, huge white+cyan title left, bold caption — 5 variações de foto aprovada" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.especial { background: #0a1a24 center/cover no-repeat; overflow: hidden;
+    background-image: url('../assets/destaques/destaque-01.jpg'); }
+  .especial::before { content: ""; position: absolute; inset: 0; z-index: 1;
+    background: linear-gradient(90deg, rgba(8,26,36,.74) 0%, rgba(8,26,36,.40) 36%, rgba(8,26,36,.05) 56%, rgba(8,26,36,0) 68%); }
+  .especial h1 { position: absolute; left: 56px; top: 132px; z-index: 2; margin: 0;
+    font-family: var(--font-display); font-weight: 800; font-size: 78px; line-height: .98; letter-spacing: -.03em; color: #fff;
+    text-shadow: 0 4px 24px rgba(0,0,0,.35); }
+  .especial h1 em { font-style: normal; color: var(--totvs-cyan); }
+  .especial .cap { position: absolute; left: 56px; bottom: 84px; z-index: 2; width: 42%;
+    font-family: var(--font-text); font-size: 19px; line-height: 1.5; color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,.5); }
+  .especial .cap b { font-weight: 700; }
+  /* Seletor de variação — 5 fotos aprovadas */
+  .especial .vars { position: absolute; right: 56px; bottom: 40px; z-index: 3; display: flex; gap: 10px; }
+  .especial .vars button { width: 13px; height: 13px; padding: 0; border-radius: 50%; cursor: pointer;
+    background: rgba(255,255,255,.32); border: 1px solid rgba(255,255,255,.6); transition: background .16s ease, transform .16s ease; }
+  .especial .vars button:hover { transform: scale(1.12); }
+  .especial .vars button[aria-current="true"] { background: var(--totvs-cyan); border-color: var(--totvs-cyan); }
+</style>
+</head>
+<body>
+  <div class="slide especial">
+    <div class="pagemark on-dark"><span class="n">32</span><img src="../assets/totvs-symbol-white.svg" alt=""></div>
+    <h1>Slide especial<br>para <em>grandes<br>destaques</em></h1>
+    <p class="cap"><b>Insira um complemento do título, se precisar.</b> Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt laoreet dolore magna pellentes elementum enim ut placerat.</p>
+    <div class="vars" role="group" aria-label="Variações de foto aprovada"></div>
+  </div>
+
+  <script>
+    (function () {
+      var imgs = [
+        '../assets/destaques/destaque-01.jpg',
+        '../assets/destaques/destaque-02.jpg',
+        '../assets/destaques/destaque-03.jpg',
+        '../assets/destaques/destaque-04.jpg',
+        '../assets/destaques/destaque-05.jpg'
+      ];
+      var KEY = 'totvs-especial-var';
+      var slide = document.querySelector('.slide.especial');
+      var bar = slide.querySelector('.vars');
+      var current = parseInt(localStorage.getItem(KEY), 10);
+      if (isNaN(current) || current < 0 || current >= imgs.length) current = 0;
+
+      function apply(i) {
+        current = i;
+        slide.style.backgroundImage = "url('" + imgs[i] + "')";
+        Array.prototype.forEach.call(bar.children, function (b, k) {
+          b.setAttribute('aria-current', k === i ? 'true' : 'false');
+        });
+        try { localStorage.setItem(KEY, String(i)); } catch (e) {}
+      }
+      imgs.forEach(function (_, i) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('aria-label', 'Variação ' + (i + 1));
+        b.addEventListener('click', function () { apply(i); });
+        bar.appendChild(b);
+      });
+      apply(current);
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!-- @dsCard group="13 Slides — Conteúdo" viewport="1280x720" name="Texto + tópicos" subtitle="Text left, navy organic shape right with three cyan-titled topic blocks" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.tt { background: #fff; overflow: hidden; }
+  .tt .graf { position: absolute; right: -160px; top: -60px; width: 880px; height: 880px;
+    background: url('../assets/grafismo/grafismo-navy.png') center/contain no-repeat; z-index: 1; }
+  .tt .pad { padding: 50px 64px; position: relative; z-index: 2; }
+  .tt h1 { font-family: var(--font-display); font-weight: 800; font-size: 46px; letter-spacing: -.02em; margin: 0; color: var(--totvs-dark); }
+  .tt h1 em { font-style: normal; color: var(--totvs-cyan); }
+  .tt .sub { font-family: var(--font-text); font-size: 21px; color: var(--text-muted); margin: 6px 0 0; }
+  .tt .lead { width: 46%; font-family: var(--font-text); font-size: 18px; line-height: 1.5; color: var(--text-muted); margin: 60px 0 0; }
+  .tt .lead b { font-family: var(--font-display); font-weight: 800; color: var(--totvs-dark); }
+  .topics { position: absolute; right: 48px; top: 132px; width: 40%; display: flex; flex-direction: column; gap: 26px; z-index: 3;
+    background: linear-gradient(135deg, rgba(0,24,38,.92), rgba(0,34,51,.82)); border-radius: 20px; padding: 28px 30px; box-sizing: border-box; }
+  .topic h3 { font-family: var(--font-display); font-weight: 800; font-size: 24px; color: var(--totvs-cyan); margin: 0 0 8px; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,.3); }
+  .topic p { font-family: var(--font-text); font-size: 15px; line-height: 1.45; color: #fff; margin: 0; }
+</style>
+</head>
+<body>
+  <div class="slide tt">
+    <div class="graf"></div>
+    <div class="pagemark"><span class="n">04</span><img src="../assets/totvs-symbol.svg" alt=""></div>
+    <div class="pad">
+      <h1>Slide com texto <em>+ tópicos</em></h1>
+      <p class="sub">Insira aqui um subtítulo, se necessário</p>
+      <p class="lead"><b>Lorem ipsum dolor sit amet, nisimor consectetuer adipiscing elit, sed diam nonummy nibh euismod</b> tincidunt ut laoreet dolore magna aliquam erat volutpat. Key word or statement to be highlighted. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer nec hendrerit erat, id iaculis nulla. Donec vel dapibus nisi. Nullam pharetra leo eu purus congue euismod. Pellentesque habitant morbi tristique senecti.</p>
+    </div>
+    <div class="topics">
+      <div class="topic"><h3>Tópico</h3><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p></div>
+      <div class="topic"><h3>Tópico</h3><p>magnis dis parturient montes, nascetur ridiculus mus.</p></div>
+      <div class="topic"><h3>Tópico</h3><p>Nullam pharetra leo eu purus congue euismod. Pellentesque habitant morbi tristique senecti.</p></div>
+    </div>
+  </div>
+</body>
+</html>

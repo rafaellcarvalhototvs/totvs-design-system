@@ -1,0 +1,40 @@
+<!-- @dsCard group="05 Fundamentos — Tipografia" viewport="920x600" name="Caracteres alternativos — aplicações" subtitle="Usage logic — large display only, sparingly, with brand-team sign-off" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family:var(--font-text); background:var(--surface-card); color:var(--text-strong);
+    display:grid; grid-template-columns:360px 1fr; height:600px; }
+  .content { padding:32px 34px; box-sizing:border-box; display:flex; flex-direction:column; }
+  .overline { font-family:var(--font-display); font-weight:700; font-size:10px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--text-muted); }
+  h1 { font-family:var(--font-display); font-weight:800; font-size:25px; letter-spacing:-.02em; margin:4px 0 10px; }
+  .lead { font-size:12.5px; line-height:1.6; color:var(--text-body); margin:0 0 16px; }
+  .h { font-family:var(--font-display); font-weight:700; font-size:10px; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--cyan-700); margin:0 0 10px; }
+  ul { margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:11px; }
+  li { display:grid; grid-template-columns:18px 1fr; gap:10px; font-size:12px; line-height:1.45; color:var(--text-body); }
+  li::before { content:""; width:7px; height:7px; border-radius:2px; background:var(--totvs-cyan); margin-top:5px; }
+  li b { color:var(--text-strong); font-weight:700; }
+  .map { background:var(--grey-100); display:flex; align-items:center; justify-content:center; padding:18px; box-sizing:border-box; }
+  .map img { max-width:100%; max-height:100%; object-fit:contain; }
+</style>
+</head>
+<body>
+  <div class="content">
+    <div class="overline">Caracteres alternativos</div>
+    <h1>Aplicações</h1>
+    <p class="lead">São elementos de estilo, de função estética, que dão personalidade à identidade. Seguimos uma lógica básica de uso:</p>
+    <p class="h">Lógica de uso</p>
+    <ul>
+      <li><span></span>Use em <b>chamadas, títulos e textos de destaque</b> — em grandes dimensões ganham força; por isso só existem nas maiúsculas.</li>
+      <li><span></span>Em <b>textos menores</b>, prefira a tipografia padrão, para não gerar interpretação dúbia sobre a variação das letras.</li>
+      <li><span></span><b>Não exagere</b>: prefira iniciais e letras em destaque — 3 a 5 ocorrências por chamada.</li>
+      <li><span></span><b>Submarcas, selos e assinaturas</b> se beneficiam do recurso. Use com moderação e autorização do time de marca.</li>
+    </ul>
+  </div>
+  <div class="map"><img src="../assets/social/alternativos-aplicacoes.png" alt="Aplicações corretas e incorretas dos caracteres alternativos TOTVS"></div>
+</body>
+</html>

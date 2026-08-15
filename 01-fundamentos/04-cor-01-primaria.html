@@ -1,0 +1,29 @@
+<!-- @dsCard group="04 Fundamentos — Cores" viewport="700x190" name="Primary palette" subtitle="Azul Escuro, Azul (cyan) & Branco — the brand core (55–70% + 15–20%)" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family: var(--font-text); background: var(--surface-card); }
+  .row { display:flex; gap:0; height:190px; }
+  .sw { flex:1; display:flex; flex-direction:column; justify-content:flex-end; padding:16px; box-sizing:border-box; }
+  .sw .name { font-family:var(--font-display); font-weight:700; font-size:14px; }
+  .sw .hex { font-size:12px; margin-top:3px; opacity:.85; letter-spacing:.02em; }
+  .sw .pct { font-size:11px; margin-top:8px; opacity:.6; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="sw" style="background:var(--totvs-dark); color:#fff;">
+      <div class="name">Azul Escuro</div><div class="hex">#002233</div><div class="pct">Pantone 539 C</div>
+    </div>
+    <div class="sw" style="background:var(--totvs-cyan); color:var(--totvs-dark); flex:1.4;">
+      <div class="name">Azul</div><div class="hex">#00DBFF</div><div class="pct">Pantone 2985 C · 55–70%</div>
+    </div>
+    <div class="sw" style="background:var(--totvs-white); color:var(--totvs-dark); box-shadow: inset 1px 0 0 var(--border-subtle);">
+      <div class="name">Branco</div><div class="hex">#FFFFFF</div><div class="pct">15–20%</div>
+    </div>
+  </div>
+</body>
+</html>

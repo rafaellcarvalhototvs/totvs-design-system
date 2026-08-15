@@ -1,0 +1,31 @@
+<!-- @dsCard group="15 Slides — Fundos & fechamento" viewport="1280x720" name="Frase de impacto (anel)" subtitle="Statement divider — navy ground, single hexagon ring behind a centered white phrase" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.frase-anel { background: var(--totvs-dark); background-image: radial-gradient(120% 120% at 50% 50%, #013040 0%, var(--totvs-dark) 55%, #00111c 100%); color: #fff; overflow: hidden; }
+  .frase-anel .ring {
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+    width: 250px; height: 250px;
+    background: url('../assets/grafismo/grafismo-cyan.png') center/contain no-repeat;
+    z-index: 1;
+  }
+  .frase-anel .phrase {
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+    white-space: nowrap; text-align: center; z-index: 2;
+    font-family: var(--font-display); font-weight: 400; font-size: 50px; line-height: 1.06;
+    letter-spacing: -.02em; color: #fff; margin: 0;
+  }
+  .frase-anel .phrase b { font-weight: 800; }
+</style>
+</head>
+<body>
+  <div class="slide frase-anel">
+    <div class="pagemark on-dark"><span class="n">07</span><img src="../assets/totvs-symbol-white.svg" alt=""></div>
+    <div class="ring"></div>
+    <h1 class="phrase">Somos o <b>Trusted Advisor</b> do nosso cliente</h1>
+  </div>
+</body>
+</html>

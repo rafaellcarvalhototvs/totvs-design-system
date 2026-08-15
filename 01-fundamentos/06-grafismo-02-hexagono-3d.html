@@ -1,0 +1,45 @@
+<!-- @dsCard group="06 Fundamentos — Grafismo & composição" viewport="700x300" name="Grafismo 3D (rotação)" subtitle="The signature ring rendered in 3D — 16-frame rotation loop + color variants" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; height:300px; display:grid; grid-template-columns:300px 1fr;
+    background:var(--totvs-dark); font-family:var(--font-display); color:#fff; }
+  .stage { display:flex; align-items:center; justify-content:center; position:relative;
+    background:radial-gradient(80% 80% at 50% 42%, rgba(0,219,255,.14), transparent 70%); }
+  .stage img { width:210px; height:210px; object-fit:contain;
+    filter:drop-shadow(0 24px 40px rgba(0,0,0,.45)); }
+  .side { display:flex; flex-direction:column; justify-content:center; gap:14px; padding:0 36px 0 8px; }
+  .side .k { font-weight:700; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--totvs-cyan); }
+  .side h2 { margin:0; font-weight:800; font-size:26px; line-height:1.08; letter-spacing:-.02em; }
+  .side p { margin:0; font-family:var(--font-text); font-size:13px; line-height:1.5; color:var(--navy-200); max-width:34ch; }
+  .vars { display:flex; gap:12px; margin-top:6px; }
+  .vars img { width:48px; height:48px; object-fit:contain; }
+</style>
+</head>
+<body>
+  <div class="stage"><img id="spin" src="../assets/grafismo/hex/hex-00.png" alt="Grafismo 3D TOTVS"></div>
+  <div class="side">
+    <span class="k">Elemento gráfico · O</span>
+    <h2>O grafismo em 3D</h2>
+    <p>O símbolo TOTVS — o anel hexagonal arredondado — renderizado em volume e rotação. Use grande, cropado e como gesto único.</p>
+    <div class="vars">
+      <img src="../assets/grafismo/grafismo-cyan.png" alt="">
+      <img src="../assets/grafismo/grafismo-teal.png" alt="">
+      <img src="../assets/grafismo/grafismo-navy.png" alt="">
+      <img src="../assets/grafismo/grafismo-blue.png" alt="">
+    </div>
+  </div>
+  <script>
+    (function(){
+      var n=16, frames=[], img=document.getElementById('spin');
+      for(var i=0;i<n;i++){ var s=String(i).padStart(2,'0');
+        var p=new Image(); p.src='../assets/grafismo/hex/hex-'+s+'.png'; frames.push(p.src); }
+      var i=0;
+      setInterval(function(){ i=(i+1)%n; img.src=frames[i]; }, 90);
+    })();
+  </script>
+</body>
+</html>

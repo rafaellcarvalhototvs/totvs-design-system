@@ -1,0 +1,45 @@
+<!-- @dsCard group="14 Slides — Diagramas & dados" viewport="1280x720" name="Classificação de sigilo" subtitle="Confidentiality seals — Confidencial / Uso Restrito / Uso Interno / Uso Público" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.sig { background: #fff; }
+  .sig .pad { padding: 52px 64px 44px; }
+  .sig h1 { font-family: var(--font-display); font-weight: 800; font-size: 46px; letter-spacing: -.02em; margin: 0; color: var(--totvs-dark); }
+  .sig h1 em { font-style: normal; color: var(--totvs-cyan); }
+  .sig .sub { font-family: var(--font-text); font-size: 21px; color: var(--text-muted); margin: 6px 0 0; }
+  .sig .intro { font-family: var(--font-text); font-size: 18px; color: var(--text-body); margin: 44px 0 30px; }
+  .rows { display: flex; flex-direction: column; }
+  .srow { display: grid; grid-template-columns: 220px 1fr; gap: 36px; align-items: center;
+    padding: 20px 0; border-top: 1px solid var(--border-subtle); }
+  .rows .srow:first-child { border-top: none; }
+  .seal { justify-self: start; font-family: var(--font-display); font-weight: 800; font-size: 15px; letter-spacing: .04em;
+    color: #fff; padding: 11px 20px; border-radius: var(--radius-sm); white-space: nowrap; }
+  .seal.conf { background: var(--totvs-pink); }
+  .seal.rest { background: var(--totvs-orange); }
+  .seal.intern { background: var(--totvs-purple); }
+  .seal.pub { background: #fff; color: var(--totvs-cyan); border: 2px solid var(--totvs-cyan); }
+  .srow p { font-family: var(--font-text); font-size: 18px; line-height: 1.45; color: var(--text-body); margin: 0; }
+  .foot { font-family: var(--font-display); font-weight: 800; font-size: 18px; color: var(--text-muted); margin: 34px 0 0; }
+</style>
+</head>
+<body>
+  <div class="slide sig">
+    <div class="pagemark"><span class="n">20</span><img src="../assets/totvs-symbol.svg" alt=""></div>
+    <div class="pad">
+      <h1><em>Classificação do sigilo</em> da apresentação</h1>
+      <p class="sub">Conheça os selos de classificação</p>
+      <p class="intro">Os documentos produzidos a partir deste template devem ser classificados quanto a seu sigilo, de acordo com os critérios abaixo:</p>
+      <div class="rows">
+        <div class="srow"><span class="seal conf">CONFIDENCIAL</span><p>Exclusivo para um grupo específico de pessoas (Ex.: documento com ações salariais da área)</p></div>
+        <div class="srow"><span class="seal rest">USO RESTRITO</span><p>Exclusivo para uso na área (Ex.: planejamento anual da área)</p></div>
+        <div class="srow"><span class="seal intern">USO INTERNO</span><p>Permissão para uso em toda a empresa, não sendo permitida a distribuição a fornecedores ou clientes</p></div>
+        <div class="srow"><span class="seal pub">USO PÚBLICO</span><p>Uso livre na TOTVS ou fora dela. É importante que os documentos que podem ser compartilhados sejam sinalizados com este selo.</p></div>
+      </div>
+      <p class="foot">Copie o selo escolhido acima e insira nos slides de sua apresentação.</p>
+    </div>
+  </div>
+</body>
+</html>

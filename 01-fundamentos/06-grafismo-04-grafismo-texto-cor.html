@@ -1,0 +1,63 @@
+<!-- @dsCard group="06 Fundamentos — Grafismo & composição" viewport="720x570" name="Grafismo, texto e cor" subtitle="Composition rules — spatial order, light weights at large sizes, palette grounds with contrast" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family:var(--font-text); background:var(--surface-card); }
+
+  /* ---- Composition example ---- */
+  .art { position:relative; aspect-ratio:16/9; background:var(--totvs-cyan); overflow:hidden; }
+  .art .logo { position:absolute; left:5%; top:30%; height:6%; }
+  .art .url { position:absolute; left:5%; top:65%; font-family:var(--font-display); font-weight:700;
+    font-size:16px; color:var(--totvs-dark); }
+  .art .ring { position:absolute; right:6%; top:50%; transform:translateY(-50%); height:88%;
+    filter:drop-shadow(0 18px 30px rgba(0,18,28,.28)); }
+  .word { position:absolute; right:3%; color:#fff; font-family:var(--font-display); font-weight:300;
+    font-size:84px; line-height:.92; letter-spacing:-.02em; white-space:nowrap; }
+  .w-top { top:-12px; }
+  .w-bot { bottom:-14px; }
+  .tag { position:absolute; width:26px; height:26px; border-radius:999px; background:var(--totvs-purple);
+    color:#fff; font-family:var(--font-display); font-weight:700; font-size:13px;
+    display:flex; align-items:center; justify-content:center; box-shadow:0 2px 6px rgba(0,0,0,.2); }
+  .t1 { left:50%; top:27%; } .t2 { right:13%; top:68%; } .t3 { left:18%; top:72%; }
+
+  /* ---- Rules legend ---- */
+  .rules { display:grid; grid-template-columns:repeat(3,1fr); gap:0; }
+  .rule { padding:18px 20px; border-right:1px solid var(--border-subtle); box-sizing:border-box; }
+  .rule:last-child { border-right:0; }
+  .num { display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px;
+    border-radius:999px; background:var(--purple-soft); color:var(--purple-700);
+    font-family:var(--font-display); font-weight:700; font-size:12px; margin-bottom:10px; }
+  .rule p { margin:0; font-size:12px; line-height:1.5; color:var(--text-body); }
+  .rule b { color:var(--text-strong); font-weight:700; }
+</style>
+</head>
+<body>
+  <div class="art">
+    <span class="word w-top">ciência</span>
+    <img class="ring" src="../assets/grafismo/grafismo-navy.png" alt="grafismo">
+    <span class="word w-bot">e intuição</span>
+    <img class="logo" src="../assets/totvs-logo.svg" alt="TOTVS">
+    <span class="url">totvs.com</span>
+    <span class="tag t1">1</span>
+    <span class="tag t2">2</span>
+    <span class="tag t3">3</span>
+  </div>
+  <div class="rules">
+    <div class="rule">
+      <span class="num">1</span>
+      <p>Numa mesma peça, <b>texto e grafismo trocam de ordem espacial</b> — ora acima, ora abaixo — para criar interesse visual.</p>
+    </div>
+    <div class="rule">
+      <span class="num">2</span>
+      <p>Em <b>textos de grande dimensão</b>, use pesos mais leves para manter o layout elegante e tecnológico.</p>
+    </div>
+    <div class="rule">
+      <span class="num">3</span>
+      <p>Explore as <b>cores da paleta como fundo</b>, sempre garantindo contraste de leitura com as informações.</p>
+    </div>
+  </div>
+</body>
+</html>

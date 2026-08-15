@@ -1,0 +1,46 @@
+<!-- @dsCard group="13 Slides — Conteúdo" viewport="1280x720" name="Tópicos + ícones" subtitle="Four icon topics left, navy ring right with three purple callout boxes" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.tp { background: #fff; overflow: hidden; }
+  .tp .ring { position: absolute; right: -200px; top: 50%; transform: translateY(-50%); width: 760px; height: 800px;
+    background: url('../assets/grafismo/hexagono-centro-sm.png') center/contain no-repeat; z-index: 1; }
+  .tp .pad { padding: 44px 64px; position: relative; z-index: 2; }
+  .tp h1 { font-family: var(--font-display); font-weight: 800; font-size: 46px; letter-spacing: -.02em; margin: 0; color: var(--totvs-dark); }
+  .tp h1 em { font-style: normal; color: var(--totvs-purple); }
+  .tp .sub { font-family: var(--font-text); font-size: 21px; color: var(--text-muted); margin: 6px 0 0; }
+  .list { width: 38%; margin-top: 26px; display: flex; flex-direction: column; gap: 18px; }
+  .it { display: grid; grid-template-columns: 64px 1fr; gap: 16px; align-items: start; }
+  .it .disc { width: 60px; height: 60px; border-radius: 50%; background: var(--grey-100, #eef1f3); display: flex; align-items: center; justify-content: center; }
+  .it .disc svg { width: 30px; height: 30px; }
+  .it h3 { font-family: var(--font-display); font-weight: 800; font-size: 21px; color: var(--totvs-purple); margin: 0 0 4px; }
+  .it p { font-family: var(--font-text); font-size: 13.5px; line-height: 1.4; color: var(--text-muted); margin: 0; }
+  .boxes { position: absolute; right: 200px; top: 50%; transform: translateY(-50%); width: 36%; display: flex; flex-direction: column; gap: 16px; z-index: 3; }
+  .pbox { background: var(--totvs-purple); color: #fff; border-radius: 10px; padding: 18px 22px; font-family: var(--font-display); font-weight: 700; font-size: 19px; line-height: 1.25; }
+</style>
+</head>
+<body>
+  <div class="slide tp">
+    <div class="ring"></div>
+    <div class="pagemark"><span class="n">05</span><img src="../assets/totvs-symbol.svg" alt=""></div>
+    <div class="pad">
+      <h1>Slide com <em>tópicos</em></h1>
+      <p class="sub">Insira aqui um subtítulo, se necessário</p>
+      <div class="list">
+        <div class="it"><div class="disc"><svg viewBox="0 0 32 32" fill="none" stroke="var(--totvs-dark)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4a8 8 0 0 0-5 14v3h10v-3a8 8 0 0 0-5-14Z"/><path d="M13 25h6M14 28h4"/></svg></div><div><h3>Tópico</h3><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut la dolore.</p></div></div>
+        <div class="it"><div class="disc"><svg viewBox="0 0 32 32" fill="none" stroke="var(--totvs-dark)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="12" r="5"/><path d="M6 27c0-5 5-8 10-8s10 3 10 8"/></svg></div><div><h3>Tópico</h3><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p></div></div>
+        <div class="it"><div class="disc"><svg viewBox="0 0 32 32" fill="none" stroke="var(--totvs-dark)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21a6 6 0 0 1 1-12 7 7 0 0 1 13-1 5 5 0 0 1 0 13"/><path d="M16 16v9M12 21l4 4 4-4"/></svg></div><div><h3>Tópico</h3><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy tincidunt ut laoreet dolore.</p></div></div>
+        <div class="it"><div class="disc"><svg viewBox="0 0 32 32" fill="none" stroke="var(--totvs-dark)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="11"/><path d="M16 9v7l5 3"/></svg></div><div><h3>Tópico</h3><p>Lorem ipsum dolor sit amet, consectetuer adipiscing.</p></div></div>
+      </div>
+    </div>
+    <div class="boxes">
+      <div class="pbox">Ut wisi enim adminim veniam, quisnos exercitus</div>
+      <div class="pbox">Magna aliquam erat agt volutpat dolor sit amet</div>
+      <div class="pbox">Seimt nonum nibh morq euismod tincidunt wisi turet</div>
+    </div>
+  </div>
+</body>
+</html>

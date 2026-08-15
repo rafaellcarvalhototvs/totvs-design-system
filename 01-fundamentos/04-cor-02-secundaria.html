@@ -1,0 +1,33 @@
+<!-- @dsCard group="04 Fundamentos — Cores" viewport="700x190" name="Secondary & tertiary" subtitle="Roxo accent + occasional brights: Verde, Limão, Laranja, Rosa" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family: var(--font-text); background: var(--surface-card); }
+  .row { display:flex; gap:0; height:190px; }
+  .sw { flex:1; display:flex; flex-direction:column; justify-content:flex-end; padding:14px; box-sizing:border-box; }
+  .sw .name { font-family:var(--font-display); font-weight:700; font-size:13px; }
+  .sw .hex { font-size:11px; margin-top:3px; opacity:.85; }
+  .tag { position:absolute; top:14px; left:14px; font-family:var(--font-display); font-weight:700; font-size:10px; letter-spacing:.12em; text-transform:uppercase; opacity:.7; }
+  .cell { position:relative; flex:1; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="cell"><div class="sw" style="background:var(--totvs-purple); color:#fff; height:100%;">
+      <span class="tag">Secundária</span>
+      <div class="name">Roxo</div><div class="hex">#A44DFF</div></div></div>
+    <div class="cell"><div class="sw" style="background:var(--totvs-green); color:var(--totvs-dark); height:100%;">
+      <span class="tag">Terciária</span>
+      <div class="name">Verde</div><div class="hex">#00FFD4</div></div></div>
+    <div class="cell"><div class="sw" style="background:var(--totvs-lime); color:var(--totvs-dark); height:100%;">
+      <div class="name">Limão</div><div class="hex">#D9FF65</div></div></div>
+    <div class="cell"><div class="sw" style="background:var(--totvs-orange); color:var(--totvs-dark); height:100%;">
+      <div class="name">Laranja</div><div class="hex">#FF8900</div></div></div>
+    <div class="cell"><div class="sw" style="background:var(--totvs-pink); color:#fff; height:100%;">
+      <div class="name">Rosa</div><div class="hex">#FF009E</div></div></div>
+  </div>
+</body>
+</html>

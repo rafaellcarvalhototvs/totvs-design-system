@@ -1,0 +1,94 @@
+<!-- @dsCard group="14 Slides — Diagramas & dados" viewport="1280x720" name="Timeline 2" subtitle="Seven-step alternating timeline — cyan/navy cards, thin-line icons, funnel legs, year ticks" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.tl { background: var(--surface-page); }
+  .tl .pad { padding: 40px 48px 30px; }
+  .tl h1 { font-family: var(--font-display); font-weight: 800; font-size: 46px; letter-spacing: -.02em; margin: 0; color: var(--totvs-dark); }
+  .tl .sub { font-family: var(--font-text); font-size: 21px; color: var(--text-muted); margin: 6px 0 0; }
+  .track { display: grid; grid-template-columns: repeat(7, 1fr); gap: 14px; margin-top: 24px; align-items: end; }
+  .step { display: flex; flex-direction: column; align-items: center; width: 100%; }
+  .ico { width: 44px; height: 44px; margin-bottom: 14px; }
+  .ico svg { width: 100%; height: 100%; }
+  .card { width: 100%; border-radius: 12px; box-sizing: border-box; text-align: center; }
+  .card.title { padding: 13px 10px; }
+  .card.title h3 { font-family: var(--font-display); font-weight: 800; font-size: 21px; margin: 0; }
+  .card.body { padding: 15px 14px; margin-top: 7px; }
+  .card.body p { font-family: var(--font-text); font-size: 12px; line-height: 1.42; margin: 0; }
+  .navy { background: var(--totvs-dark); }
+  .navy.title h3 { color: #fff; } .navy.body p { color: var(--navy-100); }
+  .cyan { background: var(--totvs-cyan); }
+  .cyan.title h3 { color: var(--totvs-dark); } .cyan.body p { color: var(--totvs-dark); }
+  /* funnel legs — solid, tapering to a thin neck; cyan (long) for high cards, navy (short, fading) for low cards */
+  .leg { width: 58px; }
+  .leg.cyan { height: 150px; background: url('../assets/grafismo/perna-cyan.png') top center / 100% 100% no-repeat; }
+  .leg.navy { height: 60px; background: url('../assets/grafismo/perna-navy.png') top center / 100% 100% no-repeat; }
+  .year { font-family: var(--font-display); font-weight: 800; font-size: 21px; color: var(--totvs-dark);
+    background: #fff; border-radius: var(--radius-pill); padding: 8px 0; width: 100%; text-align: center; box-shadow: var(--shadow-xs); }
+  .step .card.body { min-height: 168px; }
+</style>
+</head>
+<body>
+  <div class="slide tl">
+    <div class="pagemark"><span class="n">16</span><img src="../assets/totvs-symbol.svg" alt=""></div>
+    <div class="pad">
+      <h1>Timeline 2</h1>
+      <p class="sub">Complete a informação neste espaço</p>
+      <div class="track">
+        <div class="step">
+          <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="var(--totvs-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 18h28l-7-7"/><path d="M40 30H12l7 7"/></svg></div>
+          <div class="card title navy"><h3>Step 1</h3></div>
+          <div class="card body navy"><p>Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p></div>
+          <div class="leg navy"></div>
+          <div class="year">2017</div>
+        </div>
+        <div class="step">
+          <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="var(--totvs-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l14 6v9c0 9-6 16-14 21-8-5-14-12-14-21v-9l14-6Z"/><path d="M17 24l5 5 9-10"/></svg></div>
+          <div class="card title cyan"><h3>Step 2</h3></div>
+          <div class="card body cyan"><p>Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt aliquam adipiscing dolore nibh</p></div>
+          <div class="leg cyan"></div>
+          <div class="year">2018</div>
+        </div>
+        <div class="step">
+          <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="var(--totvs-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="18"/><ellipse cx="24" cy="24" rx="8" ry="18"/><path d="M6 24h36M9 14h30M9 34h30"/></svg></div>
+          <div class="card title navy"><h3>Step 3</h3></div>
+          <div class="card body navy"><p>Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p></div>
+          <div class="leg navy"></div>
+          <div class="year">2019</div>
+        </div>
+        <div class="step">
+          <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="var(--totvs-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="4"/><circle cx="24" cy="8" r="3.5"/><circle cx="24" cy="40" r="3.5"/><circle cx="8" cy="24" r="3.5"/><circle cx="40" cy="24" r="3.5"/><path d="M24 12v8M24 28v8M12 24h8M28 24h8"/></svg></div>
+          <div class="card title cyan"><h3>Step 4</h3></div>
+          <div class="card body cyan"><p>Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt aliquam adipiscing dolore nibh</p></div>
+          <div class="leg cyan"></div>
+          <div class="year">2020</div>
+        </div>
+        <div class="step">
+          <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="var(--totvs-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4c7 5 10 12 10 20 0 4-1 7-2 9H16c-1-2-2-5-2-9 0-8 3-15 10-20Z"/><circle cx="24" cy="20" r="4"/><path d="M16 33l-5 6 6-1M32 33l5 6-6-1M21 42h6"/></svg></div>
+          <div class="card title navy"><h3>Step 5</h3></div>
+          <div class="card body navy"><p>Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p></div>
+          <div class="leg navy"></div>
+          <div class="year">2021</div>
+        </div>
+        <div class="step">
+          <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="var(--totvs-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8h24l8 10-20 24L4 18 12 8Z"/><path d="M4 18h40M18 8l-6 10 12 24 12-24-6-10"/></svg></div>
+          <div class="card title cyan"><h3>Step 6</h3></div>
+          <div class="card body cyan"><p>Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt aliquam adipiscing dolore nibh</p></div>
+          <div class="leg cyan"></div>
+          <div class="year">2022</div>
+        </div>
+        <div class="step">
+          <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="var(--totvs-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 24V8a16 16 0 0 1 16 16H24Z"/><circle cx="21" cy="26" r="15"/></svg></div>
+          <div class="card title navy"><h3>Step 7</h3></div>
+          <div class="card body navy"><p>Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p></div>
+          <div class="leg navy"></div>
+          <div class="year">2023</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

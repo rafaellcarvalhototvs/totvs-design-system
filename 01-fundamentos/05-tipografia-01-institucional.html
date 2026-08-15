@@ -1,0 +1,65 @@
+<!-- @dsCard group="05 Fundamentos — Tipografia" viewport="900x470" name="Tipografia institucional" subtitle="The exclusive TOTVS typeface — built from the logotype, used for everything" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family:var(--font-text); background:var(--surface-card); color:var(--text-strong);
+    display:grid; grid-template-columns:1fr 1.15fr; height:470px; }
+  .content { padding:30px 32px; box-sizing:border-box; display:flex; flex-direction:column; }
+  .overline { font-family:var(--font-display); font-weight:700; font-size:10px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--text-muted); }
+  h1 { font-family:var(--font-display); font-weight:800; font-size:27px; letter-spacing:-.02em; margin:4px 0 12px; }
+  .lead { font-size:12.5px; line-height:1.6; color:var(--text-body); margin:0 0 12px; max-width:46ch; }
+  .lead b { color:var(--text-strong); font-weight:700; }
+  .use { margin-top:auto; font-size:11.5px; line-height:1.5; color:var(--text-body);
+    background:var(--surface-sunken); border-radius:var(--radius-md); padding:12px 14px; }
+  .use b { color:var(--text-strong); font-weight:700; }
+  .specimen { border-left:1px solid var(--border-subtle); padding:30px 32px; box-sizing:border-box;
+    display:flex; flex-direction:column; font-family:var(--font-display); }
+  .label { font-weight:700; font-size:11px; letter-spacing:.06em; color:var(--text-muted); }
+  .aabbcc { display:flex; align-items:baseline; gap:14px; margin:14px 0; padding:14px 0;
+    border-top:1px solid var(--border-subtle); border-bottom:1px solid var(--border-subtle); flex:1; align-items:center; }
+  .aabbcc span { font-size:74px; line-height:1; letter-spacing:-.02em; }
+  .w1 { font-weight:200; color:var(--totvs-cyan); }
+  .w2 { font-weight:400; color:var(--cyan-600); }
+  .w3 { font-weight:800; color:var(--totvs-cyan); }
+  .bottom { display:grid; grid-template-columns:auto 1fr; gap:22px; }
+  .weights { display:flex; flex-direction:column; gap:3px; font-size:12px; white-space:nowrap; }
+  .weights div:nth-child(1){font-weight:200;} .weights div:nth-child(2){font-weight:300;color:var(--totvs-purple);}
+  .weights div:nth-child(3){font-weight:400;} .weights div:nth-child(4){font-weight:600;color:var(--totvs-purple);}
+  .weights div:nth-child(5){font-weight:700;} .weights div:nth-child(6){font-weight:800;color:var(--totvs-purple);}
+  .charset { border-left:1px solid var(--border-subtle); padding-left:20px; font-size:13px; line-height:1.5; color:var(--text-strong); word-break:break-word; }
+  .charset .num { font-weight:700; }
+</style>
+</head>
+<body>
+  <div class="content">
+    <div class="overline">Tipografia</div>
+    <h1>Institucional</h1>
+    <p class="lead">A TOTVS conta com uma <b>tipografia exclusiva</b>, criada a partir do logotipo para traduzir as características da marca e construir uma expressão única e reconhecível.</p>
+    <div class="use"><b>Uso:</b> serve para tudo — títulos, chamadas, subtítulos, retrancas, textos corridos e legendas. Não combine nem adicione outras fontes à identidade.</div>
+  </div>
+  <div class="specimen">
+    <div class="label">TOTVS</div>
+    <div class="aabbcc"><span class="w1">Aa</span><span class="w2">Bb</span><span class="w3">Cc</span></div>
+    <div class="bottom">
+      <div class="weights">
+        <div>TOTVS ExtraLight</div>
+        <div>TOTVS Light</div>
+        <div>TOTVS Regular</div>
+        <div>TOTVS SemiBold</div>
+        <div>TOTVS Bold</div>
+        <div>TOTVS ExtraBold</div>
+      </div>
+      <div class="charset">
+        ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+        abcdefghijklmnopqrstuvwxyz<br>
+        <span class="num">0123456789</span><br>
+        @#$%&()[]{}&lt;&gt;*,.:; “” !?~^´`
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!-- @dsCard group="09 Fundamentos — Aplicações da marca" viewport="700x260" name="Telas de reunião" subtitle="Official TOTVS Gestão video-call backgrounds — Petróleo, Rosa, Roxo" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; padding:20px 24px; background:var(--surface-card); font-family:var(--font-display);
+    display:flex; flex-direction:column; gap:14px; box-sizing:border-box; }
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  figure { margin:0; }
+  .thumb { aspect-ratio:16/9; border-radius:var(--radius-md); background-size:cover; background-position:center;
+    box-shadow:var(--shadow-sm); }
+  .p { background-image:url('../assets/backgrounds/reuniao-petroleo.jpg'); }
+  .r { background-image:url('../assets/backgrounds/reuniao-rosa.jpg'); }
+  .x { background-image:url('../assets/backgrounds/reuniao-roxo.jpg'); }
+  figcaption { font-weight:600; font-size:12px; color:var(--text-muted); margin-top:8px; letter-spacing:.02em; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <figure><div class="thumb p"></div><figcaption>Petróleo</figcaption></figure>
+    <figure><div class="thumb r"></div><figcaption>Rosa</figcaption></figure>
+    <figure><div class="thumb x"></div><figcaption>Roxo</figcaption></figure>
+  </div>
+</body>
+</html>

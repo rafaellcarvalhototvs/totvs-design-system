@@ -1,0 +1,40 @@
+<!-- @dsCard group="13 Slides — Conteúdo" viewport="1280x720" name="Texto + destaque (imagem)" subtitle="Purple ground, navy shape, big statement + image placeholder slot" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.dimg { background: var(--totvs-purple); overflow: hidden; }
+  .dimg .graf { position: absolute; right: -160px; top: 50%; transform: translateY(-50%); width: 920px; height: 920px;
+    background: url('../assets/grafismo/grafismo-navy.png') center/contain no-repeat; z-index: 1; }
+  .dimg .pad { padding: 50px 64px; position: relative; z-index: 2; }
+  .dimg h1 { font-family: var(--font-display); font-weight: 800; font-size: 46px; letter-spacing: -.02em; margin: 0; color: #fff; }
+  .dimg h1 em { font-style: normal; color: var(--totvs-green); }
+  .dimg .sub { font-family: var(--font-text); font-size: 21px; color: #fff; opacity: .92; margin: 6px 0 0; }
+  .dimg .massa { width: 42%; font-family: var(--font-display); font-weight: 800; font-size: 42px; line-height: 1.16; letter-spacing: -.02em;
+    color: #fff; margin: 56px 0 0; }
+  .dimg .massa em { font-style: normal; color: var(--totvs-green); }
+  .slot { position: absolute; right: 130px; top: 50%; transform: translateY(-50%); width: 330px; height: 440px;
+    border: 2px dashed rgba(255,255,255,.85); border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; z-index: 3; }
+  .slot .ph { width: 56px; height: 56px; background: #fff; border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+  .slot .ph svg { width: 30px; height: 30px; }
+  .slot span { font-family: var(--font-text); font-size: 14px; color: rgba(255,255,255,.85); }
+</style>
+</head>
+<body>
+  <div class="slide dimg">
+    <div class="graf"></div>
+    <div class="pagemark on-dark"><span class="n">12</span><img src="../assets/totvs-symbol-white.svg" alt=""></div>
+    <div class="pad">
+      <h1>Slide com texto <em>+ destaque 3</em></h1>
+      <p class="sub">Insira aqui um subtítulo, se necessário</p>
+      <p class="massa">Massa de texto, dolor consectetuer amet adipisc elit, sed diam nonummy nibh morq euismod <em>tincidunt utrich.</em></p>
+    </div>
+    <div class="slot">
+      <div class="ph"><svg viewBox="0 0 32 32" fill="none" stroke="var(--totvs-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="24" height="20" rx="2"/><circle cx="11" cy="13" r="2.5"/><path d="M6 24l7-7 5 5 4-4 4 4"/></svg></div>
+      <span>Insira uma imagem aqui</span>
+    </div>
+  </div>
+</body>
+</html>

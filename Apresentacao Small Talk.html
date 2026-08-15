@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Small Talk — Do protótipo estático ao protótipo operacional</title>
+<link rel="stylesheet" href="apresentacao.css">
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<style>
+  html, body { margin: 0; background: #00121c; }
+  deck-stage:not(:defined) { visibility: hidden; }
+</style>
+</head>
+<body>
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+<rect width="400" height="300" fill="#00121c"/>
+<g transform="translate(200 150)">
+<circle r="64" fill="none" stroke="#00dbff" stroke-width="14"/>
+<circle r="64" fill="none" stroke="#00dbff" stroke-width="14" stroke-dasharray="60 340" transform="rotate(-40)"/>
+</g>
+<text x="200" y="250" fill="#ffffff" font-family="Verdana, sans-serif" font-size="22" font-weight="bold" text-anchor="middle">TOTVS</text>
+</svg>
+</template>
+<deck-stage width="1280" height="720">
+
+  <!-- 01 — CAPA -->
+  <section data-label="Capa" data-speaker-notes="Abrir leve. Me apresentar rápido. Dizer que isso NÃO é uma metodologia — é uma experiência real, do que andei fazendo com IA no meu fluxo. Promessa: mostrar como o protótipo deixou de ser só imagem e virou ambiente de construção.">
+    <div class="slide capa">
+      <div class="hero"></div>
+      <div class="pad">
+        <img class="logo" src="assets/totvs-logo-white.svg" alt="TOTVS">
+        <div class="mid">
+          <h1 class="title"><span class="reg" style="width: 706px">Do protótipo estático ao</span><span class="bold" style="width: 707px">protótipo operacional</span></h1>
+          <p class="subtitle">Como a IA está mudando meu fluxo de design</p>
+        </div>
+        <div class="foot"><svg viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="7" width="22" height="21" rx="3"/><path d="M5 13h22M11 4v6M21 4v6"/><circle cx="11" cy="19" r="1.4" fill="#fff" stroke="none"/><circle cx="16" cy="19" r="1.4" fill="#fff" stroke="none"/><circle cx="21" cy="19" r="1.4" fill="#fff" stroke="none"/></svg><span>Rafael Luiz Carvalho · Small Talk · Jul/2026</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 — AGENDA -->
+  <section data-label="Agenda" data-speaker-notes="~40 min no total. Avisar que vou deixar os últimos minutos para conversa. Não ler item por item — só situar: começo do uso da IA, o desafio no Figma Make, os 3 demos, limites, e Q&amp;A.">
+    <div class="slide agenda">
+      <div class="pagemark"><span class="n">02</span><img src="assets/totvs-symbol.svg" alt=""></div>
+      <div class="blob"><span class="chip"><i class="ph ph-image"></i>Inserir imagem</span></div>
+      <div class="ag">
+        <h1>Agenda</h1>
+        <p class="sub">Small Talk · aproximadamente 40 minutos</p>
+        <div class="row"><div class="head"><span class="time">00h00</span><span class="name">Abertura</span></div><div class="desc">Como a IA entrou no meu processo</div></div>
+        <div class="row"><div class="head"><span class="time">00h07</span><span class="name">O desafio com o Figma Make</span></div><div class="desc">Reconstruir o Ponto Web Lite como laboratório de aprendizagem</div></div>
+        <div class="row"><div class="head"><span class="time">00h11</span><span class="name">Do protótipo ao produto + Design System</span></div><div class="desc">Comportamento, lógica e proximidade com a realidade</div></div>
+        <div class="row"><div class="head"><span class="time">00h20</span><span class="name">Acessibilidade e documentação na construção</span></div><div class="desc">Avaliação recorrente e documentação que nasce do comportamento</div></div>
+        <div class="row"><div class="head"><span class="time">00h29</span><span class="name">Landing page, analytics e Maze interno</span></div><div class="desc">Um protótipo que já nasce preparado para aprender</div></div>
+        <div class="row"><div class="head"><span class="time">00h33</span><span class="name">O protótipo operacional e seus limites</span></div><div class="desc">Conceito, o que muda no papel do designer e cuidados</div></div>
+        <div class="qa-row"><span class="qa"><span class="time">00h38</span><span class="name">Perguntas e Respostas</span></span><div class="desc">Vamos abrir a conversa</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 — TESE -->
+  <section data-label="Tese" data-speaker-notes="Frase âncora da talk. Falar devagar. O protótipo está deixando de ser só representação visual e passando a ser ambiente de construção, validação, documentação e aprendizado. Tudo depois disso é prova disso.">
+    <div class="slide frase-anel thesis">
+      <div class="pagemark on-dark"><span class="n">03</span><img src="assets/totvs-symbol-white.svg" alt=""></div>
+      <div class="ring"></div>
+      <h1 class="phrase" style="width: 1200px">O protótipo está deixando de ser apenas uma <b>representação visual</b> e começando a funcionar como ambiente de <b>construção, validação, documentação e aprendizado.</b></h1>
+    </div>
+  </section>
+
+  <!-- 04 — DIVISÓRIA 01 -->
+  <section data-label="Seção 01 Abertura" data-speaker-notes="Contexto pessoal: nos últimos meses passei a usar IA cada vez mais integrada ao trabalho. Reforçar: experiência, não fórmula.">
+    <div class="slide secao" style="background-image:url('assets/aberturas/abertura-01.opt.jpg')">
+      <div class="overlay"></div>
+      <div class="pagemark on-dark"><span class="n">04</span><img src="assets/totvs-symbol-white.svg" alt=""></div>
+      <div class="dwrap">
+        <div class="ring"><span class="num">01</span></div>
+        <div class="dtext">
+          <h1 class="dtitle"><span class="reg">Abertura</span><span class="bold">Uma experiência, não uma metodologia</span></h1>
+          <div class="dsub">Nos últimos meses, comecei a usar IA de forma cada vez mais integrada ao meu trabalho como designer.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 — ABERTURA: o fluxo simples -->
+  <section data-label="No início era simples" data-speaker-notes="Como começou, bem simples: 1) criava a tela no Figma; 2) print no ChatGPT pedindo avaliação; 3) leitura crítica de hierarquia, legibilidade, acessibilidade, clareza. Segundo olhar, não substituto.">
+    <div class="slide steps">
+      <div class="pagemark"><span class="n">05</span><img src="assets/totvs-symbol.svg" alt=""></div>
+      <div class="header">
+        <h1 class="h-title">No início, era <span class="pur">muito simples</span></h1>
+        <p class="h-sub">Eu usava a IA como um segundo olhar sobre o que eu desenhava.</p>
+      </div>
+      <div class="cols">
+        <div class="col">
+          <div class="head"><div class="badge">1</div><div class="ctitle">Criar a tela</div></div>
+          <p class="lead">Eu criava uma tela no <b>Figma</b>, como sempre fiz no meu fluxo de design.</p>
+        </div>
+        <div class="col">
+          <div class="head"><div class="badge">2</div><div class="ctitle">Levar ao ChatGPT</div></div>
+          <p class="lead">Tirava um print e <b>pedia uma avaliação</b> — um segundo olhar, não um substituto da minha.</p>
+        </div>
+        <div class="col">
+          <div class="head"><div class="badge">3</div><div class="ctitle">Pedir uma leitura crítica</div></div>
+          <p class="lead">Perguntava sobre <b>hierarquia, legibilidade, acessibilidade, clareza dos textos</b> e onde o fluxo poderia melhorar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 — IMPACTO (ideia s1) -->
+  <section data-label="Frase: qualidade da reflexão" data-speaker-notes="Pausa. Não comecei querendo automatizar design — queria melhorar a qualidade da reflexão. Esse era o objetivo.">
+    <div class="slide frase-anel">
+      <div class="pagemark on-dark"><span class="n">06</span><img src="assets/totvs-symbol-white.svg" alt=""></div>
+      <div class="ring"></div>
+      <h1 class="phrase">Não comecei querendo <b>automatizar design.</b> Comecei querendo melhorar a <b>qualidade da reflexão.</b></h1>
+    </div>
+  </section>
+
+  <!-- 07 — DIVISÓRIA 02 -->
+  <section data-label="Seção 02 Como a IA entrou" data-speaker-notes="Transição: meu primeiro uso não foi gerar telas — foi colocar a IA como crítica do processo.">
+    <div class="slide secao" style="background-image:url('assets/aberturas/abertura-02.opt.jpg')">
+      <div class="overlay"></div>
+      <div class="pagemark on-dark"><span class="n">07</span><img src="assets/totvs-symbol-white.svg" alt=""></div>
+      <div class="dwrap">
+        <div class="ring"><span class="num">02</span></div>
+        <div class="dtext">
+          <h1 class="dtitle"><span class="reg">Como a IA</span><span class="bold">entrou no meu processo</span></h1>
+          <div class="dsub">Meu primeiro uso não foi criar telas automaticamente — foi participar como crítica.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 — CONTEÚDO s2 (bullets) -->
+  <section data-label="A IA como crítica" data-speaker-notes="O que eu pedia: usabilidade, contraste/acessibilidade visual, legibilidade e hierarquia, clareza dos textos. Deixar claro o limite: não substitui teste com usuário nem auditoria técnica.">
+    <div class="slide bullets">
+      <div class="pagemark"><span class="n">08</span><img src="assets/totvs-symbol.svg" alt=""></div>
+      <div class="pad">
+        <div class="head">
+          <h1 class="title">A IA entrou como crítica</h1>
+          <p class="sub">Uma verificação intermediária, muito mais sistemática.</p>
+        </div>
+        <div class="cols">
+          <div class="left">
+            <div class="graf"></div>
+            <div class="imgslot"><span class="chip"><i class="ph ph-image"></i>Inserir imagem</span></div>
+          </div>
+          <div class="right">
+            <p class="lead">Quando eu criava alguma coisa, podia pedir uma leitura sobre:</p>
+            <div class="blist">
+              <div class="bcard">Revisão de usabilidade e possíveis dificuldades de navegação</div>
+              <div class="bcard">Análise de acessibilidade visual e problemas de contraste</div>
+              <div class="bcard">Legibilidade e hierarquia da informação</div>
+              <div class="bcard">Clareza dos textos — não substitui teste com usuário nem auditoria técnica completa</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 — IMPACTO (s2) -->
+  <section data-label="Frase: segundo olhar crítico" data-speaker-notes="Fechar a ideia: a IA começou como segundo olhar crítico, não como máquina de fazer telas.">
+    <div class="slide frase-anel">
+      <div class="pagemark on-dark"><span class="n">09</span><img src="assets/totvs-symbol-white.svg" alt=""></div>
+      <div class="ring"></div>
+      <h1 class="phrase">A IA começou como um <b>segundo olhar crítico</b>, não como uma máquina de fazer telas.</h1>
+    </div>
+  </section>
+
+  <!-- 10 — DIVISÓRIA 03 -->
+  <section data-label="Seção 03 Figma Make" data-speaker-notes="Vira o jogo: aqui entra o Figma Make. O desafio que eu me dei.">
+    <div class="slide secao" style="background-image:url('assets/aberturas/abertura-03.opt.jpg')">
+      <div class="overlay"></div>
+      <div class="pagemark on-dark"><span class="n">10</span><img src="assets/totvs-symbol-white.svg" alt=""></div>
+      <div class="dwrap">
+        <div class="ring"><span class="num">03</span></div>
+        <div class="dtext">
+          <h1 class="dtitle"><span class="reg">O desafio com o</span><span class="bold">Figma Make</span></h1>
+          <div class="dsub">Construir o máximo possível do Ponto Web Lite — um laboratório de aprendizagem.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 — CONTEÚDO s3 (ti) -->
+  <section data-label="O laboratório de aprendizagem" data-speaker-notes="História: aviso de que créditos livres poderiam acabar. Me desafiei a reconstruir o máximo do Ponto Web Lite. Não era economizar crédito — era entender a fundo a ferramenta, achar limites e oportunidades construindo algo real. [DEMO entra no próximo bloco]">
+    <div class="slide ti bleed">
+      <div class="pagemark"><span class="n">11</span><img src="assets/totvs-symbol.svg" alt=""></div>
+      <div class="left">
+        <p class="kick">Laboratório de aprendizagem</p>
+        <h1>Reconstruir um <em>produto real</em></h1>
+        <p class="sub">Ponto Web Lite, dentro do Figma Make</p>
+        <p class="body">Apareceu uma comunicação dizendo que os créditos livres poderiam acabar. Decidi me desafiar: construir o máximo possível do produto na ferramenta.</p>
+        <p class="body">Não era só economizar créditos ou gerar telas rápido. <b>Eu queria entender a fundo como a ferramenta funcionava</b> — e, construindo algo real e complexo, encontrar seus limites, problemas e oportunidades.</p>
+      </div>
+      <div class="right">
+        <div class="slot filled"><img src="assets/demos/demo-lab-figma.opt.jpg" alt="Reconstrução do PontoWEB Lite dentro do Figma Make" style="object-fit: cover"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12 — DIVISÓRIA 04 -->
+  <section data-label="Seção 04 Protótipo como produto" data-speaker-notes="O que mudou não foi a quantidade de telas — foi a NATUREZA do protótipo.">
+    <div class="slide secao" style="background-image:url('assets/aberturas/abertura-05.opt.jpg')">
+      <div class="overlay"></div>
+      <div class="pagemark on-dark"><span class="n">12</span><img src="assets/totvs-symbol-white.svg" alt=""></div>
+      <div class="dwrap">
+        <div class="ring"><span class="num">04</span></div>
+        <div class="dtext">
+          <h1 class="dtitle"><span class="reg">O protótipo crescendo</span><span class="bold">como produto</span></h1>
+          <div class="dsub">O que mudou não foi a quantidade de telas — foi a natureza do protótipo.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13 — CONTEÚDO s4 (tt) -->
+  <section data-label="Deixou de ser imagem navegável" data-speaker-notes="Protótipo tradicional = representa interface + simula caminhos. Aqui virou algo mais próximo de produto funcional: comportamento, lógica e componentes/documentação próximos da realidade. Citar de passagem o app My Ahgora.">
+    <div class="slide tt">
+      <div class="graf"></div>
+      <div class="pagemark"><span class="n">13</span><img src="assets/totvs-symbol.svg" alt=""></div>
+      <div class="pad">
+        <h1>Deixou de ser uma <em>imagem navegável</em></h1>
+        <p class="sub">Uma parte significativa do Ponto Web Lite já está representada nesse ambiente.</p>
+        <p class="lead"><b>Em um protótipo tradicional, representamos a interface e simulamos alguns caminhos.</b> Aqui, comecei a construir uma experiência muito mais próxima de um produto funcional.</p>
+      </div>
+      <div class="topics">
+        <div class="topic"><h3>Comportamento</h3><p>Fluxos, estados e regras reagindo como reagiriam no produto.</p></div>
+        <div class="topic"><h3>Lógica</h3><p>Não só telas: condições, caminhos e respostas às ações.</p></div>
+        <div class="topic"><h3>Componentes e documentação</h3><p>Próximos da realidade — também o app My Ahgora e outros experimentos.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14 — IMPACTO (s4) -->
+  <section data-label="Frase: não apenas um protótipo" data-speaker-notes="Momento de virada: foi aí que percebi que talvez eu não estivesse mais fazendo apenas um protótipo.">
+    <div class="slide frase-anel">
+      <div class="pagemark on-dark"><span class="n">14</span><img src="assets/totvs-symbol-white.svg" alt=""></div>
+      <div class="ring"></div>
+      <h1 class="phrase">Foi aí que comecei a perceber que talvez eu não estivesse mais fazendo <b>apenas um protótipo.</b></h1>
+    </div>
+  </section>
+
+  <!-- 15 — DIVISÓRIA 05 -->
+  <section data-label="Seção 05 Design System" data-speaker-notes="Ponto importante: demo de IA impressiona, mas tem que sobreviver ao contato com o produto real. Por isso conectei ao Design System.">
+    <div class="slide secao" style="background-image:url('assets/aberturas/abertura-06.opt.jpg')">
+      <div class="overlay"></div>
+      <div class="pagemark on-dark"><span class="n">15</span><img src="assets/totvs-symbol-white.svg" alt=""></div>
+      <div class="dwrap">
+        <div class="ring"><span class="num">05</span></div>
+        <div class="dtext">
+          <h1 class="dtitle"><span class="reg">Design System e</span><span class="bold">proximidade com a realidade</span></h1>
+          <div class="dsub">Uma demonstração de IA pode impressionar, mas precisa sobreviver ao contato com o produto real.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 16 — CONTEÚDO s5 (tp) -->
+  <section data-label="Conectado ao Design System" data-speaker-notes="Usar nossos componentes e regras dá mais valor para discutir com produto/eng. É uma segunda fonte de verdade executável — NÃO substitui Figma nem doc oficial. Resultado: menos distância entre ideia e implementação.">
+    <div class="slide tp">
+      <div class="ring"></div>
+      <div class="pagemark"><span class="n">16</span><img src="assets/totvs-symbol.svg" alt=""></div>
+      <div class="pad">
+        <h1>Conectado ao <em>nosso Design System</em></h1>
+        <p class="sub">Não uma experiência solta, desconectada do produto.</p>
+        <div class="list">
+          <div class="it"><div class="disc"><svg viewBox="0 0 32 32" fill="none" stroke="var(--totvs-dark)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="9" height="9" rx="1.5"/><rect x="18" y="5" width="9" height="9" rx="1.5"/><rect x="5" y="18" width="9" height="9" rx="1.5"/><rect x="18" y="18" width="9" height="9" rx="1.5"/></svg></div><div><h3>Nossos componentes e regras</h3><p>Mais valor para discutir com produto, engenharia e outras áreas.</p></div></div>
+          <div class="it"><div class="disc"><svg viewBox="0 0 32 32" fill="none" stroke="var(--totvs-dark)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4l11 5v7c0 7-5 11-11 12-6-1-11-5-11-12V9l11-5Z"/><path d="M11 16l4 4 7-8"/></svg></div><div><h3>Segunda fonte de verdade</h3><p>Não substitui o Figma nem a documentação oficial — representa regras de forma executável.</p></div></div>
+          <div class="it"><div class="disc"><svg viewBox="0 0 32 32" fill="none" stroke="var(--totvs-dark)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22l8-8 5 5 7-9"/><path d="M6 6v20h20"/></svg></div><div><h3>Distância menor</h3><p>Aumenta a simulação e reduz a distância entre ideia e implementação.</p></div></div>
+        </div>
+      </div>
+      <div class="boxes">
+        <div class="pbox">Governança</div>
+        <div class="pbox">Aderência</div>
+        <div class="pbox">Consistência</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 17 — DEMO 1 (ti) -->
+  <section data-label="Demo 1 — PW Lite + DS" data-speaker-notes="[DEMO 1] Mostrar um fluxo real do PW Lite rodando sobre os componentes da TOTVS. Destacar estados e comportamento — o mais perto da experiência final. Se a demo ao vivo falhar, usar o print do slide.">
+    <div class="slide ti">
+      <div class="pagemark"><span class="n">17</span><img src="assets/totvs-symbol.svg" alt=""></div>
+      <div class="left">
+        <p class="kick">Demonstração 1</p>
+        <h1>Um fluxo do <em>PW Lite</em> com o Design System</h1>
+        <p class="sub">Telas, estados e comportamentos construídos sobre os componentes da TOTVS.</p>
+        <p class="body">Aqui mostro um fluxo real reconstruído no ambiente, usando o Design System conectado ao projeto — o mais próximo possível da experiência final.</p>
+        <p class="urlpill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 15l6-6M11 6l1-1a4 4 0 0 1 6 6l-1 1M13 18l-1 1a4 4 0 0 1-6-6l1-1"/></svg>rem-domain-60342137.figma.site/?activity=1</p>
+      </div>
+      <div class="right">
+        <div class="slot filled"><img src="assets/demos/demo1-pwlite.opt.jpg" alt="PontoWEB Lite — Atividades de configuração inicial" style="object-fit: cover"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 18 — DIVISÓRIA 06 -->
+  <section data-label="Seção 06 Acessibilidade" data-speaker-notes="Tema: acessibilidade durante a construção — quando corrigir ainda é barato, não só no fim.">
+    <div class="slide secao" style="background-image:url('assets/aberturas/abertura-09.opt.jpg')">
+      <div class="overlay"></div>
+      <div class="pagemark on-dark"><span class="n">18</span><img src="assets/totvs-symbol-white.svg" alt=""></div>
+      <div class="dwrap">
+        <div class="ring"><span class="num">06</span></div>
+        <div class="dtext">
+          <h1 class="dtitle"><span class="reg">Acessibilidade</span><span class="bold">integrada ao processo</span></h1>
+          <div class="dsub">Incorporada durante a construção — quando os problemas ainda são baratos de corrigir.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 19 — CONTEÚDO s6 (cinco) -->
+  <section data-label="Camadas de acessibilidade" data-speaker-notes="O que passei a avaliar: navegação por teclado/ordem de foco, sequência de leitura, contraste/legibilidade, semântica dos componentes, problemas para VoiceOver. Limite: não substitui auditoria nem teste com tecnologia assistiva — é camada intermediária recorrente.">
+    <div class="slide cinco">
+      <div class="pagemark on-dark"><span class="n">19</span><img src="assets/totvs-symbol-white.svg" alt=""></div>
+      <div class="top">
+        <h1>O que eu passei a <em>avaliar</em></h1>
+        <p class="sub">Depois de finalizar uma página ou fluxo, pedia avaliações mais completas.</p>
+        <div class="cols">
+          <div class="col"><div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#00dbff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="13" width="38" height="22" rx="3"/><path d="M11 20h0M17 20h0M23 20h0M29 20h0M35 20h0M11 27h0M17 27h0M31 27h0M37 27h0M22 27h4"/></svg></div><p><b>Navegação por teclado</b> e ordem de foco</p><div class="bar"></div></div>
+          <div class="col"><div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#00dbff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="13" r="6"/><path d="M10 40c0-8 6-13 14-13s14 5 14 13"/></svg></div><p><b>Sequência de leitura</b> e foco</p><div class="bar"></div></div>
+          <div class="col"><div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#00dbff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="18"/><path d="M24 6v36" fill="#00dbff"/><path d="M24 6a18 18 0 0 1 0 36Z" fill="#00dbff"/></svg></div><p><b>Legibilidade</b> e contraste</p><div class="bar"></div></div>
+          <div class="col"><div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#00dbff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="14" height="9" rx="1.5"/><rect x="28" y="20" width="12" height="8" rx="1.5"/><rect x="28" y="33" width="12" height="8" rx="1.5"/><path d="M15 15v9h13M28 24h-6M22 37h-7V24"/></svg></div><p><b>Semântica</b> e estrutura dos componentes</p><div class="bar"></div></div>
+          <div class="col"><div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#00dbff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 19v10h6l8 7V12l-8 7H8Z"/><path d="M30 16a10 10 0 0 1 0 16M34 11a16 16 0 0 1 0 26"/></svg></div><p>Possíveis problemas para <b>VoiceOver</b></p><div class="bar"></div></div>
+        </div>
+      </div>
+      <div class="band">
+        <p class="one">Não substitui uma auditoria especializada nem testes reais com tecnologias assistivas. Mas cria <b>uma camada intermediária de controle</b> que antes não existia de maneira tão acessível e recorrente.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 20 — IMPACTO (s6) -->
+  <section data-label="Frase: acessibilidade na construção" data-speaker-notes="Fechamento: acessibilidade deixou de ser checagem no fim e passou a participar da construção.">
+    <div class="slide frase-anel">
+      <div class="pagemark on-dark"><span class="n">20</span><img src="assets/totvs-symbol-white.svg" alt=""></div>
+      <div class="ring"></div>
+      <h1 class="phrase">Acessibilidade deixou de ser apenas uma verificação <b>no final</b> e começou a participar da <b>construção.</b></h1>
+    </div>
+  </section>
+
+  <!-- 21 — DIVISÓRIA 07 -->
+  <section data-label="Seção 07 Documentação" data-speaker-notes="Próximo benefício: documentação que nasce da construção, não da página em branco.">
+    <div class="slide secao" style="background-image:url('assets/aberturas/abertura-10.opt.jpg')">
+      <div class="overlay"></div>
+      <div class="pagemark on-dark"><span class="n">21</span><img src="assets/totvs-symbol-white.svg" alt=""></div>
+      <div class="dwrap">
+        <div class="ring"><span class="num">07</span></div>
+        <div class="dtext">
+          <h1 class="dtitle"><span class="reg">Documentação gerada</span><span class="bold">a partir da construção</span></h1>
+          <div class="dsub">A documentação deixa de começar em uma página em branco.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 22 — CONTEÚDO s7 (bullets) -->
+  <section data-label="Documentar o componente" data-speaker-notes="Como o ambiente já tem contexto (regras, estados, comportamento), eu peço a doc do componente: o que faz, estados, regras de negócio, acessibilidade, orientações para dev. Precisa de revisão — mas não parte do zero. [DEMO 2 no próximo bloco]">
+    <div class="slide bullets">
+      <div class="pagemark"><span class="n">22</span><img src="assets/totvs-symbol.svg" alt=""></div>
+      <div class="pad">
+        <div class="head">
+          <h1 class="title">O ambiente já tem contexto</h1>
+          <p class="sub">Quando o componente tem regras, estados e comportamentos claros.</p>
+        </div>
+        <div class="cols">
+          <div class="left">
+            <div class="graf"></div>
+            <div class="imgslot"><span class="chip"><i class="ph ph-image"></i>Inserir imagem</span></div>
+          </div>
+          <div class="right">
+            <p class="lead">Eu podia solicitar a documentação daquele componente:</p>
+            <div class="blist">
+              <div class="bcard">Para que serve, seus estados e como se comporta</div>
+              <div class="bcard">Regras de negócio e interações</div>
+              <div class="bcard">Considerações de acessibilidade</div>
+              <div class="bcard">Orientações para desenvolvimento — precisa de revisão, mas não parte do zero</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 23 — DEMO 2 (ti) -->
+  <section data-label="Demo 2 — Acessibilidade / doc" data-speaker-notes="[DEMO 2] Mostrar a avaliação + documentação geradas de um componente. Ponto-chave: construção e documentação no mesmo ambiente, sem depender da memória semanas depois.">
+    <div class="slide ti">
+      <div class="pagemark"><span class="n">23</span><img src="assets/totvs-symbol.svg" alt=""></div>
+      <div class="left">
+        <p class="kick">Demonstração 2</p>
+        <h1>Avaliação e <em>documentação</em> de um componente</h1>
+        <p class="sub">A documentação nasce do comportamento que já foi construído.</p>
+        <p class="body">Em vez de depender da memória do designer algum tempo depois, <b>construção e documentação acontecem no mesmo ambiente.</b></p>
+        <p class="urlpill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 15l6-6M11 6l1-1a4 4 0 0 1 6 6l-1 1M13 18l-1 1a4 4 0 0 1-6-6l1-1"/></svg>rem-domain-60342137.figma.site/design-system-toaster</p>
+        <p class="urlpill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 15l6-6M11 6l1-1a4 4 0 0 1 6 6l-1 1M13 18l-1 1a4 4 0 0 1-6-6l1-1"/></svg>rem-domain-60342137.figma.site/design-system-figma-make-guide</p>
+        <p class="urlpill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 15l6-6M11 6l1-1a4 4 0 0 1 6 6l-1 1M13 18l-1 1a4 4 0 0 1-6-6l1-1"/></svg>rem-domain-60342137.figma.site/design-system-ux-writing</p>
+        <p class="urlpill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 15l6-6M11 6l1-1a4 4 0 0 1 6 6l-1 1M13 18l-1 1a4 4 0 0 1-6-6l1-1"/></svg>rem-domain-60342137.figma.site/relatorio-final</p>
+      </div>
+      <div class="right">
+        <div class="slot filled tall"><img src="assets/demos/demo-doc.opt.jpg" alt="Guia &quot;Como Construir com Figma Make&quot; gerado no ambiente"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 24 — IMPACTO (s7) -->
+  <section data-label="Frase: mesmo ambiente" data-speaker-notes="Síntese: construção e documentação acontecem no mesmo ambiente.">
+    <div class="slide frase-anel">
+      <div class="pagemark on-dark"><span class="n">24</span><img src="assets/totvs-symbol-white.svg" alt=""></div>
+      <div class="ring"></div>
+      <h1 class="phrase">Construção e documentação começam a acontecer <b>no mesmo ambiente.</b></h1>
+    </div>
+  </section>
+
+  <!-- 25 — DIVISÓRIA 08 -->
+  <section data-label="Seção 08 A lupa" data-speaker-notes="Bônus, deixar leve: um experimento — a lupa. Nasceu da falta de acesso ao Dev Mode. É exploração, não substituição.">
+    <div class="slide secao" style="background-image:url('assets/aberturas/abertura-12.opt.jpg')">
+      <div class="overlay"></div>
+      <div class="pagemark on-dark"><span class="n">25</span><img src="assets/totvs-symbol-white.svg" alt=""></div>
+      <div class="dwrap">
+        <div class="ring"><span class="num">08</span></div>
+        <div class="dtext">
+          <h1 class="dtitle"><span class="reg">A lupa e a ausência</span><span class="bold">do Dev Mode</span></h1>
+          <div class="dsub">Bônus — uma exploração, não uma substituição completa.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 26 — CONTEÚDO s8 (ti) -->
+  <section data-label="Modo de inspeção" data-speaker-notes="[DEMO opcional] Passar o mouse e mostrar medidas/propriedades/nomes do componente. Problema concreto: nem todos têm Dev Mode. Ideia: protótipo também como camada de comunicação com dev. Se o tempo apertar, pular.">
+    <div class="slide ti">
+      <div class="pagemark"><span class="n">26</span><img src="assets/totvs-symbol.svg" alt=""></div>
+      <div class="left">
+        <p class="kick">Experimento</p>
+        <h1>Uma <em>lupa</em> dentro do protótipo</h1>
+        <p class="sub">Modo de inspeção sobre os elementos.</p>
+        <p class="body">Ao passar sobre os elementos, ela apresenta informações do componente — medidas, propriedades, nomes e dados relevantes. Surgiu de uma limitação concreta: <b>nem todas as pessoas têm acesso ao Dev Mode.</b></p>
+        <p class="body">Ainda é uma exploração. Mas mostra outra possibilidade: o protótipo também pode funcionar como camada de comunicação com desenvolvimento.</p>
+      </div>
+      <div class="right">
+        <div class="slot filled"><img src="assets/demos/demo-lupa.opt.jpg" alt="Modo de inspeção (lupa) sobre os componentes do PontoWEB Lite"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 27 — DIVISÓRIA 09 -->
+  <section data-label="Seção 09 Landing page" data-speaker-notes="Terceiro demo: landing page de preparação, antes do cadastro do PW Lite.">
+    <div class="slide secao" style="background-image:url('assets/aberturas/abertura-13.opt.jpg')">
+      <div class="overlay"></div>
+      <div class="pagemark on-dark"><span class="n">27</span><img src="assets/totvs-symbol-white.svg" alt=""></div>
+      <div class="dwrap">
+        <div class="ring"><span class="num">09</span></div>
+        <div class="dtext">
+          <h1 class="dtitle"><span class="reg">A landing page</span><span class="bold">de preparação</span></h1>
+          <div class="dsub">Antes do cadastro, a pessoa precisa saber o que ter em mãos.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 28 — DEMO 3a (ti) -->
+  <section data-label="Demo 3 — Landing page" data-speaker-notes="[DEMO 3a] Problema: a pessoa precisa saber que documentos/infos ter em mãos antes de começar. Hipótese: preparar antes reduz interrupção, dúvida e abandono no onboarding.">
+    <div class="slide ti">
+      <div class="pagemark"><span class="n">28</span><img src="assets/totvs-symbol.svg" alt=""></div>
+      <div class="left">
+        <p class="kick">Demonstração 3</p>
+        <h1>Uma página de <em>preparação</em></h1>
+        <p class="sub">Ponto Web Lite — antes de iniciar a jornada de cadastro.</p>
+        <p class="body">O problema era simples: a pessoa precisava saber quais documentos e informações ter em mãos antes de começar.</p>
+        <p class="body"><b>Hipótese:</b> uma preparação prévia pode reduzir interrupções, dúvidas e abandono durante o onboarding.</p>
+        <p class="urlpill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 15l6-6M11 6l1-1a4 4 0 0 1 6 6l-1 1M13 18l-1 1a4 4 0 0 1-6-6l1-1"/></svg>twins-broil-21673025.figma.site</p>
+      </div>
+      <div class="right">
+        <div class="slot filled tall"><img src="assets/demos/demo-landing.opt.jpg" alt="Landing page de preparação do PontoWEB Lite"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 29 — DIVISÓRIA 10 -->
+  <section data-label="Seção 10 Analytics e Maze" data-speaker-notes="Diferencial: a página não é só publicada — já vem instrumentada. Pequena infra de teste e observação acoplada.">
+    <div class="slide secao" style="background-image:url('assets/aberturas/abertura-15.opt.jpg')">
+      <div class="overlay"></div>
+      <div class="pagemark on-dark"><span class="n">29</span><img src="assets/totvs-symbol-white.svg" alt=""></div>
+      <div class="dwrap">
+        <div class="ring"><span class="num">10</span></div>
+        <div class="dtext">
+          <h1 class="dtitle"><span class="reg">Analytics e</span><span class="bold">Maze interno</span></h1>
+          <div class="dsub">Pequenas infraestruturas de teste e observação, acopladas à própria experiência.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 30 — CONTEÚDO s10 (tp) -->
+  <section data-label="O que a página aprende" data-speaker-notes="O que ela captura: onde/quanto clicaram, onde houve abandono, e uma área admin para consultar tudo no próprio ambiente. É um Maze interno — não substitui o Maze em todo cenário, mas é útil em fases exploratórias.">
+    <div class="slide tp">
+      <div class="ring"></div>
+      <div class="pagemark"><span class="n">30</span><img src="assets/totvs-symbol.svg" alt=""></div>
+      <div class="pad">
+        <h1>A página já nasce para <em>aprender</em></h1>
+        <p class="sub">Em vez de configurar tudo em uma ferramenta externa.</p>
+        <div class="list">
+          <div class="it"><div class="disc"><svg viewBox="0 0 32 32" fill="none" stroke="var(--totvs-dark)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4l16 12-7 2-2 7L9 4Z"/></svg></div><div><h3>Onde e quanto clicaram</h3><p>Quais partes foram utilizadas e quais caminhos as pessoas seguiram.</p></div></div>
+          <div class="it"><div class="disc"><svg viewBox="0 0 32 32" fill="none" stroke="var(--totvs-dark)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 27V14M13 27V7M21 27V17M29 27V11"/></svg></div><div><h3>Onde houve abandono</h3><p>Para entender o comportamento real na jornada.</p></div></div>
+          <div class="it"><div class="disc"><svg viewBox="0 0 32 32" fill="none" stroke="var(--totvs-dark)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="6" width="22" height="16" rx="2"/><path d="M11 26h10M16 22v4"/></svg></div><div><h3>Área administrativa</h3><p>Para consultar essas informações dentro do próprio ambiente.</p></div></div>
+        </div>
+      </div>
+      <div class="boxes">
+        <div class="pbox">Maze interno acoplado à experiência</div>
+        <div class="pbox">Não substitui o Maze em todos os cenários</div>
+        <div class="pbox">Útil em fases exploratórias</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 31 — DEMO 3b (ti) -->
+  <section data-label="Demo 3 — Analytics / Maze interno" data-speaker-notes="[DEMO 3b] Mostrar a área admin com as métricas. Recado: a observação pode nascer junto com o protótipo. Reconhecer que o Maze tem recursos e confiabilidade próprios.">
+    <div class="slide ti">
+      <div class="pagemark"><span class="n">31</span><img src="assets/totvs-symbol.svg" alt=""></div>
+      <div class="left">
+        <p class="kick">Demonstração 3 · continuação</p>
+        <h1>Métricas e <em>Maze interno</em></h1>
+        <p class="sub">Área administrativa para observar a experiência.</p>
+        <p class="body">Hoje conseguimos criar rapidamente pequenas infraestruturas de teste e observação. O Maze tem recursos e confiabilidade próprios — o ponto é mostrar que a observação pode nascer junto com o protótipo.</p>
+        <p class="urlpill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 15l6-6M11 6l1-1a4 4 0 0 1 6 6l-1 1M13 18l-1 1a4 4 0 0 1-6-6l1-1"/></svg>twins-broil-21673025.figma.site/admin</p>
+      </div>
+      <div class="right">
+        <div class="slot filled tall"><img src="assets/demos/demo-analytics.opt.jpg" alt="Dashboard Analytics — insights em tempo real do Pontoweb Lite"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 32 — IMPACTO (s10) -->
+  <section data-label="Frase: nascer para aprender" data-speaker-notes="Fechar a trinca de demos: eu não queria só publicar a landing — queria que ela já nascesse preparada para aprender.">
+    <div class="slide frase-anel">
+      <div class="pagemark on-dark"><span class="n">32</span><img src="assets/totvs-symbol-white.svg" alt=""></div>
+      <div class="ring"></div>
+      <h1 class="phrase">Eu não queria apenas publicar a landing page. Eu queria que ela já nascesse <b>preparada para aprender.</b></h1>
+    </div>
+  </section>
+
+  <!-- 33 — DIVISÓRIA 11 -->
+  <section data-label="Seção 11 Protótipo operacional" data-speaker-notes="Nomear o conceito central: o protótipo operacional. Não é produto final, nem só protótipo navegável.">
+    <div class="slide secao" style="background-image:url('assets/aberturas/abertura-16.opt.jpg')">
+      <div class="overlay"></div>
+      <div class="pagemark on-dark"><span class="n">33</span><img src="assets/totvs-symbol-white.svg" alt=""></div>
+      <div class="dwrap">
+        <div class="ring"><span class="num">11</span></div>
+        <div class="dtext">
+          <h1 class="dtitle"><span class="reg">O protótipo</span><span class="bold">operacional</span></h1>
+          <div class="dsub">Não é produto final. Também não é apenas protótipo navegável.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 34 — CONTEÚDO s11 (cinco) -->
+  <section data-label="O que ele permite" data-speaker-notes="Espaço intermediário onde dá pra: simular comportamento, testar hipótese, instrumentar interação, avaliar acessibilidade, documentar e aprender. Recado final: o valor não é parecer real — é permitir decisões melhores antes de implementar.">
+    <div class="slide cinco">
+      <div class="pagemark on-dark"><span class="n">34</span><img src="assets/totvs-symbol-white.svg" alt=""></div>
+      <div class="top">
+        <h1>Um espaço <em>intermediário</em></h1>
+        <p class="sub">No qual conseguimos:</p>
+        <div class="cols">
+          <div class="col"><div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#00dbff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 38c0-8 6-14 14-14s14 6 14 14"/><circle cx="24" cy="14" r="7"/></svg></div><p><b>Simular</b> comportamentos</p><div class="bar"></div></div>
+          <div class="col"><div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#00dbff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 6h10M24 6v10M16 16h16l6 18a4 4 0 0 1-4 5H14a4 4 0 0 1-4-5l6-18Z"/></svg></div><p><b>Testar</b> hipóteses</p><div class="bar"></div></div>
+          <div class="col"><div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#00dbff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="26" width="7" height="14"/><rect x="20" y="16" width="7" height="24"/><rect x="34" y="8" width="7" height="32"/></svg></div><p><b>Instrumentar</b> interações</p><div class="bar"></div></div>
+          <div class="col"><div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#00dbff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="18"/><path d="M24 6v36" fill="#00dbff"/><path d="M24 6a18 18 0 0 1 0 36Z" fill="#00dbff"/></svg></div><p><b>Avaliar</b> acessibilidade</p><div class="bar"></div></div>
+          <div class="col"><div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#00dbff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5h16l8 8v30H12V5Z"/><path d="M28 5v8h8M18 24h12M18 31h12"/></svg></div><p><b>Documentar</b> e aprender</p><div class="bar"></div></div>
+        </div>
+      </div>
+      <div class="band">
+        <p class="one">O valor não está apenas em <b>parecer real.</b> Está em permitir decisões melhores antes da implementação definitiva.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 35 — DEFINIÇÃO (s11) -->
+  <section data-label="Definição: protótipo operacional" data-speaker-notes="Definição para gravar: um protótipo que não só representa a solução — ajuda a testá-la, explicá-la e aprender com ela.">
+    <div class="slide frase-anel">
+      <div class="pagemark on-dark"><span class="n">35</span><img src="assets/totvs-symbol-white.svg" alt=""></div>
+      <div class="ring"></div>
+      <h1 class="phrase">Um protótipo que não apenas <b>representa</b> uma solução: ele ajuda a <b>testá-la, explicá-la e aprender com ela.</b></h1>
+    </div>
+  </section>
+
+  <!-- 36 — DIVISÓRIA 12 -->
+  <section data-label="Seção 12 O que não funciona" data-speaker-notes="Equilíbrio: falar dos limites. IA acelera, mas pode aumentar dívida e inconsistência.">
+    <div class="slide secao" style="background-image:url('assets/aberturas/abertura-02.opt.jpg')">
+      <div class="overlay"></div>
+      <div class="pagemark on-dark"><span class="n">36</span><img src="assets/totvs-symbol-white.svg" alt=""></div>
+      <div class="dwrap">
+        <div class="ring"><span class="num">12</span></div>
+        <div class="dtext">
+          <h1 class="dtitle"><span class="reg">O que</span><span class="bold">não funciona bem</span></h1>
+          <div class="dsub">A IA aumenta velocidade, mas também pode aumentar dívida e inconsistência.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 37 — CONTEÚDO s12 (bullets) -->
+  <section data-label="Limitações" data-speaker-notes="Ser honesto: as ferramentas inventam comportamento, mudam regra sem perceber, duplicam componente, interpretam mal o DS, geram acessibilidade só aparente e quebram telas ao corrigir outra. Quanto maior o projeto, mais supervisão. O papel humano não some.">
+    <div class="slide bullets">
+      <div class="pagemark"><span class="n">37</span><img src="assets/totvs-symbol.svg" alt=""></div>
+      <div class="pad">
+        <div class="head">
+          <h1 class="title">Também é preciso falar dos limites</h1>
+          <p class="sub">Quanto maior o projeto, maior a necessidade de supervisão e organização.</p>
+        </div>
+        <div class="cols">
+          <div class="left">
+            <div class="graf"></div>
+            <div class="imgslot"><span class="chip"><i class="ph ph-warning"></i>Essas ferramentas cometem erros</span></div>
+          </div>
+          <div class="right">
+            <p class="lead">Elas podem:</p>
+            <div class="blist">
+              <div class="bcard">Inventar comportamento ou alterar uma regra sem perceber</div>
+              <div class="bcard">Criar inconsistências e duplicar componentes</div>
+              <div class="bcard">Interpretar o Design System incorretamente</div>
+              <div class="bcard">Gerar acessibilidade só aparentemente correta — e quebrar telas ao corrigir outra. O papel humano não desaparece.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 38 — IMPACTO (s12) -->
+  <section data-label="Frase: o que não devemos construir" data-speaker-notes="Frase forte: quanto mais rápido conseguimos construir, mais importante saber o que NÃO devemos construir.">
+    <div class="slide frase-anel">
+      <div class="pagemark on-dark"><span class="n">38</span><img src="assets/totvs-symbol-white.svg" alt=""></div>
+      <div class="ring"></div>
+      <h1 class="phrase">Quanto mais rápido conseguimos construir, mais importante se torna saber <b>o que não devemos construir.</b></h1>
+    </div>
+  </section>
+
+  <!-- 39 — DIVISÓRIA 13 -->
+  <section data-label="Seção 13 Meu papel" data-speaker-notes="Fechamento reflexivo: o que mudou no meu papel como designer.">
+    <div class="slide secao" style="background-image:url('assets/aberturas/abertura-06.opt.jpg')">
+      <div class="overlay"></div>
+      <div class="pagemark on-dark"><span class="n">39</span><img src="assets/totvs-symbol-white.svg" alt=""></div>
+      <div class="dwrap">
+        <div class="ring"><span class="num">13</span></div>
+        <div class="dtext">
+          <h1 class="dtitle"><span class="reg">O que mudou no meu</span><span class="bold">papel como designer</span></h1>
+          <div class="dsub">Menos tempo em operações manuais, mais tempo em estruturar e decidir.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 40 — CONTEÚDO s13 (tt) -->
+  <section data-label="Talvez desenhar sistemas" data-speaker-notes="Não deixei de desenhar — desenho menos operação manual e mais sistema: estruturar o problema, explicitar regras, decidir o que continua. Desenhar instruções, critérios e ambientes de aprendizado.">
+    <div class="slide tt">
+      <div class="graf"></div>
+      <div class="pagemark"><span class="n">40</span><img src="assets/totvs-symbol.svg" alt=""></div>
+      <div class="pad">
+        <h1>Talvez eu esteja desenhando <em>também sistemas</em></h1>
+        <p class="sub">O designer não está deixando de desenhar.</p>
+        <p class="lead"><b>Dedico menos tempo a operações manuais</b> e mais tempo a estruturar o problema, explicitar regras e decidir o que merece continuar — desenhando instruções, critérios e ambientes de aprendizado.</p>
+      </div>
+      <div class="topics">
+        <div class="topic"><h3>Estruturar e explicitar</h3><p>Organizar o problema e tornar as regras explícitas.</p></div>
+        <div class="topic"><h3>Avaliar e testar</h3><p>Revisar comportamento, testar hipóteses, avaliar o resultado.</p></div>
+        <div class="topic"><h3>Conectar e decidir</h3><p>Aproximar produto, design e tecnologia — e decidir o que segue.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 41 — TRÊS IDEIAS -->
+  <section data-label="Três ideias para levar" data-speaker-notes="Resumo em 3: (1) IA em problemas reais, não só demo; (2) protótipo como ambiente de aprendizado; (3) mais curadoria no papel do designer. Repetir os três em voz alta.">
+    <div class="slide tp">
+      <div class="ring"></div>
+      <div class="pagemark"><span class="n">41</span><img src="assets/totvs-symbol.svg" alt=""></div>
+      <div class="pad">
+        <h1>O que eu queria que <em>ficasse</em></h1>
+        <p class="sub">Três ideias para levar desta conversa.</p>
+        <div class="list">
+          <div class="it"><div class="disc"><svg viewBox="0 0 32 32" fill="none" stroke="var(--totvs-dark)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4a8 8 0 0 0-5 14v3h10v-3a8 8 0 0 0-5-14Z"/><path d="M13 25h6M14 28h4"/></svg></div><div><h3>IA em problemas reais</h3><p>Não apenas demonstrações — uso em produtos e fluxos reais.</p></div></div>
+          <div class="it"><div class="disc"><svg viewBox="0 0 32 32" fill="none" stroke="var(--totvs-dark)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4l11 5v7c0 7-5 11-11 12-6-1-11-5-11-12V9l11-5Z"/><path d="M11 16l4 4 7-8"/></svg></div><div><h3>Ambiente de aprendizado</h3><p>O protótipo pode se tornar um lugar onde se aprende antes de construir.</p></div></div>
+          <div class="it"><div class="disc"><svg viewBox="0 0 32 32" fill="none" stroke="var(--totvs-dark)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="11" r="5"/><path d="M6 27c0-5 5-8 10-8s10 3 10 8"/></svg></div><div><h3>Mais curadoria</h3><p>O papel do designer passa a incluir estruturação e validação.</p></div></div>
+        </div>
+      </div>
+      <div class="boxes">
+        <div class="pbox">Problemas reais</div>
+        <div class="pbox">Aprendizado</div>
+        <div class="pbox">Curadoria</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 42 — PERGUNTA -->
+  <section data-label="Pergunta para a conversa" data-speaker-notes="Abrir o Q&amp;A com a pergunta do slide. Deixar o silêncio rolar. O que vocês já testaram com IA que mudou de verdade o jeito de trabalhar — não só a velocidade?">
+    <div class="slide frase-anel pergunta">
+      <div class="pagemark on-dark"><span class="n">42</span><img src="assets/totvs-symbol-white.svg" alt=""></div>
+      <div class="ring"></div>
+      <h1 class="phrase">O que vocês já experimentaram com IA que <b>mudou de verdade</b> a forma como trabalham — e não apenas a velocidade?</h1>
+    </div>
+  </section>
+
+  <!-- 43 — ENCERRAMENTO -->
+  <section data-label="Encerramento" data-speaker-notes="Agradecer. Deixar contato/redes na tela durante a conversa. Disponível para trocar ideia depois.">
+    <div class="slide end">
+      <div class="graf-final"></div>
+      <div class="pad">
+        <h1 class="title">Obrigado</h1>
+        <div class="badge"><img src="assets/icons/sf-iconapresenter.png" alt=""></div>
+        <p class="pres">Rafael Luiz Carvalho</p>
+        <p class="role">Designer de produto<br><a href="mailto:rafael.lcarvalho@totvs.com.br">rafael.lcarvalho@totvs.com.br</a></p>
+      </div>
+      <div class="social">
+        <span class="si"><img src="assets/social/icon-totvs.svg" alt="">totvs.com</span>
+        <span class="si"><span class="circle"><svg viewBox="0 0 24 24" fill="var(--totvs-dark)"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16Zm0 3.18A6.66 6.66 0 1 0 18.66 12 6.66 6.66 0 0 0 12 5.34Zm0 10.99A4.33 4.33 0 1 1 16.33 12 4.33 4.33 0 0 1 12 16.33Zm6.92-11.25a1.56 1.56 0 1 0 1.56 1.56 1.56 1.56 0 0 0-1.56-1.56Z"/></svg></span>@totvs</span>
+        <span class="si"><img src="assets/social/icon-x.svg" alt="">@totvs</span>
+        <span class="si"><span class="circle"><svg viewBox="0 0 24 24" fill="var(--totvs-dark)"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14ZM8.34 18.34V9.96H5.56v8.38h2.78ZM6.95 8.72a1.61 1.61 0 1 0 0-3.22 1.61 1.61 0 0 0 0 3.22Zm11.4 9.62v-4.6c0-2.45-1.31-3.59-3.06-3.59a2.64 2.64 0 0 0-2.4 1.32v-1.13h-2.78v8.38h2.78v-4.42c0-1.17.22-2.3 1.67-2.3 1.43 0 1.45 1.34 1.45 2.38v4.34h2.78Z"/></svg></span>company/totvs</span>
+      </div>
+      <div class="hashtag">#SOMOSTOTVS</div>
+      <img class="logo-final" src="assets/sf-logototvs.svg" alt="TOTVS">
+    </div>
+  </section>
+
+  <!-- 44 — CONTRACAPA -->
+  <section data-label="Contracapa" data-speaker-notes="Slide de aviso legal — não precisa falar nada. Pode encerrar aqui.">
+    <div class="slide contracapa">
+      <div class="graf"></div>
+      <div class="panel">
+        <div class="label"><span class="bar"></span><span>Aviso legal</span></div>
+        <p>As informações, produtos e marcas contidas nesta apresentação são de propriedade intelectual da TOTVS e não podem ser divulgadas, compartilhadas, publicadas ou utilizadas sem autorização expressa da TOTVS, sob pena de responsabilização cível e criminal do infrator, nos termos do quanto disposto na Lei n. 9.279/1996.</p>
+        <p class="copy">© TOTVS — Todos os direitos reservados.</p>
+      </div>
+      <img class="logo-bl" src="assets/totvs-logo-white.svg" alt="TOTVS">
+    </div>
+  </section>
+
+</deck-stage>
+<script src="deck-stage.js"></script>
+</body>
+</html>

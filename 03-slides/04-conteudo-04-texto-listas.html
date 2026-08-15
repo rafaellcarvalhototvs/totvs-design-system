@@ -1,0 +1,43 @@
+<!-- @dsCard group="13 Slides — Conteúdo" viewport="1280x720" name="Texto + listas (bullets)" subtitle="Body-copy slide — paragraph with bold lead-in & 3-level bullet hierarchy" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slide.css">
+<style>
+  .slide.txt { background: #fff; overflow: hidden; }
+  .txt .wm { position: absolute; right: -120px; top: -80px; width: 720px; height: 720px; background: url('../assets/grafismo/grafismo-capa.png') center/contain no-repeat; opacity: .05; z-index: 0; }
+  .txt .pad { position: relative; z-index: 1; padding: 48px 64px; height: 100%; box-sizing: border-box; }
+  .txt h1 { font-family: var(--font-display); font-weight: 800; font-size: 40px; color: var(--totvs-dark); margin: 0; letter-spacing: -.01em; }
+  .txt h1 b { color: var(--totvs-cyan); font-weight: 800; }
+  .txt .sub { font-size: 20px; color: var(--text-muted); margin: 4px 0 0; }
+  .txt .body { font-size: 18px; line-height: 1.65; color: var(--text-body); margin: 34px 0 0; max-width: 62ch; }
+  .txt .body b { color: var(--text-strong); font-weight: 700; }
+  .txt .lists-h { font-family: var(--font-display); font-weight: 800; font-size: 19px; color: var(--totvs-dark); margin: 40px 0 12px; }
+  .txt ul { margin: 0; padding: 0; list-style: none; }
+  .txt li { font-size: 17px; line-height: 1.5; color: var(--text-body); display: flex; gap: 11px; align-items: baseline; padding: 3px 0; }
+  .txt li::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--totvs-dark); flex: 0 0 auto; transform: translateY(-3px); }
+  .txt .l2 { margin-left: 30px; }
+  .txt .l2::before { border-radius: 50%; background: transparent; border: 1.5px solid var(--text-muted); width: 7px; height: 7px; }
+  .txt .l3 { margin-left: 60px; }
+  .txt .l3::before { border-radius: 0; background: var(--totvs-dark); width: 7px; height: 7px; }
+</style>
+</head>
+<body>
+  <div class="slide txt">
+    <div class="wm"></div>
+    <div class="pagemark"><span class="n">40</span><img src="../assets/totvs-symbol.svg" alt=""></div>
+    <div class="pad">
+      <h1>Slide para <b>conteúdo</b></h1>
+      <p class="sub">Insira aqui um subtítulo, se necessário</p>
+      <p class="body">Massa de texto para o corpo do slide, com o comprimento que a mensagem exigir — de conteúdos curtos a densos. Mantenha a leitura confortável e destaque a palavra-chave quando fizer sentido. <b>Use a versão bold para títulos do texto.</b></p>
+      <p class="lists-h">Listas e bullet points:</p>
+      <ul>
+        <li>Primeiro nível, risus non viverra tincidunt placerat lectus a sapiens</li>
+        <li class="l2">Segundo nível, massa vel erat accumsan eleifend aliquip enim</li>
+        <li class="l3">Terceiro nível, erat vel massa</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
