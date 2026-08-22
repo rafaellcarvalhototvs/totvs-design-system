@@ -1,8 +1,9 @@
 {
   "name": "TOTVS Design System",
   "version": "2026-08-22",
-  "description": "Índice estruturado para agentes de IA consultarem regras de marca, tokens, componentes e exemplos.",
+  "description": "Índice estruturado para agentes de IA consultarem principalmente o estilo das apresentações TOTVS, além de tokens e componentes de suporte.",
   "baseUrl": "https://totvs-design-system-f0e57812.vercel.app/",
+  "primaryFocus": "slide-design",
   "sourceOfTruth": {
     "repository": "https://github.com/rafaellcarvalhototvs/totvs-design-system",
     "manifest": "_ds_manifest.json",
@@ -28,6 +29,49 @@
     { "path": "tokens/effects.css", "role": "sombras, foco, transições e movimento" },
     { "path": "tokens/fonts.css", "role": "fontes TOTVS e arquivos locais" }
   ],
+  "slideSystem": {
+    "frame": "1280x720",
+    "sharedStylesheet": "03-slides/slide.css",
+    "catalogPath": "03-slides/",
+    "referenceManifest": "_ds_manifest.json",
+    "families": [
+      {
+        "id": "openings-agenda",
+        "label": "Abertura e agenda",
+        "paths": ["03-slides/01-capa-*.html", "03-slides/02-abertura-*.html", "03-slides/03-agenda-*.html"],
+        "count": 10,
+        "examples": ["03-slides/01-capa-01-navy.html", "03-slides/02-abertura-03-divisoria-secao.html", "03-slides/03-agenda-01.html"]
+      },
+      {
+        "id": "content-highlights",
+        "label": "Conteúdo e destaques",
+        "paths": ["03-slides/04-conteudo-*.html", "03-slides/05-destaque-*.html"],
+        "count": 12,
+        "examples": ["03-slides/04-conteudo-01-topicos.html", "03-slides/04-conteudo-06-texto-imagem.html", "03-slides/05-destaque-04-foto.html"]
+      },
+      {
+        "id": "process-data",
+        "label": "Processos e dados",
+        "paths": ["03-slides/06-processo-*.html", "03-slides/07-dados-*.html"],
+        "count": 14,
+        "examples": ["03-slides/06-processo-01-passo-a-passo.html", "03-slides/06-processo-04-timeline-2.html", "03-slides/07-dados-06-bignumbers-donut.html"]
+      },
+      {
+        "id": "backgrounds-closing",
+        "label": "Fundos e fechamento",
+        "paths": ["03-slides/08-fundo-*.html", "03-slides/09-fechamento-*.html"],
+        "count": 9,
+        "examples": ["03-slides/08-fundo-01-azul-escuro.html", "03-slides/09-fechamento-01-frase-impacto.html", "03-slides/09-fechamento-04-contracapa.html"]
+      }
+    ],
+    "compositionRules": [
+      "Começar por um slide existente da mesma família.",
+      "Manter o frame 1280x720, o pagemark, o número de página e a assinatura TOTVS.",
+      "Usar o grafismo 3D O como elemento de composição, não como decoração aleatória.",
+      "Preservar recortes grandes, painéis, hierarquia e áreas de respiro da referência.",
+      "Em slides, respeitar a tipografia Verdana escopada em 03-slides/slide.css."
+    ]
+  },
   "brandDefaults": {
     "navy": "#002233",
     "cyan": "#00DBFF",
@@ -36,7 +80,7 @@
     "bodyFont": "Verdana",
     "spacingRhythm": "8pt"
   },
-  "components": [
+  "supportComponents": [
     { "name": "Avatar", "category": "core", "path": "02-componentes/core/Avatar" },
     { "name": "Badge", "category": "core", "path": "02-componentes/core/Badge" },
     { "name": "Button", "category": "core", "path": "02-componentes/core/Button" },
@@ -54,6 +98,12 @@
     "implementation": "<path>.jsx"
   },
   "startingPoints": [
+    {
+      "name": "Slide de referência",
+      "path": "03-slides/01-capa-01-navy.html",
+      "kind": "slide",
+      "viewport": "1280x720"
+    },
     {
       "name": "TOTVS Gestão UI Kit",
       "path": "05-ui-kits/gestao/index.html",
@@ -83,5 +133,5 @@
     "namespace": "TOTVSDesignSystem_be3538",
     "localCommand": "python3 -m http.server 8080"
   },
-  "agentInstruction": "Antes de criar UI, procure primeiro um token, componente ou exemplo existente. Não invente valores de marca sem registrar a lacuna."
+  "agentInstruction": "Antes de criar uma apresentação, escolha uma família de slide e procure primeiro uma composição existente em 03-slides/. Reutilize o slide de referência, seus tokens e assets; não invente valores de marca sem registrar a lacuna."
 }
