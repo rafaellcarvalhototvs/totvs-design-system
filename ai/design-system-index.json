@@ -1,0 +1,87 @@
+{
+  "name": "TOTVS Design System",
+  "version": "2026-08-22",
+  "description": "Índice estruturado para agentes de IA consultarem regras de marca, tokens, componentes e exemplos.",
+  "baseUrl": "https://totvs-design-system-f0e57812.vercel.app/",
+  "sourceOfTruth": {
+    "repository": "https://github.com/rafaellcarvalhototvs/totvs-design-system",
+    "manifest": "_ds_manifest.json",
+    "guidance": "GEMINI.md",
+    "readme": "readme.md"
+  },
+  "consumptionOrder": [
+    "GEMINI.md",
+    "ai/design-system-index.json",
+    "_ds_manifest.json",
+    "tokens/*.css",
+    "02-componentes/<category>/<Component>.prompt.md",
+    "02-componentes/<category>/<Component>.d.ts",
+    "02-componentes/<category>/<Component>.jsx",
+    "01-fundamentos/",
+    "03-slides/",
+    "05-ui-kits/"
+  ],
+  "tokens": [
+    { "path": "tokens/colors.css", "role": "cores, gradientes e estados" },
+    { "path": "tokens/typography.css", "role": "famílias, pesos, tamanhos e line-height" },
+    { "path": "tokens/spacing.css", "role": "ritmo 8pt, raios, containers e controles" },
+    { "path": "tokens/effects.css", "role": "sombras, foco, transições e movimento" },
+    { "path": "tokens/fonts.css", "role": "fontes TOTVS e arquivos locais" }
+  ],
+  "brandDefaults": {
+    "navy": "#002233",
+    "cyan": "#00DBFF",
+    "white": "#FFFFFF",
+    "displayFont": "TOTVS",
+    "bodyFont": "Verdana",
+    "spacingRhythm": "8pt"
+  },
+  "components": [
+    { "name": "Avatar", "category": "core", "path": "02-componentes/core/Avatar" },
+    { "name": "Badge", "category": "core", "path": "02-componentes/core/Badge" },
+    { "name": "Button", "category": "core", "path": "02-componentes/core/Button" },
+    { "name": "Card", "category": "core", "path": "02-componentes/core/Card" },
+    { "name": "Alert", "category": "feedback", "path": "02-componentes/feedback/Alert" },
+    { "name": "ProgressBar", "category": "feedback", "path": "02-componentes/feedback/ProgressBar" },
+    { "name": "Checkbox", "category": "forms", "path": "02-componentes/forms/Checkbox" },
+    { "name": "Input", "category": "forms", "path": "02-componentes/forms/Input" },
+    { "name": "Switch", "category": "forms", "path": "02-componentes/forms/Switch" },
+    { "name": "Tabs", "category": "navigation", "path": "02-componentes/navigation/Tabs" }
+  ],
+  "componentFileConvention": {
+    "prompt": "<path>.prompt.md",
+    "api": "<path>.d.ts",
+    "implementation": "<path>.jsx"
+  },
+  "startingPoints": [
+    {
+      "name": "TOTVS Gestão UI Kit",
+      "path": "05-ui-kits/gestao/index.html",
+      "flow": "Login → Dashboard → Pedidos",
+      "viewport": "1280x720",
+      "status": "composição demonstrativa, não especificação de produto"
+    }
+  ],
+  "visualFoundations": {
+    "path": "01-fundamentos/",
+    "topics": [
+      "marca",
+      "logo",
+      "arquitetura de marcas",
+      "cores",
+      "tipografia",
+      "grafismo",
+      "fotografia",
+      "iconografia",
+      "aplicações",
+      "espaçamento e elevação"
+    ]
+  },
+  "runtime": {
+    "type": "static-html",
+    "bundle": "_ds_bundle.js",
+    "namespace": "TOTVSDesignSystem_be3538",
+    "localCommand": "python3 -m http.server 8080"
+  },
+  "agentInstruction": "Antes de criar UI, procure primeiro um token, componente ou exemplo existente. Não invente valores de marca sem registrar a lacuna."
+}
